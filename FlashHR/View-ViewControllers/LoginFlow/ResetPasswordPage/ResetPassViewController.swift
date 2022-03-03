@@ -6,28 +6,23 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseAuth
+
 class ResetPassViewController: UIViewController {
-    
-    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
+    private let loginService = LoginService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         submitButton.layer.cornerRadius = submitButton.frame.size.height / 2
-        
     }
     
     @IBAction func submitPressed(_ sender: UIButton) {
-        if let email = emailTextField.text{
-            Auth.auth().sendPasswordReset(withEmail: email) { error in
-                if let e = error{
-                    print(e)
-                }
-            }
+        guard let email = emailTextField.text, !email.isEmpty else {return}
+        loginService.performForgetPassword(email) {
+            self.dismiss(animated: true, completion: nil)
+        } failure: { errorString in
+            print(errorString)
         }
-        dismiss(animated: true, completion: nil)
     }
 }

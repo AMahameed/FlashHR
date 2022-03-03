@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PgE-wD-L0Q">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="zXY-5i-d3f">
+            <objects>
+                <viewController id="PgE-wD-L0Q" customClass="SplashViewController" customModule="FlashHR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RsU-GN-GJI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="EXf-Qt-Pf2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="N6K-WP-U6q"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EXf-Qt-Pf2" firstAttribute="leading" secondItem="RsU-GN-GJI" secondAttribute="leading" id="54N-ww-09D"/>
+                            <constraint firstAttribute="bottom" secondItem="EXf-Qt-Pf2" secondAttribute="bottom" id="gEs-f7-w6F"/>
+                            <constraint firstItem="EXf-Qt-Pf2" firstAttribute="top" secondItem="RsU-GN-GJI" secondAttribute="top" id="puh-Na-W42"/>
+                            <constraint firstAttribute="trailing" secondItem="EXf-Qt-Pf2" secondAttribute="trailing" id="wCF-vr-F2F"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d1W-Jp-ljd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-130" y="495"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="826.5" height="659"/>
+    </resources>
+</document>

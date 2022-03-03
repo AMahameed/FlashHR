@@ -13,6 +13,11 @@
 		730FA0BB27D0B9B700EB0C39 /* EmployerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730FA0BA27D0B9B700EB0C39 /* EmployerViewController.swift */; };
 		730FA0BD27D0BF3E00EB0C39 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 730FA0BC27D0BF3E00EB0C39 /* GoogleService-Info.plist */; };
 		7374A2BD27D105A600493821 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7374A2BC27D105A600493821 /* IQKeyboardManagerSwift */; };
+		7374A2C327D124EE00493821 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7374A2C227D124EE00493821 /* UserModel.swift */; };
+		7374A2C627D1283C00493821 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7374A2C427D1283C00493821 /* SplashViewController.swift */; };
+		7374A2CA27D12C6000493821 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7374A2C927D12C6000493821 /* UserDataService.swift */; };
+		7374A2CD27D12C7E00493821 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7374A2CC27D12C7E00493821 /* LoginService.swift */; };
+		7374A2D127D1321E00493821 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7374A2D027D1321E00493821 /* Login.storyboard */; };
 		7394F01C27CCBA7B001C58C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7394F01B27CCBA7B001C58C9 /* AppDelegate.swift */; };
 		7394F01E27CCBA7B001C58C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7394F01D27CCBA7B001C58C9 /* SceneDelegate.swift */; };
 		7394F02027CCBA7B001C58C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7394F01F27CCBA7B001C58C9 /* LoginViewController.swift */; };
@@ -21,9 +26,8 @@
 		7394F03327CCBC9E001C58C9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7394F03227CCBC9E001C58C9 /* Constants.swift */; };
 		73A735A027CF5F1F00FA9253 /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73A7359F27CF5F1F00FA9253 /* ResetPassword.storyboard */; };
 		73A735A327CF62D700FA9253 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73A735A227CF62D700FA9253 /* Main.storyboard */; };
+		73C8942F27D140F200BA3A6A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C8942E27D140F200BA3A6A /* Extensions.swift */; };
 		73FBD99A27CD73A90061B864 /* ResetPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBD99927CD73A90061B864 /* ResetPassViewController.swift */; };
-		73FE902C27D0D7F200CC54F1 /* FirstTimeLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE902B27D0D7F200CC54F1 /* FirstTimeLogin.swift */; };
-		73FE902E27D0D84E00CC54F1 /* FirstTimeLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73FE902D27D0D84E00CC54F1 /* FirstTimeLogin.storyboard */; };
 		ABC2E132C1AF08CDB9826C25 /* Pods_FlashHR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C276AF36410A344916FB7C1 /* Pods_FlashHR.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +39,11 @@
 		730FA0B827D0B91B00EB0C39 /* EmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
 		730FA0BA27D0B9B700EB0C39 /* EmployerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerViewController.swift; sourceTree = "<group>"; };
 		730FA0BC27D0BF3E00EB0C39 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7374A2C227D124EE00493821 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		7374A2C427D1283C00493821 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		7374A2C927D12C6000493821 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
+		7374A2CC27D12C7E00493821 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		7374A2D027D1321E00493821 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		7394F01827CCBA7B001C58C9 /* FlashHR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashHR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7394F01B27CCBA7B001C58C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7394F01D27CCBA7B001C58C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,9 +54,8 @@
 		7394F03227CCBC9E001C58C9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		73A7359F27CF5F1F00FA9253 /* ResetPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPassword.storyboard; sourceTree = "<group>"; };
 		73A735A227CF62D700FA9253 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		73C8942E27D140F200BA3A6A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		73FBD99927CD73A90061B864 /* ResetPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassViewController.swift; sourceTree = "<group>"; };
-		73FE902B27D0D7F200CC54F1 /* FirstTimeLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeLogin.swift; sourceTree = "<group>"; };
-		73FE902D27D0D84E00CC54F1 /* FirstTimeLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FirstTimeLogin.storyboard; sourceTree = "<group>"; };
 		BD537B4C9017A29F0631B0E3 /* Pods-FlashHR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashHR.debug.xcconfig"; path = "Target Support Files/Pods-FlashHR/Pods-FlashHR.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +72,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7374A2BE27D1239E00493821 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				7394F02F27CCBA9B001C58C9 /* Model */,
+				7374A2C827D12C4C00493821 /* Services */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		7374A2BF27D123A500493821 /* View-ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7374A2CF27D131AD00493821 /* LoginFlow */,
+			);
+			path = "View-ViewControllers";
+			sourceTree = "<group>";
+		};
+		7374A2C027D123D700493821 /* LoginPage */ = {
+			isa = PBXGroup;
+			children = (
+				7394F01F27CCBA7B001C58C9 /* LoginViewController.swift */,
+				7374A2D027D1321E00493821 /* Login.storyboard */,
+			);
+			path = LoginPage;
+			sourceTree = "<group>";
+		};
+		7374A2C127D1240C00493821 /* SplashPage */ = {
+			isa = PBXGroup;
+			children = (
+				73A735A227CF62D700FA9253 /* Main.storyboard */,
+				7374A2C427D1283C00493821 /* SplashViewController.swift */,
+			);
+			path = SplashPage;
+			sourceTree = "<group>";
+		};
+		7374A2C827D12C4C00493821 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7374A2C927D12C6000493821 /* UserDataService.swift */,
+				7374A2CC27D12C7E00493821 /* LoginService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7374A2CE27D131A100493821 /* ResetPasswordPage */ = {
+			isa = PBXGroup;
+			children = (
+				73FBD99927CD73A90061B864 /* ResetPassViewController.swift */,
+				73A7359F27CF5F1F00FA9253 /* ResetPassword.storyboard */,
+			);
+			path = ResetPasswordPage;
+			sourceTree = "<group>";
+		};
+		7374A2CF27D131AD00493821 /* LoginFlow */ = {
+			isa = PBXGroup;
+			children = (
+				7374A2C127D1240C00493821 /* SplashPage */,
+				7374A2C027D123D700493821 /* LoginPage */,
+				7374A2CE27D131A100493821 /* ResetPasswordPage */,
+			);
+			path = LoginFlow;
+			sourceTree = "<group>";
+		};
 		7394F00F27CCBA7B001C58C9 = {
 			isa = PBXGroup;
 			children = (
@@ -87,12 +158,13 @@
 			children = (
 				7394F01B27CCBA7B001C58C9 /* AppDelegate.swift */,
 				7394F01D27CCBA7B001C58C9 /* SceneDelegate.swift */,
-				7394F02F27CCBA9B001C58C9 /* Model */,
-				7394F03127CCBABB001C58C9 /* Controller */,
-				7394F03027CCBAAF001C58C9 /* View */,
 				7394F02427CCBA7B001C58C9 /* Assets.xcassets */,
 				7394F02627CCBA7B001C58C9 /* LaunchScreen.storyboard */,
-				7394F03227CCBC9E001C58C9 /* Constants.swift */,
+				7374A2BE27D1239E00493821 /* Core */,
+				7374A2BF27D123A500493821 /* View-ViewControllers */,
+				73C8942D27D140CE00BA3A6A /* Support Files */,
+				7394F03127CCBABB001C58C9 /* Controller */,
+				7394F03027CCBAAF001C58C9 /* View */,
 				730FA0BC27D0BF3E00EB0C39 /* GoogleService-Info.plist */,
 				7394F02927CCBA7B001C58C9 /* Info.plist */,
 			);
@@ -102,6 +174,7 @@
 		7394F02F27CCBA9B001C58C9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7374A2C227D124EE00493821 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -109,9 +182,6 @@
 		7394F03027CCBAAF001C58C9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				73A735A227CF62D700FA9253 /* Main.storyboard */,
-				73FE902D27D0D84E00CC54F1 /* FirstTimeLogin.storyboard */,
-				73A7359F27CF5F1F00FA9253 /* ResetPassword.storyboard */,
 				730FA0B427D0B8ED00EB0C39 /* Employee.storyboard */,
 				730FA0B627D0B90600EB0C39 /* Employer.storyboard */,
 			);
@@ -121,13 +191,19 @@
 		7394F03127CCBABB001C58C9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7394F01F27CCBA7B001C58C9 /* LoginViewController.swift */,
-				73FE902B27D0D7F200CC54F1 /* FirstTimeLogin.swift */,
-				73FBD99927CD73A90061B864 /* ResetPassViewController.swift */,
 				730FA0B827D0B91B00EB0C39 /* EmployeeViewController.swift */,
 				730FA0BA27D0B9B700EB0C39 /* EmployerViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		73C8942D27D140CE00BA3A6A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7394F03227CCBC9E001C58C9 /* Constants.swift */,
+				73C8942E27D140F200BA3A6A /* Extensions.swift */,
+			);
+			path = "Support Files";
 			sourceTree = "<group>";
 		};
 		A4BD030DFA22BE0A3DC63323 /* Pods */ = {
@@ -213,7 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73FE902E27D0D84E00CC54F1 /* FirstTimeLogin.storyboard in Resources */,
+				7374A2D127D1321E00493821 /* Login.storyboard in Resources */,
 				7394F02827CCBA7B001C58C9 /* LaunchScreen.storyboard in Resources */,
 				730FA0BD27D0BF3E00EB0C39 /* GoogleService-Info.plist in Resources */,
 				7394F02527CCBA7B001C58C9 /* Assets.xcassets in Resources */,
@@ -278,9 +354,13 @@
 				730FA0BB27D0B9B700EB0C39 /* EmployerViewController.swift in Sources */,
 				73FBD99A27CD73A90061B864 /* ResetPassViewController.swift in Sources */,
 				7394F01E27CCBA7B001C58C9 /* SceneDelegate.swift in Sources */,
+				7374A2CA27D12C6000493821 /* UserDataService.swift in Sources */,
 				730FA0B927D0B91B00EB0C39 /* EmployeeViewController.swift in Sources */,
+				73C8942F27D140F200BA3A6A /* Extensions.swift in Sources */,
+				7374A2CD27D12C7E00493821 /* LoginService.swift in Sources */,
 				7394F03327CCBC9E001C58C9 /* Constants.swift in Sources */,
-				73FE902C27D0D7F200CC54F1 /* FirstTimeLogin.swift in Sources */,
+				7374A2C327D124EE00493821 /* UserModel.swift in Sources */,
+				7374A2C627D1283C00493821 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
