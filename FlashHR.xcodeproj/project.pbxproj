@@ -7,23 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		730FA0B527D0B8ED00EB0C39 /* Employee.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 730FA0B427D0B8ED00EB0C39 /* Employee.storyboard */; };
+		730FA0B727D0B90600EB0C39 /* Employer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 730FA0B627D0B90600EB0C39 /* Employer.storyboard */; };
+		730FA0B927D0B91B00EB0C39 /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730FA0B827D0B91B00EB0C39 /* EmployeeViewController.swift */; };
+		730FA0BB27D0B9B700EB0C39 /* EmployerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730FA0BA27D0B9B700EB0C39 /* EmployerViewController.swift */; };
+		730FA0BD27D0BF3E00EB0C39 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 730FA0BC27D0BF3E00EB0C39 /* GoogleService-Info.plist */; };
+		7374A2BD27D105A600493821 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7374A2BC27D105A600493821 /* IQKeyboardManagerSwift */; };
 		7394F01C27CCBA7B001C58C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7394F01B27CCBA7B001C58C9 /* AppDelegate.swift */; };
 		7394F01E27CCBA7B001C58C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7394F01D27CCBA7B001C58C9 /* SceneDelegate.swift */; };
-		7394F02027CCBA7B001C58C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7394F01F27CCBA7B001C58C9 /* ViewController.swift */; };
-		7394F02327CCBA7B001C58C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7394F02127CCBA7B001C58C9 /* Main.storyboard */; };
+		7394F02027CCBA7B001C58C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7394F01F27CCBA7B001C58C9 /* LoginViewController.swift */; };
 		7394F02527CCBA7B001C58C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7394F02427CCBA7B001C58C9 /* Assets.xcassets */; };
 		7394F02827CCBA7B001C58C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7394F02627CCBA7B001C58C9 /* LaunchScreen.storyboard */; };
+		7394F03327CCBC9E001C58C9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7394F03227CCBC9E001C58C9 /* Constants.swift */; };
+		73A735A027CF5F1F00FA9253 /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73A7359F27CF5F1F00FA9253 /* ResetPassword.storyboard */; };
+		73A735A327CF62D700FA9253 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73A735A227CF62D700FA9253 /* Main.storyboard */; };
+		73FBD99A27CD73A90061B864 /* ResetPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBD99927CD73A90061B864 /* ResetPassViewController.swift */; };
+		73FE902C27D0D7F200CC54F1 /* FirstTimeLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE902B27D0D7F200CC54F1 /* FirstTimeLogin.swift */; };
+		73FE902E27D0D84E00CC54F1 /* FirstTimeLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73FE902D27D0D84E00CC54F1 /* FirstTimeLogin.storyboard */; };
+		ABC2E132C1AF08CDB9826C25 /* Pods_FlashHR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C276AF36410A344916FB7C1 /* Pods_FlashHR.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C276AF36410A344916FB7C1 /* Pods_FlashHR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlashHR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34D270E593635B02F0649083 /* Pods-FlashHR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashHR.release.xcconfig"; path = "Target Support Files/Pods-FlashHR/Pods-FlashHR.release.xcconfig"; sourceTree = "<group>"; };
+		730FA0B427D0B8ED00EB0C39 /* Employee.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Employee.storyboard; sourceTree = "<group>"; };
+		730FA0B627D0B90600EB0C39 /* Employer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Employer.storyboard; sourceTree = "<group>"; };
+		730FA0B827D0B91B00EB0C39 /* EmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
+		730FA0BA27D0B9B700EB0C39 /* EmployerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerViewController.swift; sourceTree = "<group>"; };
+		730FA0BC27D0BF3E00EB0C39 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7394F01827CCBA7B001C58C9 /* FlashHR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashHR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7394F01B27CCBA7B001C58C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7394F01D27CCBA7B001C58C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7394F01F27CCBA7B001C58C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7394F02227CCBA7B001C58C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7394F01F27CCBA7B001C58C9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7394F02427CCBA7B001C58C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7394F02727CCBA7B001C58C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7394F02927CCBA7B001C58C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7394F03227CCBC9E001C58C9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		73A7359F27CF5F1F00FA9253 /* ResetPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPassword.storyboard; sourceTree = "<group>"; };
+		73A735A227CF62D700FA9253 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		73FBD99927CD73A90061B864 /* ResetPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassViewController.swift; sourceTree = "<group>"; };
+		73FE902B27D0D7F200CC54F1 /* FirstTimeLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeLogin.swift; sourceTree = "<group>"; };
+		73FE902D27D0D84E00CC54F1 /* FirstTimeLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FirstTimeLogin.storyboard; sourceTree = "<group>"; };
+		BD537B4C9017A29F0631B0E3 /* Pods-FlashHR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashHR.debug.xcconfig"; path = "Target Support Files/Pods-FlashHR/Pods-FlashHR.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABC2E132C1AF08CDB9826C25 /* Pods_FlashHR.framework in Frameworks */,
+				7374A2BD27D105A600493821 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +69,8 @@
 			children = (
 				7394F01A27CCBA7B001C58C9 /* FlashHR */,
 				7394F01927CCBA7B001C58C9 /* Products */,
+				A4BD030DFA22BE0A3DC63323 /* Pods */,
+				EAD06FF461377279B6F77236 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +87,64 @@
 			children = (
 				7394F01B27CCBA7B001C58C9 /* AppDelegate.swift */,
 				7394F01D27CCBA7B001C58C9 /* SceneDelegate.swift */,
-				7394F01F27CCBA7B001C58C9 /* ViewController.swift */,
-				7394F02127CCBA7B001C58C9 /* Main.storyboard */,
+				7394F02F27CCBA9B001C58C9 /* Model */,
+				7394F03127CCBABB001C58C9 /* Controller */,
+				7394F03027CCBAAF001C58C9 /* View */,
 				7394F02427CCBA7B001C58C9 /* Assets.xcassets */,
 				7394F02627CCBA7B001C58C9 /* LaunchScreen.storyboard */,
+				7394F03227CCBC9E001C58C9 /* Constants.swift */,
+				730FA0BC27D0BF3E00EB0C39 /* GoogleService-Info.plist */,
 				7394F02927CCBA7B001C58C9 /* Info.plist */,
 			);
 			path = FlashHR;
+			sourceTree = "<group>";
+		};
+		7394F02F27CCBA9B001C58C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7394F03027CCBAAF001C58C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				73A735A227CF62D700FA9253 /* Main.storyboard */,
+				73FE902D27D0D84E00CC54F1 /* FirstTimeLogin.storyboard */,
+				73A7359F27CF5F1F00FA9253 /* ResetPassword.storyboard */,
+				730FA0B427D0B8ED00EB0C39 /* Employee.storyboard */,
+				730FA0B627D0B90600EB0C39 /* Employer.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7394F03127CCBABB001C58C9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7394F01F27CCBA7B001C58C9 /* LoginViewController.swift */,
+				73FE902B27D0D7F200CC54F1 /* FirstTimeLogin.swift */,
+				73FBD99927CD73A90061B864 /* ResetPassViewController.swift */,
+				730FA0B827D0B91B00EB0C39 /* EmployeeViewController.swift */,
+				730FA0BA27D0B9B700EB0C39 /* EmployerViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A4BD030DFA22BE0A3DC63323 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD537B4C9017A29F0631B0E3 /* Pods-FlashHR.debug.xcconfig */,
+				34D270E593635B02F0649083 /* Pods-FlashHR.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EAD06FF461377279B6F77236 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C276AF36410A344916FB7C1 /* Pods_FlashHR.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,15 +154,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7394F02C27CCBA7B001C58C9 /* Build configuration list for PBXNativeTarget "FlashHR" */;
 			buildPhases = (
+				D0CB881892F229D015ADD189 /* [CP] Check Pods Manifest.lock */,
 				7394F01427CCBA7B001C58C9 /* Sources */,
 				7394F01527CCBA7B001C58C9 /* Frameworks */,
 				7394F01627CCBA7B001C58C9 /* Resources */,
+				533641A8F5DBC0D93BC6E66B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = FlashHR;
+			packageProductDependencies = (
+				7374A2BC27D105A600493821 /* IQKeyboardManagerSwift */,
+			);
 			productName = FlashHR;
 			productReference = 7394F01827CCBA7B001C58C9 /* FlashHR.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +196,9 @@
 				Base,
 			);
 			mainGroup = 7394F00F27CCBA7B001C58C9;
+			packageReferences = (
+				7374A2BB27D105A600493821 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 7394F01927CCBA7B001C58C9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,36 +213,80 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73FE902E27D0D84E00CC54F1 /* FirstTimeLogin.storyboard in Resources */,
 				7394F02827CCBA7B001C58C9 /* LaunchScreen.storyboard in Resources */,
+				730FA0BD27D0BF3E00EB0C39 /* GoogleService-Info.plist in Resources */,
 				7394F02527CCBA7B001C58C9 /* Assets.xcassets in Resources */,
-				7394F02327CCBA7B001C58C9 /* Main.storyboard in Resources */,
+				730FA0B527D0B8ED00EB0C39 /* Employee.storyboard in Resources */,
+				73A735A327CF62D700FA9253 /* Main.storyboard in Resources */,
+				73A735A027CF5F1F00FA9253 /* ResetPassword.storyboard in Resources */,
+				730FA0B727D0B90600EB0C39 /* Employer.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		533641A8F5DBC0D93BC6E66B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlashHR/Pods-FlashHR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlashHR/Pods-FlashHR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlashHR/Pods-FlashHR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0CB881892F229D015ADD189 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlashHR-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7394F01427CCBA7B001C58C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7394F02027CCBA7B001C58C9 /* ViewController.swift in Sources */,
+				7394F02027CCBA7B001C58C9 /* LoginViewController.swift in Sources */,
 				7394F01C27CCBA7B001C58C9 /* AppDelegate.swift in Sources */,
+				730FA0BB27D0B9B700EB0C39 /* EmployerViewController.swift in Sources */,
+				73FBD99A27CD73A90061B864 /* ResetPassViewController.swift in Sources */,
 				7394F01E27CCBA7B001C58C9 /* SceneDelegate.swift in Sources */,
+				730FA0B927D0B91B00EB0C39 /* EmployeeViewController.swift in Sources */,
+				7394F03327CCBC9E001C58C9 /* Constants.swift in Sources */,
+				73FE902C27D0D7F200CC54F1 /* FirstTimeLogin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7394F02127CCBA7B001C58C9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7394F02227CCBA7B001C58C9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7394F02627CCBA7B001C58C9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,6 +416,7 @@
 		};
 		7394F02D27CCBA7B001C58C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD537B4C9017A29F0631B0E3 /* Pods-FlashHR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -295,8 +428,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,6 +447,7 @@
 		};
 		7394F02E27CCBA7B001C58C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34D270E593635B02F0649083 /* Pods-FlashHR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -323,8 +459,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -360,6 +498,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7374A2BB27D105A600493821 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 6.5.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7374A2BC27D105A600493821 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7374A2BB27D105A600493821 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7394F01027CCBA7B001C58C9 /* Project object */;
 }
