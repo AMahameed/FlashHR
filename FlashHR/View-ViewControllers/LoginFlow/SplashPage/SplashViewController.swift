@@ -17,9 +17,9 @@ class SplashViewController: UIViewController {
         super.viewDidAppear(animated)
         checkUserData()
     }
-    
+
     private func checkUserData() {
-        if UserDataService.shared.isFirstLogin{
+        if UserDataService.shared.userID == nil  {
             presentFromSTB(stbName: "Login", vcID: "Login")
         }else {
             if UserDataService.shared.isEmployeer{

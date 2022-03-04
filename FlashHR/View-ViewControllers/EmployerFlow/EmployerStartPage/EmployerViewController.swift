@@ -10,7 +10,7 @@ import UIKit
 class EmployerViewController: UIViewController {
     
     @IBOutlet weak var uidLabel: UILabel!
-    
+    private let loginService = LoginService()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,5 +23,14 @@ class EmployerViewController: UIViewController {
         uidLabel.text = UserDataService.shared.userID
     }
 
+    @IBAction func logOutPressed(_ sender: UIButton) {
+        
+        loginService.performLogout {
+            self.presentFromSTB(stbName: "Login", vcID: "Login")
+        } failure: { signOutError in
+            self.presentAlert(message: signOutError)
+        }
+
+    }
     
 }

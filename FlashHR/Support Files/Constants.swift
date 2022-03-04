@@ -30,6 +30,7 @@ struct Constants {
     
     struct UserDefaultKeys {
         static var currentUserIDKey: String = "currentUserIDKey"
+        
     }
     
     struct UserDataDefault {

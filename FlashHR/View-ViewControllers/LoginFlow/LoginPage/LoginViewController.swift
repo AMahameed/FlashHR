@@ -25,12 +25,6 @@ class LoginViewController: UIViewController {
     
     @IBAction func submitPressed(_ sender: UIButton) {
         
-        guard !(UserDataService.shared.isFirstLogin) else {
-            UserDataService.flag = false
-            presentFromSTB(stbName: "ResetPassword", vcID: "ResetPassword", presentingStyle: .fullScreen)
-            return
-        }
-        
         if let email = emailTextField.text, let pass = passwordTextField.text, !email.isEmpty, !pass.isEmpty {
             
             loginService.performLogin(for: email, password: pass) {

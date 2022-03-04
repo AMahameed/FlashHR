@@ -21,6 +21,18 @@ class LoginService {
         }
     }
     
+    
+    func performLogout(success: @escaping(()->(Void)), failure: @escaping ((String)->(Void))) {
+       
+        do {
+            try Auth.auth().signOut()
+            Constants.UserDataDefault.currentUserID = nil
+            success()
+        } catch let signOutError as NSError {
+            failure(signOutError.localizedDescription)
+        }
+    }
+    
     func performForgetPassword(_ email: String, success: @escaping(()->(Void)), failure: @escaping((String)->(Void)) ) {
         Auth.auth().sendPasswordReset(withEmail: email) { error in
             if let e = error{

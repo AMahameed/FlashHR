@@ -10,5 +10,6 @@ import Foundation
 
 struct UserModel {
     var userID: String = ""
+    var logID: Bool = true
 }
 
