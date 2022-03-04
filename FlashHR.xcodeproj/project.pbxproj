@@ -8,11 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		730FA0B527D0B8ED00EB0C39 /* Employee.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 730FA0B427D0B8ED00EB0C39 /* Employee.storyboard */; };
-		730FA0B727D0B90600EB0C39 /* Employer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 730FA0B627D0B90600EB0C39 /* Employer.storyboard */; };
 		730FA0B927D0B91B00EB0C39 /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730FA0B827D0B91B00EB0C39 /* EmployeeViewController.swift */; };
 		730FA0BB27D0B9B700EB0C39 /* EmployerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730FA0BA27D0B9B700EB0C39 /* EmployerViewController.swift */; };
 		730FA0BD27D0BF3E00EB0C39 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 730FA0BC27D0BF3E00EB0C39 /* GoogleService-Info.plist */; };
-		7374A2BD27D105A600493821 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7374A2BC27D105A600493821 /* IQKeyboardManagerSwift */; };
+		7333065127D25F4C0019ECF0 /* Employer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7333065027D25F4C0019ECF0 /* Employer.storyboard */; };
 		7374A2C327D124EE00493821 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7374A2C227D124EE00493821 /* UserModel.swift */; };
 		7374A2C627D1283C00493821 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7374A2C427D1283C00493821 /* SplashViewController.swift */; };
 		7374A2CA27D12C6000493821 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7374A2C927D12C6000493821 /* UserDataService.swift */; };
@@ -35,10 +34,10 @@
 		0C276AF36410A344916FB7C1 /* Pods_FlashHR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlashHR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D270E593635B02F0649083 /* Pods-FlashHR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashHR.release.xcconfig"; path = "Target Support Files/Pods-FlashHR/Pods-FlashHR.release.xcconfig"; sourceTree = "<group>"; };
 		730FA0B427D0B8ED00EB0C39 /* Employee.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Employee.storyboard; sourceTree = "<group>"; };
-		730FA0B627D0B90600EB0C39 /* Employer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Employer.storyboard; sourceTree = "<group>"; };
 		730FA0B827D0B91B00EB0C39 /* EmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
 		730FA0BA27D0B9B700EB0C39 /* EmployerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerViewController.swift; sourceTree = "<group>"; };
 		730FA0BC27D0BF3E00EB0C39 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7333065027D25F4C0019ECF0 /* Employer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Employer.storyboard; sourceTree = "<group>"; };
 		7374A2C227D124EE00493821 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		7374A2C427D1283C00493821 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		7374A2C927D12C6000493821 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
@@ -65,13 +64,46 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABC2E132C1AF08CDB9826C25 /* Pods_FlashHR.framework in Frameworks */,
-				7374A2BD27D105A600493821 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7333064C27D256750019ECF0 /* EmployerFlow */ = {
+			isa = PBXGroup;
+			children = (
+				7333064D27D257230019ECF0 /* EmployerStartPage */,
+			);
+			path = EmployerFlow;
+			sourceTree = "<group>";
+		};
+		7333064D27D257230019ECF0 /* EmployerStartPage */ = {
+			isa = PBXGroup;
+			children = (
+				730FA0BA27D0B9B700EB0C39 /* EmployerViewController.swift */,
+				7333065027D25F4C0019ECF0 /* Employer.storyboard */,
+			);
+			path = EmployerStartPage;
+			sourceTree = "<group>";
+		};
+		7333064E27D257660019ECF0 /* EmployeeFlow */ = {
+			isa = PBXGroup;
+			children = (
+				7333064F27D2577D0019ECF0 /* EmployeeProfile */,
+			);
+			path = EmployeeFlow;
+			sourceTree = "<group>";
+		};
+		7333064F27D2577D0019ECF0 /* EmployeeProfile */ = {
+			isa = PBXGroup;
+			children = (
+				730FA0B827D0B91B00EB0C39 /* EmployeeViewController.swift */,
+				730FA0B427D0B8ED00EB0C39 /* Employee.storyboard */,
+			);
+			path = EmployeeProfile;
+			sourceTree = "<group>";
+		};
 		7374A2BE27D1239E00493821 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				7374A2CF27D131AD00493821 /* LoginFlow */,
+				7333064C27D256750019ECF0 /* EmployerFlow */,
+				7333064E27D257660019ECF0 /* EmployeeFlow */,
 			);
 			path = "View-ViewControllers";
 			sourceTree = "<group>";
@@ -101,8 +135,8 @@
 		7374A2C127D1240C00493821 /* SplashPage */ = {
 			isa = PBXGroup;
 			children = (
-				73A735A227CF62D700FA9253 /* Main.storyboard */,
 				7374A2C427D1283C00493821 /* SplashViewController.swift */,
+				73A735A227CF62D700FA9253 /* Main.storyboard */,
 			);
 			path = SplashPage;
 			sourceTree = "<group>";
@@ -163,8 +197,6 @@
 				7374A2BE27D1239E00493821 /* Core */,
 				7374A2BF27D123A500493821 /* View-ViewControllers */,
 				73C8942D27D140CE00BA3A6A /* Support Files */,
-				7394F03127CCBABB001C58C9 /* Controller */,
-				7394F03027CCBAAF001C58C9 /* View */,
 				730FA0BC27D0BF3E00EB0C39 /* GoogleService-Info.plist */,
 				7394F02927CCBA7B001C58C9 /* Info.plist */,
 			);
@@ -179,29 +211,11 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		7394F03027CCBAAF001C58C9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				730FA0B427D0B8ED00EB0C39 /* Employee.storyboard */,
-				730FA0B627D0B90600EB0C39 /* Employer.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		7394F03127CCBABB001C58C9 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				730FA0B827D0B91B00EB0C39 /* EmployeeViewController.swift */,
-				730FA0BA27D0B9B700EB0C39 /* EmployerViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		73C8942D27D140CE00BA3A6A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7394F03227CCBC9E001C58C9 /* Constants.swift */,
 				73C8942E27D140F200BA3A6A /* Extensions.swift */,
+				7394F03227CCBC9E001C58C9 /* Constants.swift */,
 			);
 			path = "Support Files";
 			sourceTree = "<group>";
@@ -242,7 +256,6 @@
 			);
 			name = FlashHR;
 			packageProductDependencies = (
-				7374A2BC27D105A600493821 /* IQKeyboardManagerSwift */,
 			);
 			productName = FlashHR;
 			productReference = 7394F01827CCBA7B001C58C9 /* FlashHR.app */;
@@ -273,7 +286,6 @@
 			);
 			mainGroup = 7394F00F27CCBA7B001C58C9;
 			packageReferences = (
-				7374A2BB27D105A600493821 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 7394F01927CCBA7B001C58C9 /* Products */;
 			projectDirPath = "";
@@ -296,7 +308,7 @@
 				730FA0B527D0B8ED00EB0C39 /* Employee.storyboard in Resources */,
 				73A735A327CF62D700FA9253 /* Main.storyboard in Resources */,
 				73A735A027CF5F1F00FA9253 /* ResetPassword.storyboard in Resources */,
-				730FA0B727D0B90600EB0C39 /* Employer.storyboard in Resources */,
+				7333065127D25F4C0019ECF0 /* Employer.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,25 +590,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		7374A2BB27D105A600493821 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 6.5.3;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		7374A2BC27D105A600493821 /* IQKeyboardManagerSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7374A2BB27D105A600493821 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
-			productName = IQKeyboardManagerSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7394F01027CCBA7B001C58C9 /* Project object */;
 }

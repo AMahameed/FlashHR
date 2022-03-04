@@ -18,11 +18,16 @@ class ResetPassViewController: UIViewController {
     }
     
     @IBAction func submitPressed(_ sender: UIButton) {
-        guard let email = emailTextField.text, !email.isEmpty else {return}
+        
+        guard let email = emailTextField.text, !email.isEmpty else {
+            presentAlert(message: "Email field is empty")
+            return
+        }
+      
         loginService.performForgetPassword(email) {
-            self.dismiss(animated: true, completion: nil)
+            self.presentFromSTB(stbName: "Login", vcID: "Login")
         } failure: { errorString in
-            print(errorString)
+            self.presentAlert(message: errorString.description)
         }
     }
 }

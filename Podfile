@@ -7,5 +7,6 @@ target 'FlashHR' do
   
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'IQKeyboardManagerSwift', '~> 6.5.9'
 
 end

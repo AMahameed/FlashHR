@@ -10,6 +10,5 @@ import Foundation
 
 struct UserModel {
     var userID: String = ""
-    var isFirstLogin: Bool = true
 }
 

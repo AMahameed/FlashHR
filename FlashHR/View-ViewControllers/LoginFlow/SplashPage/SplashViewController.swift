@@ -19,13 +19,14 @@ class SplashViewController: UIViewController {
     }
     
     private func checkUserData() {
-        if Constants.UserDataDefault.currentUserID == nil {
+        if UserDataService.shared.isFirstLogin{
             presentFromSTB(stbName: "Login", vcID: "Login")
         }else {
             if UserDataService.shared.isEmployeer{
-              
+                presentFromSTB(stbName: "Employer", vcID: "Employer")
+            }else{
+                presentFromSTB(stbName: "Employee", vcID: "Employee")
             }
         }
-//        presentFromSTB(stbName: "Login", vcID: "Login")
     }
 }

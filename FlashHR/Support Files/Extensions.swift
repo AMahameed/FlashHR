@@ -15,3 +15,14 @@ extension UIViewController {
     }
 }
 
+
+extension UIViewController{
+    func presentAlert(title: String = "Error", message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Done", style: .default, handler: nil))
+        present(alert, animated: true)}
+    
+}
+
+
+
