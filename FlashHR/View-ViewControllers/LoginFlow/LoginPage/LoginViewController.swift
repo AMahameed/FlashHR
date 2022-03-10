@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
             
             loginService.performLogin(for: email, password: pass) {
                 if UserDataService.shared.isEmployeer {
-                    self.presentFromSTB(stbName: "Employer", vcID: "Employer")
+                    self.presentFromSTB(stbName: "TabBar", vcID: "TabBar")
                 }else {
                     self.presentFromSTB(stbName: "Employee", vcID: "Employee")
                 

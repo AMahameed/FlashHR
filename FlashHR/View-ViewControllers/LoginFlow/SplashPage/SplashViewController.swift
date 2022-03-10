@@ -23,7 +23,7 @@ class SplashViewController: UIViewController {
             presentFromSTB(stbName: "Login", vcID: "Login")
         }else {
             if UserDataService.shared.isEmployeer{
-                presentFromSTB(stbName: "Employer", vcID: "Employer")
+                presentFromSTB(stbName: "TabBar", vcID: "TabBar")
             }else{
                 presentFromSTB(stbName: "Employee", vcID: "Employee")
             }

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="njr-oV-Rda">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Employees-->
+        <scene sceneID="OAi-pC-uwo">
+            <objects>
+                <viewController storyboardIdentifier="Employees" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZHj-A6-gof" customClass="EmployeesVC" customModule="FlashHR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GeC-P7-C66">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="A8C-L8-XXN"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Employees" id="vFU-OA-9fJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yne-lm-vil" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2804.347826086957" y="110.49107142857143"/>
+        </scene>
+        <!--Employees-->
+        <scene sceneID="7Oh-IZ-nfd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="njr-oV-Rda" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Employees" image="person.3.sequence" catalog="system" selectedImage="person.3.sequence.fill" id="ofc-y0-0c1"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1u3-0D-jqP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZHj-A6-gof" kind="relationship" relationship="rootViewController" id="b4c-R1-FEm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H8J-rA-1Ce" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1894.2028985507247" y="110.49107142857143"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.3.sequence" catalog="system" width="128" height="59"/>
+        <image name="person.3.sequence.fill" catalog="system" width="128" height="58"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

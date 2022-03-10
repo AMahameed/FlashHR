@@ -73,7 +73,7 @@
                                                             <constraint firstAttribute="width" constant="398" id="fxP-Dc-Hni"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oua-Cm-aS9">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Abdallah27!" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oua-Cm-aS9">
                                                         <rect key="frame" x="67.666666666666686" y="142" width="293" height="49"/>
                                                         <color key="backgroundColor" name="cold"/>
                                                         <constraints>
@@ -83,7 +83,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rCz-j0-qef">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="a.mahameed2000@gmail.com" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rCz-j0-qef">
                                                         <rect key="frame" x="67.666666666666686" y="62" width="293" height="48"/>
                                                         <color key="backgroundColor" name="cold"/>
                                                         <constraints>
@@ -204,10 +204,10 @@
             </objects>
             <point key="canvasLocation" x="498.55072463768118" y="444.64285714285711"/>
         </scene>
-        <!--Employer-->
+        <!--Employees-->
         <scene sceneID="9BK-9o-Tvl">
             <objects>
-                <viewControllerPlaceholder storyboardName="Employer" id="aHi-b9-KWA" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Employees" id="aHi-b9-KWA" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="wk1-Ce-fXh"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aUU-JE-no3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

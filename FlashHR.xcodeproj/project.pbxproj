@@ -23,10 +23,19 @@
 		7394F03327CCBC9E001C58C9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7394F03227CCBC9E001C58C9 /* Constants.swift */; };
 		73A735A027CF5F1F00FA9253 /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73A7359F27CF5F1F00FA9253 /* ResetPassword.storyboard */; };
 		73A735A327CF62D700FA9253 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73A735A227CF62D700FA9253 /* Main.storyboard */; };
-		73BCD7BF27D2617700560C3F /* EmployerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BCD7BE27D2617700560C3F /* EmployerViewController.swift */; };
+		73ABEE4927D65A24001F4A2F /* Employees.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73ABEE4827D65A24001F4A2F /* Employees.storyboard */; };
+		73ABEE4B27D65FB9001F4A2F /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73ABEE4A27D65FB9001F4A2F /* TabBar.storyboard */; };
+		73BCD7BF27D2617700560C3F /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BCD7BE27D2617700560C3F /* ProfileVC.swift */; };
 		73C8942F27D140F200BA3A6A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C8942E27D140F200BA3A6A /* Extensions.swift */; };
+		73DDCA6D27D653B60025BC14 /* CommmunicationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DDCA6C27D653B60025BC14 /* CommmunicationVC.swift */; };
+		73DDCA6F27D653C70025BC14 /* ReportsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DDCA6E27D653C70025BC14 /* ReportsVC.swift */; };
+		73DDCA7127D653DF0025BC14 /* RequestsVS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DDCA7027D653DF0025BC14 /* RequestsVS.swift */; };
+		73DDCA7427D654150025BC14 /* EmployeesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DDCA7327D654150025BC14 /* EmployeesVC.swift */; };
+		73DDCA7627D654300025BC14 /* Commmunication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73DDCA7527D654300025BC14 /* Commmunication.storyboard */; };
+		73DDCA7A27D654470025BC14 /* Reports.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73DDCA7927D654470025BC14 /* Reports.storyboard */; };
+		73DDCA7C27D654560025BC14 /* Requests.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73DDCA7B27D654560025BC14 /* Requests.storyboard */; };
+		73DDCA8227D655150025BC14 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73DDCA8127D655150025BC14 /* Profile.storyboard */; };
 		73FBD99A27CD73A90061B864 /* ResetPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBD99927CD73A90061B864 /* ResetPassViewController.swift */; };
-		73FDBFC627D2609000A284D1 /* Employer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73FDBFC527D2609000A284D1 /* Employer.storyboard */; };
 		ABC2E132C1AF08CDB9826C25 /* Pods_FlashHR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C276AF36410A344916FB7C1 /* Pods_FlashHR.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,10 +60,19 @@
 		7394F03227CCBC9E001C58C9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		73A7359F27CF5F1F00FA9253 /* ResetPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPassword.storyboard; sourceTree = "<group>"; };
 		73A735A227CF62D700FA9253 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		73BCD7BE27D2617700560C3F /* EmployerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerViewController.swift; sourceTree = "<group>"; };
+		73ABEE4827D65A24001F4A2F /* Employees.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Employees.storyboard; sourceTree = "<group>"; };
+		73ABEE4A27D65FB9001F4A2F /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		73BCD7BE27D2617700560C3F /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		73C8942E27D140F200BA3A6A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		73DDCA6C27D653B60025BC14 /* CommmunicationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommmunicationVC.swift; sourceTree = "<group>"; };
+		73DDCA6E27D653C70025BC14 /* ReportsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsVC.swift; sourceTree = "<group>"; };
+		73DDCA7027D653DF0025BC14 /* RequestsVS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsVS.swift; sourceTree = "<group>"; };
+		73DDCA7327D654150025BC14 /* EmployeesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesVC.swift; sourceTree = "<group>"; };
+		73DDCA7527D654300025BC14 /* Commmunication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Commmunication.storyboard; sourceTree = "<group>"; };
+		73DDCA7927D654470025BC14 /* Reports.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reports.storyboard; sourceTree = "<group>"; };
+		73DDCA7B27D654560025BC14 /* Requests.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Requests.storyboard; sourceTree = "<group>"; };
+		73DDCA8127D655150025BC14 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		73FBD99927CD73A90061B864 /* ResetPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassViewController.swift; sourceTree = "<group>"; };
-		73FDBFC527D2609000A284D1 /* Employer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Employer.storyboard; sourceTree = "<group>"; };
 		BD537B4C9017A29F0631B0E3 /* Pods-FlashHR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashHR.debug.xcconfig"; path = "Target Support Files/Pods-FlashHR/Pods-FlashHR.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,18 +91,23 @@
 		7333064C27D256750019ECF0 /* EmployerFlow */ = {
 			isa = PBXGroup;
 			children = (
-				7333064D27D257230019ECF0 /* EmployerStartPage */,
+				73ABEE4A27D65FB9001F4A2F /* TabBar.storyboard */,
+				73DDCA7F27D6548F0025BC14 /* EmployeePage */,
+				73DDCA7D27D6545D0025BC14 /* ReportsPage */,
+				73DDCA7E27D654790025BC14 /* CommunicationPage */,
+				73DDCA8027D654A30025BC14 /* RequestsPasge */,
+				7333064D27D257230019ECF0 /* ProfilePage */,
 			);
 			path = EmployerFlow;
 			sourceTree = "<group>";
 		};
-		7333064D27D257230019ECF0 /* EmployerStartPage */ = {
+		7333064D27D257230019ECF0 /* ProfilePage */ = {
 			isa = PBXGroup;
 			children = (
-				73BCD7BE27D2617700560C3F /* EmployerViewController.swift */,
-				73FDBFC527D2609000A284D1 /* Employer.storyboard */,
+				73BCD7BE27D2617700560C3F /* ProfileVC.swift */,
+				73DDCA8127D655150025BC14 /* Profile.storyboard */,
 			);
-			path = EmployerStartPage;
+			path = ProfilePage;
 			sourceTree = "<group>";
 		};
 		7333064E27D257660019ECF0 /* EmployeeFlow */ = {
@@ -220,6 +243,42 @@
 			path = "Support Files";
 			sourceTree = "<group>";
 		};
+		73DDCA7D27D6545D0025BC14 /* ReportsPage */ = {
+			isa = PBXGroup;
+			children = (
+				73DDCA6E27D653C70025BC14 /* ReportsVC.swift */,
+				73DDCA7927D654470025BC14 /* Reports.storyboard */,
+			);
+			path = ReportsPage;
+			sourceTree = "<group>";
+		};
+		73DDCA7E27D654790025BC14 /* CommunicationPage */ = {
+			isa = PBXGroup;
+			children = (
+				73DDCA6C27D653B60025BC14 /* CommmunicationVC.swift */,
+				73DDCA7527D654300025BC14 /* Commmunication.storyboard */,
+			);
+			path = CommunicationPage;
+			sourceTree = "<group>";
+		};
+		73DDCA7F27D6548F0025BC14 /* EmployeePage */ = {
+			isa = PBXGroup;
+			children = (
+				73DDCA7327D654150025BC14 /* EmployeesVC.swift */,
+				73ABEE4827D65A24001F4A2F /* Employees.storyboard */,
+			);
+			path = EmployeePage;
+			sourceTree = "<group>";
+		};
+		73DDCA8027D654A30025BC14 /* RequestsPasge */ = {
+			isa = PBXGroup;
+			children = (
+				73DDCA7027D653DF0025BC14 /* RequestsVS.swift */,
+				73DDCA7B27D654560025BC14 /* Requests.storyboard */,
+			);
+			path = RequestsPasge;
+			sourceTree = "<group>";
+		};
 		A4BD030DFA22BE0A3DC63323 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,9 +365,14 @@
 				730FA0BD27D0BF3E00EB0C39 /* GoogleService-Info.plist in Resources */,
 				7394F02527CCBA7B001C58C9 /* Assets.xcassets in Resources */,
 				730FA0B527D0B8ED00EB0C39 /* Employee.storyboard in Resources */,
+				73DDCA8227D655150025BC14 /* Profile.storyboard in Resources */,
+				73ABEE4927D65A24001F4A2F /* Employees.storyboard in Resources */,
 				73A735A327CF62D700FA9253 /* Main.storyboard in Resources */,
+				73ABEE4B27D65FB9001F4A2F /* TabBar.storyboard in Resources */,
 				73A735A027CF5F1F00FA9253 /* ResetPassword.storyboard in Resources */,
-				73FDBFC627D2609000A284D1 /* Employer.storyboard in Resources */,
+				73DDCA7627D654300025BC14 /* Commmunication.storyboard in Resources */,
+				73DDCA7C27D654560025BC14 /* Requests.storyboard in Resources */,
+				73DDCA7A27D654470025BC14 /* Reports.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,10 +429,14 @@
 				7394F01C27CCBA7B001C58C9 /* AppDelegate.swift in Sources */,
 				73FBD99A27CD73A90061B864 /* ResetPassViewController.swift in Sources */,
 				7394F01E27CCBA7B001C58C9 /* SceneDelegate.swift in Sources */,
+				73DDCA7427D654150025BC14 /* EmployeesVC.swift in Sources */,
+				73DDCA7127D653DF0025BC14 /* RequestsVS.swift in Sources */,
+				73DDCA6D27D653B60025BC14 /* CommmunicationVC.swift in Sources */,
 				7374A2CA27D12C6000493821 /* UserDataService.swift in Sources */,
 				730FA0B927D0B91B00EB0C39 /* EmployeeViewController.swift in Sources */,
 				73C8942F27D140F200BA3A6A /* Extensions.swift in Sources */,
-				73BCD7BF27D2617700560C3F /* EmployerViewController.swift in Sources */,
+				73DDCA6F27D653C70025BC14 /* ReportsVC.swift in Sources */,
+				73BCD7BF27D2617700560C3F /* ProfileVC.swift in Sources */,
 				7374A2CD27D12C7E00493821 /* LoginService.swift in Sources */,
 				7394F03327CCBC9E001C58C9 /* Constants.swift in Sources */,
 				7374A2C327D124EE00493821 /* UserModel.swift in Sources */,
