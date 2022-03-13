@@ -17,10 +17,6 @@ class UserDataService {
         return self.userID == Constants.Strings.employerID
     }
     
-//    var logID: Bool? {
-//        return Constants.UserDataDefault.currentUserLogID
-//    }
-    
     var userID: String? {
         return Constants.UserDataDefault.currentUserID
     }

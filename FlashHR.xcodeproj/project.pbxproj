@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73067AAF27DBF28600FC7A7F /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73067AAD27DBF28600FC7A7F /* MessageCell.swift */; };
+		73067AB027DBF28600FC7A7F /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73067AAE27DBF28600FC7A7F /* MessageCell.xib */; };
 		730FA0B527D0B8ED00EB0C39 /* Employee.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 730FA0B427D0B8ED00EB0C39 /* Employee.storyboard */; };
 		730FA0B927D0B91B00EB0C39 /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730FA0B827D0B91B00EB0C39 /* EmployeeViewController.swift */; };
 		730FA0BD27D0BF3E00EB0C39 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 730FA0BC27D0BF3E00EB0C39 /* GoogleService-Info.plist */; };
@@ -15,6 +17,9 @@
 		7374A2CA27D12C6000493821 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7374A2C927D12C6000493821 /* UserDataService.swift */; };
 		7374A2CD27D12C7E00493821 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7374A2CC27D12C7E00493821 /* LoginService.swift */; };
 		7374A2D127D1321E00493821 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7374A2D027D1321E00493821 /* Login.storyboard */; };
+		7381E2C027DB751F00134937 /* RequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7381E2BE27DB751F00134937 /* RequestCell.swift */; };
+		7381E2C127DB751F00134937 /* RequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7381E2BF27DB751F00134937 /* RequestCell.xib */; };
+		7381E2C327DBE42200134937 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7381E2C227DBE42200134937 /* MessageModel.swift */; };
 		7394F01C27CCBA7B001C58C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7394F01B27CCBA7B001C58C9 /* AppDelegate.swift */; };
 		7394F01E27CCBA7B001C58C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7394F01D27CCBA7B001C58C9 /* SceneDelegate.swift */; };
 		7394F02027CCBA7B001C58C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7394F01F27CCBA7B001C58C9 /* LoginViewController.swift */; };
@@ -29,7 +34,7 @@
 		73C8942F27D140F200BA3A6A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C8942E27D140F200BA3A6A /* Extensions.swift */; };
 		73DDCA6D27D653B60025BC14 /* CommmunicationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DDCA6C27D653B60025BC14 /* CommmunicationVC.swift */; };
 		73DDCA6F27D653C70025BC14 /* ReportsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DDCA6E27D653C70025BC14 /* ReportsVC.swift */; };
-		73DDCA7127D653DF0025BC14 /* RequestsVS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DDCA7027D653DF0025BC14 /* RequestsVS.swift */; };
+		73DDCA7127D653DF0025BC14 /* RequestsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DDCA7027D653DF0025BC14 /* RequestsVC.swift */; };
 		73DDCA7427D654150025BC14 /* EmployeesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DDCA7327D654150025BC14 /* EmployeesVC.swift */; };
 		73DDCA7627D654300025BC14 /* Commmunication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73DDCA7527D654300025BC14 /* Commmunication.storyboard */; };
 		73DDCA7A27D654470025BC14 /* Reports.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73DDCA7927D654470025BC14 /* Reports.storyboard */; };
@@ -42,6 +47,8 @@
 /* Begin PBXFileReference section */
 		0C276AF36410A344916FB7C1 /* Pods_FlashHR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlashHR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D270E593635B02F0649083 /* Pods-FlashHR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashHR.release.xcconfig"; path = "Target Support Files/Pods-FlashHR/Pods-FlashHR.release.xcconfig"; sourceTree = "<group>"; };
+		73067AAD27DBF28600FC7A7F /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		73067AAE27DBF28600FC7A7F /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		730FA0B427D0B8ED00EB0C39 /* Employee.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Employee.storyboard; sourceTree = "<group>"; };
 		730FA0B827D0B91B00EB0C39 /* EmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
 		730FA0BC27D0BF3E00EB0C39 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -50,6 +57,9 @@
 		7374A2C927D12C6000493821 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		7374A2CC27D12C7E00493821 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		7374A2D027D1321E00493821 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		7381E2BE27DB751F00134937 /* RequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCell.swift; sourceTree = "<group>"; };
+		7381E2BF27DB751F00134937 /* RequestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestCell.xib; sourceTree = "<group>"; };
+		7381E2C227DBE42200134937 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		7394F01827CCBA7B001C58C9 /* FlashHR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashHR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7394F01B27CCBA7B001C58C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7394F01D27CCBA7B001C58C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,7 +76,7 @@
 		73C8942E27D140F200BA3A6A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		73DDCA6C27D653B60025BC14 /* CommmunicationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommmunicationVC.swift; sourceTree = "<group>"; };
 		73DDCA6E27D653C70025BC14 /* ReportsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsVC.swift; sourceTree = "<group>"; };
-		73DDCA7027D653DF0025BC14 /* RequestsVS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsVS.swift; sourceTree = "<group>"; };
+		73DDCA7027D653DF0025BC14 /* RequestsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsVC.swift; sourceTree = "<group>"; };
 		73DDCA7327D654150025BC14 /* EmployeesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesVC.swift; sourceTree = "<group>"; };
 		73DDCA7527D654300025BC14 /* Commmunication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Commmunication.storyboard; sourceTree = "<group>"; };
 		73DDCA7927D654470025BC14 /* Reports.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reports.storyboard; sourceTree = "<group>"; };
@@ -88,6 +98,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73067AA727DBF1B100FC7A7F /* RequestCell */ = {
+			isa = PBXGroup;
+			children = (
+				7381E2BE27DB751F00134937 /* RequestCell.swift */,
+				7381E2BF27DB751F00134937 /* RequestCell.xib */,
+			);
+			path = RequestCell;
+			sourceTree = "<group>";
+		};
+		73067AA827DBF1C400FC7A7F /* MessageCell */ = {
+			isa = PBXGroup;
+			children = (
+				73067AAD27DBF28600FC7A7F /* MessageCell.swift */,
+				73067AAE27DBF28600FC7A7F /* MessageCell.xib */,
+			);
+			path = MessageCell;
+			sourceTree = "<group>";
+		};
 		7333064C27D256750019ECF0 /* EmployerFlow */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				7374A2C227D124EE00493821 /* UserModel.swift */,
+				7381E2C227DBE42200134937 /* MessageModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -257,6 +286,7 @@
 			children = (
 				73DDCA6C27D653B60025BC14 /* CommmunicationVC.swift */,
 				73DDCA7527D654300025BC14 /* Commmunication.storyboard */,
+				73067AA827DBF1C400FC7A7F /* MessageCell */,
 			);
 			path = CommunicationPage;
 			sourceTree = "<group>";
@@ -273,8 +303,9 @@
 		73DDCA8027D654A30025BC14 /* RequestsPasge */ = {
 			isa = PBXGroup;
 			children = (
-				73DDCA7027D653DF0025BC14 /* RequestsVS.swift */,
+				73DDCA7027D653DF0025BC14 /* RequestsVC.swift */,
 				73DDCA7B27D654560025BC14 /* Requests.storyboard */,
+				73067AA727DBF1B100FC7A7F /* RequestCell */,
 			);
 			path = RequestsPasge;
 			sourceTree = "<group>";
@@ -361,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7374A2D127D1321E00493821 /* Login.storyboard in Resources */,
+				7381E2C127DB751F00134937 /* RequestCell.xib in Resources */,
 				7394F02827CCBA7B001C58C9 /* LaunchScreen.storyboard in Resources */,
 				730FA0BD27D0BF3E00EB0C39 /* GoogleService-Info.plist in Resources */,
 				7394F02527CCBA7B001C58C9 /* Assets.xcassets in Resources */,
@@ -369,6 +401,7 @@
 				73ABEE4927D65A24001F4A2F /* Employees.storyboard in Resources */,
 				73A735A327CF62D700FA9253 /* Main.storyboard in Resources */,
 				73ABEE4B27D65FB9001F4A2F /* TabBar.storyboard in Resources */,
+				73067AB027DBF28600FC7A7F /* MessageCell.xib in Resources */,
 				73A735A027CF5F1F00FA9253 /* ResetPassword.storyboard in Resources */,
 				73DDCA7627D654300025BC14 /* Commmunication.storyboard in Resources */,
 				73DDCA7C27D654560025BC14 /* Requests.storyboard in Resources */,
@@ -430,10 +463,13 @@
 				73FBD99A27CD73A90061B864 /* ResetPassViewController.swift in Sources */,
 				7394F01E27CCBA7B001C58C9 /* SceneDelegate.swift in Sources */,
 				73DDCA7427D654150025BC14 /* EmployeesVC.swift in Sources */,
-				73DDCA7127D653DF0025BC14 /* RequestsVS.swift in Sources */,
+				73DDCA7127D653DF0025BC14 /* RequestsVC.swift in Sources */,
 				73DDCA6D27D653B60025BC14 /* CommmunicationVC.swift in Sources */,
+				7381E2C327DBE42200134937 /* MessageModel.swift in Sources */,
 				7374A2CA27D12C6000493821 /* UserDataService.swift in Sources */,
 				730FA0B927D0B91B00EB0C39 /* EmployeeViewController.swift in Sources */,
+				73067AAF27DBF28600FC7A7F /* MessageCell.swift in Sources */,
+				7381E2C027DB751F00134937 /* RequestCell.swift in Sources */,
 				73C8942F27D140F200BA3A6A /* Extensions.swift in Sources */,
 				73DDCA6F27D653C70025BC14 /* ReportsVC.swift in Sources */,
 				73BCD7BF27D2617700560C3F /* ProfileVC.swift in Sources */,

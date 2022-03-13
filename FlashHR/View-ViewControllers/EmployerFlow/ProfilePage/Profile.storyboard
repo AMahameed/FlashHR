@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M5p-vk-Qif">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -15,17 +15,17 @@
             <objects>
                 <viewController storyboardIdentifier="Profile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ProfileVC" customModule="FlashHR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="D3m-H5-CjI">
-                                <rect key="frame" x="0.0" y="44" width="375" height="593"/>
+                                <rect key="frame" x="0.0" y="88" width="428" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kmq-O3-jLo" userLabel="nameAndImageView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="167.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="218.66666666666666"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="kKN-BT-A8W">
-                                                <rect key="frame" x="112" y="8" width="151" height="151.5"/>
+                                                <rect key="frame" x="112" y="8" width="204" height="202.66666666666666"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                             </imageView>
                                         </subviews>
@@ -38,10 +38,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q9Y-uj-h0S" userLabel="infoView">
-                                        <rect key="frame" x="0.0" y="167.5" width="375" height="425.5"/>
+                                        <rect key="frame" x="0.0" y="218.66666666666669" width="428" height="555.33333333333326"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QL8-As-3bB" userLabel="innerInfoView">
-                                                <rect key="frame" x="8" y="8" width="359" height="417.5"/>
+                                                <rect key="frame" x="8" y="8" width="412" height="547.33333333333337"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Co. Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cl1-AX-OLf">
                                                         <rect key="frame" x="30" y="87" width="89" height="24"/>
@@ -175,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1848.8" y="60.719640179910051"/>
+            <point key="canvasLocation" x="1847" y="64"/>
         </scene>
         <!--Profile-->
         <scene sceneID="WLW-nd-QWJ">
@@ -186,7 +186,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3ov-Rz-9LN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>

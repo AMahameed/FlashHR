@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reusableRequestCell" rowHeight="133" id="zuU-RR-LMu" customClass="RequestCell" customModule="FlashHR" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="336" height="133"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zuU-RR-LMu" id="vsG-DK-Kjg">
+                <rect key="frame" x="0.0" y="0.0" width="336" height="133"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bxL-Wa-ynA">
+                        <rect key="frame" x="10" y="10" width="316" height="113"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="yK9-ne-oPN">
+                                <rect key="frame" x="37" y="21.5" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="4ra-kX-OxA"/>
+                                    <constraint firstAttribute="width" constant="70" id="5M3-PP-sZ4"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61p-kr-yN3" userLabel="labelView">
+                                <rect key="frame" x="117" y="15" width="199" height="83"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employee Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="0ed-fK-IG4">
+                                        <rect key="frame" x="13" y="13" width="149" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="hMI-do-KXP">
+                                        <rect key="frame" x="13" y="41" width="149" height="28.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8M-HU-0d0">
+                                                <rect key="frame" x="0.0" y="0.0" width="68.5" height="28.5"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Accept">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="12"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="acceptPressed:" destination="zuU-RR-LMu" eventType="touchUpInside" id="Wmr-qp-bg9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLT-H3-Eaa">
+                                                <rect key="frame" x="80.5" y="0.0" width="68.5" height="28.5"/>
+                                                <color key="backgroundColor" red="1" green="0.23137254900000001" blue="0.045590736290000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Reject">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="12"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="rejectPressed:" destination="zuU-RR-LMu" eventType="touchUpInside" id="5TN-xI-pwt"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.85098039215686272" green="0.94117647058823528" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="0ed-fK-IG4" firstAttribute="leading" secondItem="61p-kr-yN3" secondAttribute="leading" constant="13" id="2g4-co-pwC"/>
+                                    <constraint firstItem="0ed-fK-IG4" firstAttribute="top" secondItem="61p-kr-yN3" secondAttribute="top" constant="13" id="7et-s2-Rch"/>
+                                    <constraint firstItem="hMI-do-KXP" firstAttribute="leading" secondItem="61p-kr-yN3" secondAttribute="leading" constant="13" id="EIo-PU-2AA"/>
+                                    <constraint firstAttribute="trailing" secondItem="0ed-fK-IG4" secondAttribute="trailing" constant="37" id="L47-17-WGF"/>
+                                    <constraint firstAttribute="trailing" secondItem="hMI-do-KXP" secondAttribute="trailing" constant="37" id="LAp-y0-og2"/>
+                                    <constraint firstItem="hMI-do-KXP" firstAttribute="top" secondItem="0ed-fK-IG4" secondAttribute="bottom" constant="10" id="URQ-nQ-dGA"/>
+                                    <constraint firstItem="hMI-do-KXP" firstAttribute="top" secondItem="0ed-fK-IG4" secondAttribute="bottom" constant="10" id="ZCA-N6-PeF"/>
+                                    <constraint firstAttribute="bottom" secondItem="hMI-do-KXP" secondAttribute="bottom" constant="13.5" id="cAs-rp-Rv4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.85098039215686272" green="0.94117647058823528" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="61p-kr-yN3" firstAttribute="leading" secondItem="yK9-ne-oPN" secondAttribute="trailing" constant="10" id="C8Y-yk-iih"/>
+                            <constraint firstItem="yK9-ne-oPN" firstAttribute="leading" secondItem="bxL-Wa-ynA" secondAttribute="leading" constant="37" id="HKH-qF-1j7"/>
+                            <constraint firstItem="61p-kr-yN3" firstAttribute="leading" secondItem="yK9-ne-oPN" secondAttribute="trailing" constant="10" id="XW8-Mu-mVF"/>
+                            <constraint firstItem="61p-kr-yN3" firstAttribute="top" secondItem="bxL-Wa-ynA" secondAttribute="top" constant="15" id="hTk-jG-vYL"/>
+                            <constraint firstAttribute="trailing" secondItem="61p-kr-yN3" secondAttribute="trailing" id="jSy-dl-39K"/>
+                            <constraint firstAttribute="bottom" secondItem="61p-kr-yN3" secondAttribute="bottom" constant="15" id="tan-ac-wFv"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="bxL-Wa-ynA" secondAttribute="trailing" constant="10" id="7W2-4v-wDl"/>
+                    <constraint firstItem="bxL-Wa-ynA" firstAttribute="top" secondItem="vsG-DK-Kjg" secondAttribute="top" constant="10" id="Ffp-C5-qu9"/>
+                    <constraint firstItem="bxL-Wa-ynA" firstAttribute="leading" secondItem="vsG-DK-Kjg" secondAttribute="leading" constant="10" id="rn6-Ao-sFn"/>
+                    <constraint firstAttribute="bottom" secondItem="bxL-Wa-ynA" secondAttribute="bottom" constant="10" id="vjE-vf-e1K"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="t6K-DK-rrH"/>
+            <connections>
+                <outlet property="acceptButton" destination="H8M-HU-0d0" id="XkQ-ka-MVq"/>
+                <outlet property="rejectButton" destination="gLT-H3-Eaa" id="RMX-y3-CqL"/>
+                <outlet property="stackView" destination="bxL-Wa-ynA" id="bx5-Is-zyM"/>
+                <outlet property="userImage" destination="yK9-ne-oPN" id="3DH-hP-kma"/>
+            </connections>
+            <point key="canvasLocation" x="128.98550724637681" y="54.575892857142854"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="userPhoto" width="1008" height="1344"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

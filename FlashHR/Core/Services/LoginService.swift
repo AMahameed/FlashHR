@@ -21,7 +21,6 @@ class LoginService {
         }
     }
     
-    
     func performLogout(success: @escaping(()->(Void)), failure: @escaping ((String)->(Void))) {
        
         do {
