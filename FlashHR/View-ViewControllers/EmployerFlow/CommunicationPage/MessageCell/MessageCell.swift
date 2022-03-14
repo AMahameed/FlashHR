@@ -15,7 +15,6 @@ class MessageCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        labelsView.layer.cornerRadius = labelsView.frame.size.height / 5
         // Initialization code
     }
 
