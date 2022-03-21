@@ -12,6 +12,10 @@
 		730FA0B527D0B8ED00EB0C39 /* Employee.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 730FA0B427D0B8ED00EB0C39 /* Employee.storyboard */; };
 		730FA0B927D0B91B00EB0C39 /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730FA0B827D0B91B00EB0C39 /* EmployeeViewController.swift */; };
 		730FA0BD27D0BF3E00EB0C39 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 730FA0BC27D0BF3E00EB0C39 /* GoogleService-Info.plist */; };
+		73556EE327E79EB70051A2E5 /* ProfileAsTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73556EE227E79EB70051A2E5 /* ProfileAsTableView.storyboard */; };
+		73556EE527E79FC70051A2E5 /* ProfileAsTableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73556EE427E79FC70051A2E5 /* ProfileAsTableViewVC.swift */; };
+		73556EE927E7A38C0051A2E5 /* infoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73556EE727E7A38C0051A2E5 /* infoCell.swift */; };
+		73556EEA27E7A38C0051A2E5 /* infoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73556EE827E7A38C0051A2E5 /* infoCell.xib */; };
 		7374A2C327D124EE00493821 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7374A2C227D124EE00493821 /* UserModel.swift */; };
 		7374A2C627D1283C00493821 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7374A2C427D1283C00493821 /* SplashViewController.swift */; };
 		7374A2CA27D12C6000493821 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7374A2C927D12C6000493821 /* UserDataService.swift */; };
@@ -52,6 +56,10 @@
 		730FA0B427D0B8ED00EB0C39 /* Employee.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Employee.storyboard; sourceTree = "<group>"; };
 		730FA0B827D0B91B00EB0C39 /* EmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
 		730FA0BC27D0BF3E00EB0C39 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		73556EE227E79EB70051A2E5 /* ProfileAsTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileAsTableView.storyboard; sourceTree = "<group>"; };
+		73556EE427E79FC70051A2E5 /* ProfileAsTableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAsTableViewVC.swift; sourceTree = "<group>"; };
+		73556EE727E7A38C0051A2E5 /* infoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoCell.swift; sourceTree = "<group>"; };
+		73556EE827E7A38C0051A2E5 /* infoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = infoCell.xib; sourceTree = "<group>"; };
 		7374A2C227D124EE00493821 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		7374A2C427D1283C00493821 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		7374A2C927D12C6000493821 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
@@ -132,8 +140,11 @@
 		7333064D27D257230019ECF0 /* ProfilePage */ = {
 			isa = PBXGroup;
 			children = (
-				73BCD7BE27D2617700560C3F /* ProfileVC.swift */,
 				73DDCA8127D655150025BC14 /* Profile.storyboard */,
+				73BCD7BE27D2617700560C3F /* ProfileVC.swift */,
+				73556EE427E79FC70051A2E5 /* ProfileAsTableViewVC.swift */,
+				73556EE227E79EB70051A2E5 /* ProfileAsTableView.storyboard */,
+				73556EE627E7A35D0051A2E5 /* infoCell */,
 			);
 			path = ProfilePage;
 			sourceTree = "<group>";
@@ -153,6 +164,15 @@
 				730FA0B427D0B8ED00EB0C39 /* Employee.storyboard */,
 			);
 			path = EmployeeProfile;
+			sourceTree = "<group>";
+		};
+		73556EE627E7A35D0051A2E5 /* infoCell */ = {
+			isa = PBXGroup;
+			children = (
+				73556EE727E7A38C0051A2E5 /* infoCell.swift */,
+				73556EE827E7A38C0051A2E5 /* infoCell.xib */,
+			);
+			path = infoCell;
 			sourceTree = "<group>";
 		};
 		7374A2BE27D1239E00493821 /* Core */ = {
@@ -358,6 +378,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					0x123d28040,
+				);
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
@@ -401,8 +424,10 @@
 				73ABEE4927D65A24001F4A2F /* Employees.storyboard in Resources */,
 				73A735A327CF62D700FA9253 /* Main.storyboard in Resources */,
 				73ABEE4B27D65FB9001F4A2F /* TabBar.storyboard in Resources */,
+				73556EEA27E7A38C0051A2E5 /* infoCell.xib in Resources */,
 				73067AB027DBF28600FC7A7F /* MessageCell.xib in Resources */,
 				73A735A027CF5F1F00FA9253 /* ResetPassword.storyboard in Resources */,
+				73556EE327E79EB70051A2E5 /* ProfileAsTableView.storyboard in Resources */,
 				73DDCA7627D654300025BC14 /* Commmunication.storyboard in Resources */,
 				73DDCA7C27D654560025BC14 /* Requests.storyboard in Resources */,
 				73DDCA7A27D654470025BC14 /* Reports.storyboard in Resources */,
@@ -465,6 +490,7 @@
 				73DDCA7427D654150025BC14 /* EmployeesVC.swift in Sources */,
 				73DDCA7127D653DF0025BC14 /* RequestsVC.swift in Sources */,
 				73DDCA6D27D653B60025BC14 /* CommmunicationVC.swift in Sources */,
+				73556EE927E7A38C0051A2E5 /* infoCell.swift in Sources */,
 				7381E2C327DBE42200134937 /* MessageModel.swift in Sources */,
 				7374A2CA27D12C6000493821 /* UserDataService.swift in Sources */,
 				730FA0B927D0B91B00EB0C39 /* EmployeeViewController.swift in Sources */,
@@ -472,6 +498,7 @@
 				7381E2C027DB751F00134937 /* RequestCell.swift in Sources */,
 				73C8942F27D140F200BA3A6A /* Extensions.swift in Sources */,
 				73DDCA6F27D653C70025BC14 /* ReportsVC.swift in Sources */,
+				73556EE527E79FC70051A2E5 /* ProfileAsTableViewVC.swift in Sources */,
 				73BCD7BF27D2617700560C3F /* ProfileVC.swift in Sources */,
 				7374A2CD27D12C7E00493821 /* LoginService.swift in Sources */,
 				7394F03327CCBC9E001C58C9 /* Constants.swift in Sources */,

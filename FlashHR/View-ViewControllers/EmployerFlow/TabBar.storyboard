@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TZ7-uW-00c">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TZ7-uW-00c">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,7 +40,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6YC-QC-6nV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-362" y="767"/>
+            <point key="canvasLocation" x="-626" y="647"/>
         </scene>
         <!--Requests-->
         <scene sceneID="SQv-Pk-3C4">
@@ -51,7 +51,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2lW-DO-7EI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="525" y="767"/>
+            <point key="canvasLocation" x="1036" y="648"/>
         </scene>
         <!--Reports-->
         <scene sceneID="0BF-0S-qeQ">
@@ -79,18 +79,18 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VD4-Hd-eLR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="70" y="767"/>
+            <point key="canvasLocation" x="225" y="791"/>
         </scene>
-        <!--Profile-->
+        <!--ProfileAs-->
         <scene sceneID="yEN-ee-1qx">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Profile" storyboardName="Profile" referencedIdentifier="Profile" id="S30-uT-uXJ" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="Profile" storyboardName="ProfileAsTableView" referencedIdentifier="ProfileAs" id="S30-uT-uXJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="NwY-Xa-rlB"/>
                     <navigationItem key="navigationItem" id="5SP-a0-CI5"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9KH-VP-Kcq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="981" y="767"/>
+            <point key="canvasLocation" x="1801" y="791"/>
         </scene>
         <!--Employees-->
         <scene sceneID="6WI-GM-qhE">
@@ -101,7 +101,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TCx-N9-ZIO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-855" y="767"/>
+            <point key="canvasLocation" x="-1384" y="791"/>
         </scene>
         <!--Requests-->
         <scene sceneID="4kx-4q-h8Z">

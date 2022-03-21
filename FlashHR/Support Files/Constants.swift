@@ -24,7 +24,6 @@ struct Constants {
     struct Segues{
         static var employerSegue = "ToEmployer"
         static var employeeSegue = "ToEmployee"
-        static var firstTimeLoginSegue = "ToFirstTimeLogin"
         static var resetPassSegue = "ToResetPass"
     }
     

@@ -14,7 +14,7 @@ class ResetPassViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        submitButton.layer.cornerRadius = submitButton.frame.size.height / 2
+        submitButton.layer.cornerRadius = submitButton.frame.size.height / 5
     }
     
     @IBAction func submitPressed(_ sender: UIButton) {
