@@ -13,9 +13,8 @@ class ProfileAsTableViewVC: UIViewController {
     @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
-    var titles = ["Company Name","Email","Mobile No.","Gender"]
-//    var placeHolder = ["Name","Company Name","Email","Mobile No.","Gender"]
-    var text = ["Zain Jo","A.Mahameed2000@gmail.com","0796957821","Male"]
+    var titles = ["Company Name","Title","Email","Mobile No.","Gender"]
+    var text = ["Zain Jo","Senior Developer","A.Mahameed2000@gmail.com","0796957821","Male"]
     
     private let loginService = LoginService()
     
@@ -30,13 +29,12 @@ class ProfileAsTableViewVC: UIViewController {
         infoView.layer.cornerRadius = infoView.frame.size.height / 11
     }
     
-    func performSwitch(_ indexPath: IndexPath) -> infoCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier:"infoCell", for: indexPath) as! infoCell
-        cell.titleLabel.text = titles[indexPath.section]
-//        cell.textField.placeholder = placeHolder[indexPath.section]
-        cell.textField.text = text[indexPath.section]
-        return cell
-    }
+//    func performSwitch(_ indexPath: IndexPath) -> infoCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier:"infoCell", for: indexPath) as! infoCell
+//        cell.titleLabel.text = titles[indexPath.section]
+//        cell.textField.text = text[indexPath.section]
+//        return cell
+//    }
     
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
         
@@ -52,46 +50,52 @@ class ProfileAsTableViewVC: UIViewController {
 extension ProfileAsTableViewVC: UITableViewDataSource,UITableViewDelegate{
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        titles.count
+        return titles.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        return 1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let cell = tableView.dequeueReusableCell(withIdentifier:"infoCell", for: indexPath) as! infoCell
+        cell.titleLabel.text = titles[indexPath.section]
+        cell.textField.text = text[indexPath.section]
+        return cell
         
-        
-        switch indexPath.section {
-        case 0:
-            let cell = performSwitch(indexPath)
-            return cell
-        case 1:
-            let cell = performSwitch(indexPath)
-            return cell
-        case 2:
-            let cell = performSwitch(indexPath)
-            return cell
-        case 3:
-            let cell = performSwitch(indexPath)
-            return cell
-        default:
-            return UITableViewCell()
-        }
+//        switch indexPath.section {
+//        case 0:
+//            let cell = performSwitch(indexPath)
+//            return cell
+//        case 1:
+//            let cell = performSwitch(indexPath)
+//            return cell
+//        case 2:
+//            let cell = performSwitch(indexPath)
+//            return cell
+//        case 3:
+//            let cell = performSwitch(indexPath)
+//            return cell
+//        case 4:
+//            let cell = performSwitch(indexPath)
+//            return cell
+//        default:
+//            return UITableViewCell()
+//        }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        75
+        return 70
         
     }
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         if section == 4{
-            return 40
+            return 30
         }else{
-            return 25
+            return 20
         }
     }
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UIView()
     }
-    
+
 }

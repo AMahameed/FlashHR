@@ -17,16 +17,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsi-Ym-0B0">
-                        <rect key="frame" x="15" y="0.0" width="287" height="20"/>
+                        <rect key="frame" x="15" y="0.0" width="287" height="25"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="20" id="JF3-Ab-HXe"/>
+                            <constraint firstAttribute="height" constant="25" id="JF3-Ab-HXe"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOs-e1-6KH">
-                        <rect key="frame" x="15" y="70" width="287" height="1"/>
+                        <rect key="frame" x="15" y="75" width="287" height="1"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="vnw-Sd-joC"/>
                         </constraints>
@@ -34,12 +34,12 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cY6-lU-Sud">
-                        <rect key="frame" x="15" y="35" width="287" height="25"/>
+                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cY6-lU-Sud">
+                        <rect key="frame" x="25" y="40" width="277" height="25"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="q9S-Hy-YpD"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                 </subviews>
@@ -50,7 +50,7 @@
                     <constraint firstItem="Lsi-Ym-0B0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Gxb-84-Hgg"/>
                     <constraint firstAttribute="trailing" secondItem="cY6-lU-Sud" secondAttribute="trailing" constant="15" id="Jn1-95-vCD"/>
                     <constraint firstItem="Lsi-Ym-0B0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="VgM-CV-n1E"/>
-                    <constraint firstItem="cY6-lU-Sud" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="cFD-f4-NVV"/>
+                    <constraint firstItem="cY6-lU-Sud" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="cFD-f4-NVV"/>
                     <constraint firstItem="vOs-e1-6KH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="m06-JH-hBn"/>
                     <constraint firstAttribute="trailing" secondItem="vOs-e1-6KH" secondAttribute="trailing" constant="15" id="w7M-ZN-ubb"/>
                 </constraints>

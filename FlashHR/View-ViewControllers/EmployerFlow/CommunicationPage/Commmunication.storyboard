@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RcD-gL-UDh">
-    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RcD-gL-UDh">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -14,20 +14,20 @@
             <objects>
                 <viewController storyboardIdentifier="Commmunication" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="CommmunicationVC" customModule="FlashHR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Plk-2L-Ebu">
-                                <rect key="frame" x="0.0" y="74" width="1024" height="1272"/>
+                                <rect key="frame" x="0.0" y="88" width="428" height="804"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOe-hG-Smn" userLabel="innerView">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="220"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="220"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="khy-TU-jo2">
-                                                <rect key="frame" x="15" y="46" width="994" height="108"/>
+                                                <rect key="frame" x="15" y="46" width="398" height="108"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fpO-fk-4ua">
-                                                        <rect key="frame" x="16" y="8" width="962" height="92"/>
+                                                        <rect key="frame" x="16" y="8" width="366" height="92"/>
                                                         <color key="backgroundColor" red="0.84907907729999998" green="0.94099998470000001" blue="0.97299999000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="textColor" systemColor="labelColor"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
@@ -43,7 +43,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBZ-2R-ioB">
-                                                <rect key="frame" x="869" y="162" width="140" height="38"/>
+                                                <rect key="frame" x="273" y="162" width="140" height="38"/>
                                                 <color key="backgroundColor" name="blue"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="xdY-H7-bZs"/>
@@ -55,7 +55,10 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write an Announcement " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwT-yS-Zff" userLabel="Write an Announcement">
-                                                <rect key="frame" x="15" y="8" width="994" height="30"/>
+                                                <rect key="frame" x="15" y="8" width="398" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Qdz-Ol-ZAB"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -75,7 +78,7 @@
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Yjp-ox-pGL">
-                                        <rect key="frame" x="0.0" y="220" width="1024" height="1052"/>
+                                        <rect key="frame" x="0.0" y="220" width="428" height="584"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
@@ -85,7 +88,6 @@
                                     <constraint firstAttribute="trailing" secondItem="GOe-hG-Smn" secondAttribute="trailing" id="TY6-W4-DSJ"/>
                                     <constraint firstItem="GOe-hG-Smn" firstAttribute="leading" secondItem="Plk-2L-Ebu" secondAttribute="leading" id="U7e-jh-pJV"/>
                                     <constraint firstItem="Yjp-ox-pGL" firstAttribute="leading" secondItem="Plk-2L-Ebu" secondAttribute="leading" id="eCq-Cd-LLW"/>
-                                    <constraint firstItem="Yjp-ox-pGL" firstAttribute="top" secondItem="GOe-hG-Smn" secondAttribute="bottom" id="kuP-Qc-9ct"/>
                                     <constraint firstItem="Yjp-ox-pGL" firstAttribute="top" secondItem="Plk-2L-Ebu" secondAttribute="top" constant="220" id="ohV-ND-Nq8"/>
                                     <constraint firstAttribute="bottom" secondItem="Yjp-ox-pGL" secondAttribute="bottom" id="sOK-Qf-hpo"/>
                                 </constraints>
@@ -118,7 +120,7 @@
                     <tabBarItem key="tabBarItem" title="Communication" image="bolt.horizontal" catalog="system" selectedImage="bolt.horizontal.fill" id="HT4-pa-Y78"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5tl-2g-aGT">
-                        <rect key="frame" x="0.0" y="24" width="1024" height="50"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
