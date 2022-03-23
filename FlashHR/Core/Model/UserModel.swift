@@ -14,7 +14,7 @@ struct UserModel {
     let mobile: String = "0700000000"
     let isDeleted: Bool = false
     let isEmployer: Bool = false
-    let isFirstTimeLogin: Bool = false
+//    let isFirstTimeLogin: Bool = false
     let workTransactions: [WorkTansactions]
 }
 

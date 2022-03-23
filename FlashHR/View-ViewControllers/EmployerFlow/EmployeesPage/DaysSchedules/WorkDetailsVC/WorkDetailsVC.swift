@@ -15,7 +15,7 @@ class WorkDetailsVC: UIViewController {
     var startTimePickerView = UIPickerView()
     var titles = ["Project Name", "Contact Number", "Start Time", "Working Hours"]
     var workingHours : [Int] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
-    var startTime = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"]
+    var startTime = ["00", "01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"]
     
     
     override func viewDidLoad() {
@@ -57,7 +57,7 @@ extension WorkDetailsVC: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 105
+        return UITableView.automaticDimension
     }
 }
 

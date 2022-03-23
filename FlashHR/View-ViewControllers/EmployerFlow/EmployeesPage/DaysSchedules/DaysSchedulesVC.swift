@@ -18,7 +18,6 @@ class DaysSchedulesVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "DaysSchedulesCell", bundle: nil) , forCellReuseIdentifier: "daysSchedulesCell")

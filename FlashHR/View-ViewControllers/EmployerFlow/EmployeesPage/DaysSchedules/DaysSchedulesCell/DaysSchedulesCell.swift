@@ -15,6 +15,7 @@ class DaysSchedulesCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         dayView.layer.cornerRadius = dayView.frame.size.height / 4
+        selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
