@@ -9,9 +9,10 @@ import Foundation
 
 
 struct UserModel {
-    let email: String
+    let email: String = "No Info"
     let userName: String = "Employee Name"
     let mobile: String = "0700000000"
+    let gender: String = "No info"
     let isDeleted: Bool = false
     let isEmployer: Bool = false
 //    let isFirstTimeLogin: Bool = false

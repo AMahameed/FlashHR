@@ -7,13 +7,15 @@
 
 import UIKit
 
-class WorkDetailsCell: UITableViewCell {
+class WorkDetailsCell: UITableViewCell, UITextFieldDelegate {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        textField.delegate = self
         // Initialization code
     }
 

@@ -13,7 +13,7 @@ class WorkDetailsVC: UIViewController {
     private var workingSiteData = WorkingSiteData()
     var workingHoursPickerView = UIPickerView()
     var startTimePickerView = UIPickerView()
-    var titles = ["Project Name", "Contact Number", "Start Time", "Working Hours"]
+    var titles = [ "Project Name", "Contact Number", "Start Time", "Working Hours"]
     var workingHours : [Int] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
     var startTime = ["00", "01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"]
     
@@ -22,12 +22,13 @@ class WorkDetailsVC: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        workingHoursPickerView.delegate = self
-        workingHoursPickerView.dataSource = self
-        workingHoursPickerView.tag = 2
         startTimePickerView.delegate = self
         startTimePickerView.dataSource = self
         startTimePickerView.tag = 1
+        workingHoursPickerView.delegate = self
+        workingHoursPickerView.dataSource = self
+        workingHoursPickerView.tag = 2
+        
         tableView.register(UINib(nibName: "WorkDetailsCell", bundle: nil) , forCellReuseIdentifier: "workDetailsCell")
         viewBackground.layer.cornerRadius = viewBackground.frame.size.height / 11
     }
@@ -44,8 +45,9 @@ extension WorkDetailsVC: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier:"workDetailsCell", for: indexPath) as? WorkDetailsCell else {return UITableViewCell()}
+        
         cell.titleLabel.text = titles[indexPath.row]
-        cell.setupTextFieldValue(value: "")
+        
         if indexPath.row == 2{
             cell.textField.inputView = startTimePickerView
             cell.setupTextFieldValue(value: workingSiteData.startTime)
@@ -53,7 +55,7 @@ extension WorkDetailsVC: UITableViewDelegate, UITableViewDataSource{
             cell.textField.inputView = workingHoursPickerView
             cell.setupTextFieldValue(value: String(workingSiteData.workingHours))
         }
-        
+
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -97,11 +99,11 @@ extension WorkDetailsVC: UIPickerViewDelegate, UIPickerViewDataSource{
         case 1:
             workingSiteData.startTime = startTime[row]
             pickerView.resignFirstResponder()
-            tableView.reloadData()
+            tableView.reloadRows(at: [IndexPath.init(row: 2, section: 0)], with: .automatic)
         case 2:
             workingSiteData.workingHours = workingHours[row]
             pickerView.resignFirstResponder()
-            tableView.reloadData()
+            tableView.reloadRows(at: [IndexPath.init(row: 3, section: 0)], with: .automatic)
         default:
             return
         }
@@ -109,8 +111,7 @@ extension WorkDetailsVC: UIPickerViewDelegate, UIPickerViewDataSource{
 }
 
 struct WorkingSiteData {
-    var projectName: String = ""
-    var contactNumber: String = ""
+
     var startTime: String = ""
     var workingHours: Int = 0
 }

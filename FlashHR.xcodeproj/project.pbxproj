@@ -16,6 +16,8 @@
 		73556EE527E79FC70051A2E5 /* ProfileAsTableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73556EE427E79FC70051A2E5 /* ProfileAsTableViewVC.swift */; };
 		73556EE927E7A38C0051A2E5 /* infoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73556EE727E7A38C0051A2E5 /* infoCell.swift */; };
 		73556EEA27E7A38C0051A2E5 /* infoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73556EE827E7A38C0051A2E5 /* infoCell.xib */; };
+		7369FC8D27F3CDD800E0A312 /* CreateEmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369FC8C27F3CDD800E0A312 /* CreateEmployeeVC.swift */; };
+		7369FC8F27F3CDEA00E0A312 /* CreateEmployee.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7369FC8E27F3CDE900E0A312 /* CreateEmployee.storyboard */; };
 		7374A2C327D124EE00493821 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7374A2C227D124EE00493821 /* UserModel.swift */; };
 		7374A2C627D1283C00493821 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7374A2C427D1283C00493821 /* SplashViewController.swift */; };
 		7374A2CA27D12C6000493821 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7374A2C927D12C6000493821 /* UserDataService.swift */; };
@@ -70,6 +72,8 @@
 		73556EE427E79FC70051A2E5 /* ProfileAsTableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAsTableViewVC.swift; sourceTree = "<group>"; };
 		73556EE727E7A38C0051A2E5 /* infoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoCell.swift; sourceTree = "<group>"; };
 		73556EE827E7A38C0051A2E5 /* infoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = infoCell.xib; sourceTree = "<group>"; };
+		7369FC8C27F3CDD800E0A312 /* CreateEmployeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEmployeeVC.swift; sourceTree = "<group>"; };
+		7369FC8E27F3CDE900E0A312 /* CreateEmployee.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateEmployee.storyboard; sourceTree = "<group>"; };
 		7374A2C227D124EE00493821 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		7374A2C427D1283C00493821 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		7374A2C927D12C6000493821 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
@@ -194,6 +198,15 @@
 			path = infoCell;
 			sourceTree = "<group>";
 		};
+		7369FC8A27F3CD9000E0A312 /* CRUDEmployees */ = {
+			isa = PBXGroup;
+			children = (
+				7369FC8C27F3CDD800E0A312 /* CreateEmployeeVC.swift */,
+				7369FC8E27F3CDE900E0A312 /* CreateEmployee.storyboard */,
+			);
+			path = CRUDEmployees;
+			sourceTree = "<group>";
+		};
 		7374A2BE27D1239E00493821 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +329,8 @@
 			children = (
 				73A1823827E8E41F0042B648 /* EmployeeCell.swift */,
 				73A1823927E8E41F0042B648 /* EmployeeCell.xib */,
+				7369FC8A27F3CD9000E0A312 /* CRUDEmployees */,
+				73CBABF027EB4B8300D9A4FB /* DaysSchedules */,
 			);
 			path = EmployeeCell;
 			sourceTree = "<group>";
@@ -401,7 +416,6 @@
 				73DDCA7327D654150025BC14 /* EmployeesVC.swift */,
 				73ABEE4827D65A24001F4A2F /* Employees.storyboard */,
 				73A1823C27E8E4250042B648 /* EmployeeCell */,
-				73CBABF027EB4B8300D9A4FB /* DaysSchedules */,
 			);
 			path = EmployeesPage;
 			sourceTree = "<group>";
@@ -515,6 +529,7 @@
 				73ABEE4B27D65FB9001F4A2F /* TabBar.storyboard in Resources */,
 				73556EEA27E7A38C0051A2E5 /* infoCell.xib in Resources */,
 				73067AB027DBF28600FC7A7F /* MessageCell.xib in Resources */,
+				7369FC8F27F3CDEA00E0A312 /* CreateEmployee.storyboard in Resources */,
 				73A735A027CF5F1F00FA9253 /* ResetPassword.storyboard in Resources */,
 				73556EE327E79EB70051A2E5 /* ProfileAsTableView.storyboard in Resources */,
 				73DDCA7627D654300025BC14 /* Commmunication.storyboard in Resources */,
@@ -581,6 +596,7 @@
 				7394F01E27CCBA7B001C58C9 /* SceneDelegate.swift in Sources */,
 				73DDCA7427D654150025BC14 /* EmployeesVC.swift in Sources */,
 				73DDCA7127D653DF0025BC14 /* RequestsVC.swift in Sources */,
+				7369FC8D27F3CDD800E0A312 /* CreateEmployeeVC.swift in Sources */,
 				73DDCA6D27D653B60025BC14 /* CommmunicationVC.swift in Sources */,
 				73556EE927E7A38C0051A2E5 /* infoCell.swift in Sources */,
 				7381E2C327DBE42200134937 /* MessageModel.swift in Sources */,

@@ -17,16 +17,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work Site Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AkP-aX-fLG">
-                                <rect key="frame" x="105" y="108" width="205" height="36"/>
+                                <rect key="frame" x="105" y="138" width="205" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x8h-IF-aZH">
-                                <rect key="frame" x="0.0" y="164" width="414" height="732"/>
+                                <rect key="frame" x="0.0" y="194" width="414" height="702"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Kjd-4L-bHV">
-                                        <rect key="frame" x="8" y="40" width="398" height="692"/>
+                                        <rect key="frame" x="8" y="40" width="398" height="662"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
@@ -46,7 +46,7 @@
                             <constraint firstAttribute="bottom" secondItem="x8h-IF-aZH" secondAttribute="bottom" id="VAC-MI-MDh"/>
                             <constraint firstItem="x8h-IF-aZH" firstAttribute="leading" secondItem="d06-o9-aCD" secondAttribute="leading" id="bQ9-vy-3TU"/>
                             <constraint firstItem="x8h-IF-aZH" firstAttribute="top" secondItem="AkP-aX-fLG" secondAttribute="bottom" constant="20" id="oTN-bt-RCf"/>
-                            <constraint firstItem="AkP-aX-fLG" firstAttribute="top" secondItem="d06-o9-aCD" secondAttribute="top" constant="20" id="pse-MB-n5b"/>
+                            <constraint firstItem="AkP-aX-fLG" firstAttribute="top" secondItem="d06-o9-aCD" secondAttribute="top" constant="50" id="pse-MB-n5b"/>
                             <constraint firstItem="x8h-IF-aZH" firstAttribute="trailing" secondItem="d06-o9-aCD" secondAttribute="trailing" id="vqA-Yp-WLd"/>
                             <constraint firstItem="AkP-aX-fLG" firstAttribute="leading" secondItem="d06-o9-aCD" secondAttribute="leading" constant="105" id="z3f-2h-oy9"/>
                         </constraints>

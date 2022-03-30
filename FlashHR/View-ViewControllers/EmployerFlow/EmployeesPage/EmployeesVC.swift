@@ -20,6 +20,7 @@ class EmployeesVC: UIViewController {
 
     @IBAction func addEmployee(_ sender: UIBarButtonItem) {
         
+        presentFromSTB(stbName: "CreateEmployee", vcID: "CreateEmployee")
         
     }
 }
@@ -27,7 +28,7 @@ class EmployeesVC: UIViewController {
 extension EmployeesVC: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        4
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -54,5 +55,20 @@ extension EmployeesVC: UITableViewDelegate,UITableViewDataSource{
 //    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
 //        return UIView()
 //    }
+
+    func tableView(_ tableView: UITableView,
+                    trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?{
+        return nil
+    }
+        // 1
+//        let shareAction = UITableViewRowAction(style: .default, title: "Share" , handler: { (action:UITableViewRowAction, indexPath: IndexPath) -> Void in
+//
+//        })
+//        // 3
+//        let rateAction = UITableViewRowAction(style: .default, title: "Rate" , handler: { (action:UITableViewRowAction, indexPath:IndexPath) -> Void in
+//
+//      })
+//        // 5
+//        return [shareAction,rateAction]
     
 }

@@ -22,4 +22,8 @@ class infoCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setupTextFieldValue(value: String) {
+        textField.text = value
+    }
+    
 }
