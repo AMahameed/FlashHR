@@ -25,11 +25,42 @@ struct Constants {
         static var employerSegue = "ToEmployer"
         static var employeeSegue = "ToEmployee"
         static var resetPassSegue = "ToResetPass"
+        static var LoginSegue = "Login"
+        static var createEmployeeSegue = "CreateEmployee"
+        static var daysSchedulesSegue = "DaysSchedules"
+        static var workDetailsSegue = "WorkDetails"
+    }
+    
+    struct NibNames {
+        static var employeeCell = "EmployeeCell"
+        static var workDetailsCell =  "WorkDetailsCell"
+        static var daysSchedules  = "DaysSchedulesCell"
+        static var messgaeCell =  "MessageCell"
+        static var requestCell = "RequestCell"
+        static var infoCell = "infoCell"
+    }
+    
+    struct Identifiers {
+        static var employeeCellIdentifier = "employeeCell"
+        static var workDetailsCellIdentifier = "workDetailsCell"
+        static var daysSchedulesCellIdentifier = "daysSchedulesCell"
+        static var messgaeCellIdentifier = "messageCell"
+        static var requestCellIdentifier = "reusableRequestCell"
+        static var infoCellIdentifier = "infoCell"
+    }
+    
+    struct WorkDetailsVCConstants {
+        static var startTime = ["00", "01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"]
+        
+        static var workingHours : [Int] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+    }
+    
+    struct CommunicationVCConstants {
+        static let message = "In many geographic areas mobile telephones are the only economical way to provide phone service to the population. The dominant first-generation wireless network in North America mobile telephones are the only economical way to provide phone service to the population. The dominant first-generation wireless network in North America mobile telephones are the only economical way to provide phone service to the population. The dominant first-generation wireless network in North America mobile telephones are the only economical way to provide phone service to the population. The dominant first-generation wireless network in North America mobile telephones are the only economical way to provide phone service to the population. The dominant first-generation wireless network in North America mobile telephones are the only economical way to provide phone service to the population. The dominant first-generation wireless network in North America"
     }
     
     struct UserDefaultKeys {
         static var currentUserIDKey: String = "currentUserIDKey"
-        
     }
     
     struct UserDataDefault {
@@ -39,3 +70,4 @@ struct Constants {
         }
     }
 }
+

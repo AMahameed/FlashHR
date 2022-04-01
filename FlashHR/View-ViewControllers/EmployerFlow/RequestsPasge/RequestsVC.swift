@@ -15,7 +15,7 @@ class RequestsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "RequestCell", bundle: nil) , forCellReuseIdentifier: "reusableRequestCell")
+        tableView.register(UINib(nibName: Constants.NibNames.requestCell, bundle: nil) , forCellReuseIdentifier: Constants.Identifiers.requestCellIdentifier)
       
     }
 
@@ -29,7 +29,7 @@ extension RequestsVC: UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reusableRequestCell", for: indexPath) as! RequestCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Identifiers.requestCellIdentifier, for: indexPath) as! RequestCell
         
         return cell
     }

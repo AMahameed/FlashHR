@@ -23,7 +23,7 @@ class ProfileAsTableViewVC: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "infoCell", bundle: nil) , forCellReuseIdentifier: "infoCell")
+        tableView.register(UINib(nibName: Constants.NibNames.infoCell, bundle: nil) , forCellReuseIdentifier: Constants.Identifiers.infoCellIdentifier)
         
         imageView.layer.cornerRadius = imageView.frame.size.height / 2.05
         infoView.layer.cornerRadius = infoView.frame.size.height / 11
@@ -39,7 +39,7 @@ class ProfileAsTableViewVC: UIViewController {
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
         
         loginService.performLogout {
-            self.presentFromSTB(stbName: "Login", vcID: "Login")
+            self.presentFromSTB(stbName: Constants.Segues.LoginSegue, vcID: Constants.Segues.LoginSegue)
         } failure: { signOutError in
             self.presentAlert(message: signOutError)
         }
@@ -58,35 +58,18 @@ extension ProfileAsTableViewVC: UITableViewDataSource,UITableViewDelegate{
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier:"infoCell", for: indexPath) as! infoCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Identifiers.infoCellIdentifier, for: indexPath) as! infoCell
+        
         cell.titleLabel.text = titles[indexPath.section]
         cell.textField.text = text[indexPath.section]
         return cell
-        
-//        switch indexPath.section {
-//        case 0:
-//            let cell = performSwitch(indexPath)
-//            return cell
-//        case 1:
-//            let cell = performSwitch(indexPath)
-//            return cell
-//        case 2:
-//            let cell = performSwitch(indexPath)
-//            return cell
-//        case 3:
-//            let cell = performSwitch(indexPath)
-//            return cell
-//        case 4:
-//            let cell = performSwitch(indexPath)
-//            return cell
-//        default:
-//            return UITableViewCell()
-//        }
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
         
     }
+    
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         if section == 4{
             return 30
@@ -94,6 +77,7 @@ extension ProfileAsTableViewVC: UITableViewDataSource,UITableViewDelegate{
             return 20
         }
     }
+    
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UIView()
     }

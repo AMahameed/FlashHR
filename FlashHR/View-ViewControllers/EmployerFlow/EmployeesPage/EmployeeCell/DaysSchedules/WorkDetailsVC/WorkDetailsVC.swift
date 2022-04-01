@@ -14,8 +14,6 @@ class WorkDetailsVC: UIViewController {
     var workingHoursPickerView = UIPickerView()
     var startTimePickerView = UIPickerView()
     var titles = [ "Project Name", "Contact Number", "Start Time", "Working Hours"]
-    var workingHours : [Int] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
-    var startTime = ["00", "01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"]
     
     
     override func viewDidLoad() {
@@ -29,7 +27,7 @@ class WorkDetailsVC: UIViewController {
         workingHoursPickerView.dataSource = self
         workingHoursPickerView.tag = 2
         
-        tableView.register(UINib(nibName: "WorkDetailsCell", bundle: nil) , forCellReuseIdentifier: "workDetailsCell")
+        tableView.register(UINib(nibName: Constants.NibNames.workDetailsCell, bundle: nil) , forCellReuseIdentifier: Constants.Identifiers.workDetailsCellIdentifier)
         viewBackground.layer.cornerRadius = viewBackground.frame.size.height / 11
     }
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
@@ -44,7 +42,7 @@ extension WorkDetailsVC: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier:"workDetailsCell", for: indexPath) as? WorkDetailsCell else {return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Identifiers.workDetailsCellIdentifier, for: indexPath) as? WorkDetailsCell else {return UITableViewCell()}
         
         cell.titleLabel.text = titles[indexPath.row]
         
@@ -73,9 +71,9 @@ extension WorkDetailsVC: UIPickerViewDelegate, UIPickerViewDataSource{
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch pickerView.tag {
         case 1:
-            return startTime.count
+            return Constants.WorkDetailsVCConstants.startTime.count
         case 2:
-            return workingHours.count
+            return Constants.WorkDetailsVCConstants.workingHours.count
         default:
             return 1
         }
@@ -85,9 +83,9 @@ extension WorkDetailsVC: UIPickerViewDelegate, UIPickerViewDataSource{
         
         switch pickerView.tag {
         case 1:
-            return startTime[row]
+            return Constants.WorkDetailsVCConstants.startTime[row]
         case 2:
-            return String(workingHours[row])
+            return String(Constants.WorkDetailsVCConstants.workingHours[row])
         default:
             return "Data Not Found"
         }
@@ -97,11 +95,11 @@ extension WorkDetailsVC: UIPickerViewDelegate, UIPickerViewDataSource{
         
         switch pickerView.tag {
         case 1:
-            workingSiteData.startTime = startTime[row]
+            workingSiteData.startTime = Constants.WorkDetailsVCConstants.startTime[row]
             pickerView.resignFirstResponder()
             tableView.reloadRows(at: [IndexPath.init(row: 2, section: 0)], with: .automatic)
         case 2:
-            workingSiteData.workingHours = workingHours[row]
+            workingSiteData.workingHours = Constants.WorkDetailsVCConstants.workingHours[row]
             pickerView.resignFirstResponder()
             tableView.reloadRows(at: [IndexPath.init(row: 3, section: 0)], with: .automatic)
         default:

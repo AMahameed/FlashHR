@@ -20,7 +20,7 @@ class DaysSchedulesVC: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "DaysSchedulesCell", bundle: nil) , forCellReuseIdentifier: "daysSchedulesCell")
+        tableView.register(UINib(nibName: Constants.NibNames.daysSchedules, bundle: nil) , forCellReuseIdentifier: Constants.Identifiers.daysSchedulesCellIdentifier)
         
         viewBackground.layer.cornerRadius = viewBackground.frame.size.height / 11
         navigationItem.title = segBar.titleForSegment(at: segBar.selectedSegmentIndex)
@@ -31,7 +31,7 @@ class DaysSchedulesVC: UIViewController {
     }
     
     @IBAction func allWeekPressed(_ sender: UIBarButtonItem) {
-        self.presentFromSTB(stbName: "WorkDetails", vcID: "WorkDetails")
+        self.presentFromSTB(stbName: Constants.Segues.workDetailsSegue, vcID: Constants.Segues.workDetailsSegue)
     }
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true)
@@ -49,7 +49,7 @@ extension DaysSchedulesVC: UITableViewDataSource,UITableViewDelegate{
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier:"daysSchedulesCell", for: indexPath) as! DaysSchedulesCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Identifiers.daysSchedulesCellIdentifier, for: indexPath) as! DaysSchedulesCell
         cell.dayLabel.text = Days[indexPath.section]
         return cell
     }
@@ -67,6 +67,6 @@ extension DaysSchedulesVC: UITableViewDataSource,UITableViewDelegate{
         return UIView()
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.presentFromSTB(stbName: "WorkDetails", vcID: "WorkDetails")
+        self.presentFromSTB(stbName: Constants.Segues.workDetailsSegue, vcID: Constants.Segues.workDetailsSegue)
     }
 }

@@ -24,7 +24,7 @@ class CreateEmployeeVC: UIViewController {
         genderPickerView.dataSource = self
         genderPickerView.tag = 1
         
-        tableView.register(UINib(nibName: "WorkDetailsCell", bundle: nil) , forCellReuseIdentifier: "workDetailsCell")
+        tableView.register(UINib(nibName: Constants.NibNames.workDetailsCell, bundle: nil) , forCellReuseIdentifier: Constants.Identifiers.workDetailsCellIdentifier)
         viewBackground.layer.cornerRadius = viewBackground.frame.size.height / 11
     }
     @IBAction func backPressed(_ sender: UIBarButtonItem) {
@@ -41,7 +41,7 @@ extension CreateEmployeeVC: UITableViewDelegate,UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier:"workDetailsCell", for: indexPath) as? WorkDetailsCell else {return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Identifiers.workDetailsCellIdentifier, for: indexPath) as? WorkDetailsCell else {return UITableViewCell()}
         
         cell.titleLabel.text = fields[indexPath.row]
         
@@ -98,7 +98,6 @@ extension CreateEmployeeVC: UIPickerViewDelegate, UIPickerViewDataSource{
             return
         }
     }
-    
 }
 
 struct GenderData {

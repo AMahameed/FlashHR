@@ -13,7 +13,6 @@ class CommmunicationVC: UIViewController {
     @IBOutlet weak var viewUnderneathText: UIView!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var submitButton: UIButton!
-    let message = "In many geographic areas mobile telephones are the only economical way to provide phone service to the population. The dominant first-generation wireless network in North America mobile telephones are the only economical way to provide phone service to the population. The dominant first-generation wireless network in North America mobile telephones are the only economical way to provide phone service to the population. The dominant first-generation wireless network in North America mobile telephones are the only economical way to provide phone service to the population. The dominant first-generation wireless network in North America mobile telephones are the only economical way to provide phone service to the population. The dominant first-generation wireless network in North America mobile telephones are the only economical way to provide phone service to the population. The dominant first-generation wireless network in North America"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +20,7 @@ class CommmunicationVC: UIViewController {
         submitButton.layer.cornerRadius = submitButton.frame.size.height / 5
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "MessageCell", bundle: nil) , forCellReuseIdentifier: "messageCell")
+        tableView.register(UINib(nibName: Constants.NibNames.messgaeCell, bundle: nil) , forCellReuseIdentifier: Constants.Identifiers.messgaeCellIdentifier)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -41,8 +40,8 @@ extension CommmunicationVC: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as! MessageCell
-        cell.bodyLabel.text = message
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Identifiers.messgaeCellIdentifier, for: indexPath) as! MessageCell
+        cell.bodyLabel.text = Constants.CommunicationVCConstants.message
         
         return cell
     }
