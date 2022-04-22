@@ -18,7 +18,6 @@ class WorkDetailsVC: UIViewController {
     var startTimePickerView = UIPickerView()
     let db = Firestore.firestore()
     var titles = [ "Project Name", "Contact Number", "Start Time", "Working Hours"]
-//    var statusFlag = 0
     var wtDocIDHOlder: String = "no data"
     
     override func viewDidLoad() {
@@ -271,13 +270,3 @@ extension WorkDetailsVC: UIPickerViewDelegate, UIPickerViewDataSource{
         }
     }
 }
-
-
-//func wtDocDeletion() {
-//        getWorkTransactionDocID { wtDocID, empDocID in
-//            self.db.collection("employee").document(empDocID).collection("workTransactions").document(wtDocID).delete()
-//        } failure: { error in
-//            print("error in deleting the document")
-////            self.presentAlert(message: error)
-//        }
-//    }

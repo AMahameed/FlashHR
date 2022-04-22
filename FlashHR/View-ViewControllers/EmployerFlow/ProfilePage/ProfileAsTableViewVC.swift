@@ -29,13 +29,6 @@ class ProfileAsTableViewVC: UIViewController {
         infoView.layer.cornerRadius = infoView.frame.size.height / 11
     }
     
-//    func performSwitch(_ indexPath: IndexPath) -> infoCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier:"infoCell", for: indexPath) as! infoCell
-//        cell.titleLabel.text = titles[indexPath.section]
-//        cell.textField.text = text[indexPath.section]
-//        return cell
-//    }
-    
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
         
         loginService.performLogout {
@@ -47,6 +40,7 @@ class ProfileAsTableViewVC: UIViewController {
     }
 }
 
+//MARK: - TableView Delegate
 extension ProfileAsTableViewVC: UITableViewDataSource,UITableViewDelegate{
     
     func numberOfSections(in tableView: UITableView) -> Int {

@@ -29,6 +29,9 @@ struct Constants {
         static var createEmployeeSegue = "CreateEmployee"
         static var daysSchedulesSegue = "DaysSchedules"
         static var workDetailsSegue = "WorkDetails"
+        static var ProfileOrSchedule = "ProfileOrSchedule"
+        static var ProfileAsTableView = "ProfileAsTableView"
+        static var SelectedEmpProfile = "SelectedEmpProfile"
     }
     
     struct NibNames {

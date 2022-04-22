@@ -13,6 +13,7 @@ class CreateEmployeeVC: UIViewController {
     @IBOutlet weak var viewBackground: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var imageView: UIImageView!
     var createEmployee = Employee()
     let db = Firestore.firestore()
     var genderPickerView = UIPickerView()
@@ -29,10 +30,22 @@ class CreateEmployeeVC: UIViewController {
         genderPickerView.dataSource = self
         genderPickerView.tag = 1
         
+        
+        
         tableView.register(UINib(nibName: Constants.NibNames.workDetailsCell, bundle: nil) , forCellReuseIdentifier: Constants.Identifiers.workDetailsCellIdentifier)
         viewBackground.layer.cornerRadius = viewBackground.frame.size.height / 11
+        imageView.layer.cornerRadius = imageView.frame.size.height / 2.05
     }
     
+    @IBAction func chooseImage(_ sender: UIButton) {
+        let vc = UIImagePickerController()
+        vc.sourceType = .photoLibrary
+        vc.delegate = self
+        vc.allowsEditing = true
+        present(vc, animated: true)
+    }
+    
+  
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         
         guard !(createEmployee.email.isEmpty), !(createEmployee.password.isEmpty),
@@ -66,6 +79,23 @@ class CreateEmployeeVC: UIViewController {
     }
 }
 
+
+//MARK: - Image Picker
+
+extension CreateEmployeeVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+            imageView.image = image
+        }
+        picker.dismiss(animated: true)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true)
+    }
+    
+}
 
 //MARK: - TabelView
 

@@ -95,7 +95,7 @@ extension EmployeesVC: UITableViewDelegate,UITableViewDataSource{
        
         EmployeesVC.empIDHolder.employeeID = EmployeesVC.showEmployee[indexPath.row].empID
         EmployeesVC.empIDHolder.employeeName = EmployeesVC.showEmployee[indexPath.row].userName
-        self.presentFromSTB(stbName: Constants.Segues.daysSchedulesSegue, vcID: Constants.Segues.daysSchedulesSegue)
+        presentFromSTB(stbName: Constants.Segues.ProfileOrSchedule, vcID: Constants.Segues.ProfileOrSchedule)
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?{

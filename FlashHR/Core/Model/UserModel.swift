@@ -62,27 +62,11 @@ struct TansactionsHolder {
     var isRequestedLeave: Bool = false
     var leaveHours: Float = 0.0
 }
-    
-//    init(projectName: String = "", contactNo: String = "", startTime: String = "", dayNo: Int = 0, workingHours: Int = 0, long: Float = 0.0, lat: Float = 0.0, isRequestedLeave: Bool = false, leaveHours: Float = 0.0) {
-//
-//        self.projectName = projectName
-//        self.contactNo = contactNo
-//        self.startTime = startTime
-//        self.workingHours = workingHours
-//        self.dayNo = dayNo
-//        self.long = long
-//        self.lat = lat
-//        self.isRequestedLeave = isRequestedLeave
-//        self.leaveHours = leaveHours
-//    }
-    
-
 
 struct DocumentsIDHolder {
     var empDocumentID: String = ""
     var workTransactionsDocumentID : String = ""
 }
-
 
 struct Message {
     let sender: String

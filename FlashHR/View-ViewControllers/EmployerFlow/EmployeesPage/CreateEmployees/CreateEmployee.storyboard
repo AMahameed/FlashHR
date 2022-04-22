@@ -16,40 +16,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employee Creation " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqV-A8-DSH">
-                                <rect key="frame" x="65" y="138" width="285" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5az-TW-EqI" userLabel="infoView">
-                                <rect key="frame" x="0.0" y="194" width="414" height="702"/>
+                                <rect key="frame" x="0.0" y="288" width="414" height="608"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NX0-hb-PRu">
-                                        <rect key="frame" x="8" y="40" width="398" height="662"/>
+                                        <rect key="frame" x="8" y="40" width="398" height="568"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="NX0-hb-PRu" secondAttribute="trailing" constant="8" id="Fiv-Oq-cRO"/>
-                                    <constraint firstAttribute="bottom" secondItem="NX0-hb-PRu" secondAttribute="bottom" id="d2Q-ov-Leg"/>
-                                    <constraint firstItem="NX0-hb-PRu" firstAttribute="leading" secondItem="5az-TW-EqI" secondAttribute="leading" constant="8" id="iUF-UN-qM2"/>
-                                    <constraint firstItem="NX0-hb-PRu" firstAttribute="top" secondItem="5az-TW-EqI" secondAttribute="top" constant="40" id="zae-2L-72w"/>
+                                    <constraint firstItem="NX0-hb-PRu" firstAttribute="top" secondItem="5az-TW-EqI" secondAttribute="top" constant="40" id="2TM-sq-0hf"/>
+                                    <constraint firstItem="NX0-hb-PRu" firstAttribute="leading" secondItem="5az-TW-EqI" secondAttribute="leading" constant="8" id="NqY-Gh-t3d"/>
+                                    <constraint firstAttribute="trailing" secondItem="NX0-hb-PRu" secondAttribute="trailing" constant="8" id="VuO-kU-ekw"/>
+                                    <constraint firstAttribute="bottom" secondItem="NX0-hb-PRu" secondAttribute="bottom" id="hnE-MR-Q9H"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iPc-e4-Mfq">
+                                <rect key="frame" x="122" y="104.5" width="170" height="167.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="gY5-Bc-rPP"/>
+                                    <constraint firstAttribute="width" constant="170" id="nJ1-6q-DdM"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mql-4l-377">
+                                <rect key="frame" x="122" y="103" width="170" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="chooseImage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8Mf-gb-HR1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.84907907729999998" green="0.94099998470000001" blue="0.97299999000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="5az-TW-EqI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="1Oe-zP-jse"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="XqV-A8-DSH" secondAttribute="trailing" constant="64" id="A7v-43-Jvf"/>
-                            <constraint firstItem="XqV-A8-DSH" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="Bpd-DP-kqk"/>
-                            <constraint firstItem="5az-TW-EqI" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="EL2-we-a0a"/>
-                            <constraint firstItem="5az-TW-EqI" firstAttribute="top" secondItem="XqV-A8-DSH" secondAttribute="bottom" constant="20" id="IMN-Fg-77y"/>
-                            <constraint firstItem="XqV-A8-DSH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="65" id="Yl6-Ak-irp"/>
-                            <constraint firstAttribute="bottom" secondItem="5az-TW-EqI" secondAttribute="bottom" id="jZF-cu-KLB"/>
-                            <constraint firstItem="5az-TW-EqI" firstAttribute="top" secondItem="XqV-A8-DSH" secondAttribute="bottom" constant="20" id="pE4-Nz-FGW"/>
+                            <constraint firstItem="5az-TW-EqI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="6kS-dm-TqN"/>
+                            <constraint firstItem="5az-TW-EqI" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="F6f-Rq-xCe"/>
+                            <constraint firstAttribute="bottom" secondItem="5az-TW-EqI" secondAttribute="bottom" id="FES-Ev-5uG"/>
+                            <constraint firstItem="iPc-e4-Mfq" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Oo6-gk-2Oj"/>
+                            <constraint firstItem="5az-TW-EqI" firstAttribute="top" secondItem="iPc-e4-Mfq" secondAttribute="bottom" constant="15" id="TSJ-hA-bMR"/>
+                            <constraint firstItem="iPc-e4-Mfq" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="15" id="sYe-NC-Sx9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create Emplyee" id="ike-ha-ika">
@@ -67,6 +75,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="imageView" destination="iPc-e4-Mfq" id="I0J-wC-KUi"/>
                         <outlet property="saveButton" destination="acM-Nb-juK" id="SvE-ub-yhX"/>
                         <outlet property="tableView" destination="NX0-hb-PRu" id="SvN-aT-yKF"/>
                         <outlet property="viewBackground" destination="5az-TW-EqI" id="Xh7-sf-7OF"/>
@@ -96,6 +105,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -35,9 +35,10 @@
 		73A1823B27E8E41F0042B648 /* EmployeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73A1823927E8E41F0042B648 /* EmployeeCell.xib */; };
 		73A735A027CF5F1F00FA9253 /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73A7359F27CF5F1F00FA9253 /* ResetPassword.storyboard */; };
 		73A735A327CF62D700FA9253 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73A735A227CF62D700FA9253 /* Main.storyboard */; };
+		73A96AA4281340A6003A5CF6 /* SelectedEmpProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A96AA3281340A6003A5CF6 /* SelectedEmpProfileVC.swift */; };
+		73A96AA6281340B0003A5CF6 /* SelectedEmpProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73A96AA5281340B0003A5CF6 /* SelectedEmpProfile.storyboard */; };
 		73ABEE4927D65A24001F4A2F /* Employees.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73ABEE4827D65A24001F4A2F /* Employees.storyboard */; };
 		73ABEE4B27D65FB9001F4A2F /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73ABEE4A27D65FB9001F4A2F /* TabBar.storyboard */; };
-		73BCD7BF27D2617700560C3F /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BCD7BE27D2617700560C3F /* ProfileVC.swift */; };
 		73C8942F27D140F200BA3A6A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C8942E27D140F200BA3A6A /* Extensions.swift */; };
 		73CBABF227EB4BF900D9A4FB /* DaysSchedulesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBABF127EB4BF900D9A4FB /* DaysSchedulesVC.swift */; };
 		73CBABF427EB4C1100D9A4FB /* DaysSchedules.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73CBABF327EB4C1100D9A4FB /* DaysSchedules.storyboard */; };
@@ -54,7 +55,8 @@
 		73DDCA7627D654300025BC14 /* Commmunication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73DDCA7527D654300025BC14 /* Commmunication.storyboard */; };
 		73DDCA7A27D654470025BC14 /* Reports.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73DDCA7927D654470025BC14 /* Reports.storyboard */; };
 		73DDCA7C27D654560025BC14 /* Requests.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73DDCA7B27D654560025BC14 /* Requests.storyboard */; };
-		73DDCA8227D655150025BC14 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73DDCA8127D655150025BC14 /* Profile.storyboard */; };
+		73E4D70A281336A40067B407 /* ProfileOrSchedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73E4D709281336A40067B407 /* ProfileOrSchedule.storyboard */; };
+		73E4D70C281336AF0067B407 /* ProfileOrScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E4D70B281336AF0067B407 /* ProfileOrScheduleVC.swift */; };
 		73FBD99A27CD73A90061B864 /* ResetPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBD99927CD73A90061B864 /* ResetPassViewController.swift */; };
 		ABC2E132C1AF08CDB9826C25 /* Pods_FlashHR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C276AF36410A344916FB7C1 /* Pods_FlashHR.framework */; };
 /* End PBXBuildFile section */
@@ -92,9 +94,10 @@
 		73A1823927E8E41F0042B648 /* EmployeeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeCell.xib; sourceTree = "<group>"; };
 		73A7359F27CF5F1F00FA9253 /* ResetPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPassword.storyboard; sourceTree = "<group>"; };
 		73A735A227CF62D700FA9253 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		73A96AA3281340A6003A5CF6 /* SelectedEmpProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedEmpProfileVC.swift; sourceTree = "<group>"; };
+		73A96AA5281340B0003A5CF6 /* SelectedEmpProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectedEmpProfile.storyboard; sourceTree = "<group>"; };
 		73ABEE4827D65A24001F4A2F /* Employees.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Employees.storyboard; sourceTree = "<group>"; };
 		73ABEE4A27D65FB9001F4A2F /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
-		73BCD7BE27D2617700560C3F /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		73C8942E27D140F200BA3A6A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		73CBABF127EB4BF900D9A4FB /* DaysSchedulesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysSchedulesVC.swift; sourceTree = "<group>"; };
 		73CBABF327EB4C1100D9A4FB /* DaysSchedules.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DaysSchedules.storyboard; sourceTree = "<group>"; };
@@ -111,7 +114,8 @@
 		73DDCA7527D654300025BC14 /* Commmunication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Commmunication.storyboard; sourceTree = "<group>"; };
 		73DDCA7927D654470025BC14 /* Reports.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reports.storyboard; sourceTree = "<group>"; };
 		73DDCA7B27D654560025BC14 /* Requests.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Requests.storyboard; sourceTree = "<group>"; };
-		73DDCA8127D655150025BC14 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		73E4D709281336A40067B407 /* ProfileOrSchedule.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileOrSchedule.storyboard; sourceTree = "<group>"; };
+		73E4D70B281336AF0067B407 /* ProfileOrScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOrScheduleVC.swift; sourceTree = "<group>"; };
 		73FBD99927CD73A90061B864 /* ResetPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassViewController.swift; sourceTree = "<group>"; };
 		BD537B4C9017A29F0631B0E3 /* Pods-FlashHR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashHR.debug.xcconfig"; path = "Target Support Files/Pods-FlashHR/Pods-FlashHR.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,7 +169,6 @@
 				73556EE427E79FC70051A2E5 /* ProfileAsTableViewVC.swift */,
 				73556EE227E79EB70051A2E5 /* ProfileAsTableView.storyboard */,
 				73556EE627E7A35D0051A2E5 /* infoCell */,
-				73A1823727E8DCB50042B648 /* OldProfileSTB */,
 			);
 			path = ProfilePage;
 			sourceTree = "<group>";
@@ -196,13 +199,13 @@
 			path = infoCell;
 			sourceTree = "<group>";
 		};
-		7369FC8A27F3CD9000E0A312 /* CRUDEmployees */ = {
+		7369FC8A27F3CD9000E0A312 /* CreateEmployees */ = {
 			isa = PBXGroup;
 			children = (
 				7369FC8C27F3CDD800E0A312 /* CreateEmployeeVC.swift */,
 				7369FC8E27F3CDE900E0A312 /* CreateEmployee.storyboard */,
 			);
-			path = CRUDEmployees;
+			path = CreateEmployees;
 			sourceTree = "<group>";
 		};
 		7374A2BE27D1239E00493821 /* Core */ = {
@@ -312,15 +315,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		73A1823727E8DCB50042B648 /* OldProfileSTB */ = {
-			isa = PBXGroup;
-			children = (
-				73BCD7BE27D2617700560C3F /* ProfileVC.swift */,
-				73DDCA8127D655150025BC14 /* Profile.storyboard */,
-			);
-			path = OldProfileSTB;
-			sourceTree = "<group>";
-		};
 		73A1823C27E8E4250042B648 /* EmployeeCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,6 +322,15 @@
 				73A1823927E8E41F0042B648 /* EmployeeCell.xib */,
 			);
 			path = EmployeeCell;
+			sourceTree = "<group>";
+		};
+		73A96AA228134082003A5CF6 /* SelectedEmpProfile */ = {
+			isa = PBXGroup;
+			children = (
+				73A96AA3281340A6003A5CF6 /* SelectedEmpProfileVC.swift */,
+				73A96AA5281340B0003A5CF6 /* SelectedEmpProfile.storyboard */,
+			);
+			path = SelectedEmpProfile;
 			sourceTree = "<group>";
 		};
 		73C8942D27D140CE00BA3A6A /* Support Files */ = {
@@ -411,7 +414,8 @@
 				73DDCA7327D654150025BC14 /* EmployeesVC.swift */,
 				73ABEE4827D65A24001F4A2F /* Employees.storyboard */,
 				73A1823C27E8E4250042B648 /* EmployeeCell */,
-				7369FC8A27F3CD9000E0A312 /* CRUDEmployees */,
+				73E4D708281336060067B407 /* ProfileOrSchedule */,
+				7369FC8A27F3CD9000E0A312 /* CreateEmployees */,
 				73CBABF027EB4B8300D9A4FB /* DaysSchedules */,
 			);
 			path = EmployeesPage;
@@ -425,6 +429,16 @@
 				73067AA727DBF1B100FC7A7F /* RequestCell */,
 			);
 			path = RequestsPasge;
+			sourceTree = "<group>";
+		};
+		73E4D708281336060067B407 /* ProfileOrSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				73E4D70B281336AF0067B407 /* ProfileOrScheduleVC.swift */,
+				73E4D709281336A40067B407 /* ProfileOrSchedule.storyboard */,
+				73A96AA228134082003A5CF6 /* SelectedEmpProfile */,
+			);
+			path = ProfileOrSchedule;
 			sourceTree = "<group>";
 		};
 		A4BD030DFA22BE0A3DC63323 /* Pods */ = {
@@ -520,7 +534,6 @@
 				730FA0BD27D0BF3E00EB0C39 /* GoogleService-Info.plist in Resources */,
 				7394F02527CCBA7B001C58C9 /* Assets.xcassets in Resources */,
 				730FA0B527D0B8ED00EB0C39 /* Employee.storyboard in Resources */,
-				73DDCA8227D655150025BC14 /* Profile.storyboard in Resources */,
 				73ABEE4927D65A24001F4A2F /* Employees.storyboard in Resources */,
 				73A735A327CF62D700FA9253 /* Main.storyboard in Resources */,
 				73ABEE4B27D65FB9001F4A2F /* TabBar.storyboard in Resources */,
@@ -528,7 +541,9 @@
 				73067AB027DBF28600FC7A7F /* MessageCell.xib in Resources */,
 				7369FC8F27F3CDEA00E0A312 /* CreateEmployee.storyboard in Resources */,
 				73A735A027CF5F1F00FA9253 /* ResetPassword.storyboard in Resources */,
+				73A96AA6281340B0003A5CF6 /* SelectedEmpProfile.storyboard in Resources */,
 				73556EE327E79EB70051A2E5 /* ProfileAsTableView.storyboard in Resources */,
+				73E4D70A281336A40067B407 /* ProfileOrSchedule.storyboard in Resources */,
 				73DDCA7627D654300025BC14 /* Commmunication.storyboard in Resources */,
 				73DDCA7C27D654560025BC14 /* Requests.storyboard in Resources */,
 				73CBABFE27EB629000D9A4FB /* WorkDetails.storyboard in Resources */,
@@ -595,16 +610,17 @@
 				73DDCA7127D653DF0025BC14 /* RequestsVC.swift in Sources */,
 				7369FC8D27F3CDD800E0A312 /* CreateEmployeeVC.swift in Sources */,
 				73DDCA6D27D653B60025BC14 /* CommmunicationVC.swift in Sources */,
+				73A96AA4281340A6003A5CF6 /* SelectedEmpProfileVC.swift in Sources */,
 				73556EE927E7A38C0051A2E5 /* infoCell.swift in Sources */,
 				7374A2CA27D12C6000493821 /* UserDataService.swift in Sources */,
 				730FA0B927D0B91B00EB0C39 /* EmployeeViewController.swift in Sources */,
 				73067AAF27DBF28600FC7A7F /* MessageCell.swift in Sources */,
 				7381E2C027DB751F00134937 /* RequestCell.swift in Sources */,
 				73C8942F27D140F200BA3A6A /* Extensions.swift in Sources */,
+				73E4D70C281336AF0067B407 /* ProfileOrScheduleVC.swift in Sources */,
 				73DDCA6F27D653C70025BC14 /* ReportsVC.swift in Sources */,
 				73CBABF227EB4BF900D9A4FB /* DaysSchedulesVC.swift in Sources */,
 				73556EE527E79FC70051A2E5 /* ProfileAsTableViewVC.swift in Sources */,
-				73BCD7BF27D2617700560C3F /* ProfileVC.swift in Sources */,
 				73CBABF827EB529E00D9A4FB /* DaysSchedulesCell.swift in Sources */,
 				7374A2CD27D12C7E00493821 /* LoginService.swift in Sources */,
 				73CBAC0227EB6AD900D9A4FB /* WorkDetailsCell.swift in Sources */,
