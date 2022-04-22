@@ -25,7 +25,6 @@
 		7374A2D127D1321E00493821 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7374A2D027D1321E00493821 /* Login.storyboard */; };
 		7381E2C027DB751F00134937 /* RequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7381E2BE27DB751F00134937 /* RequestCell.swift */; };
 		7381E2C127DB751F00134937 /* RequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7381E2BF27DB751F00134937 /* RequestCell.xib */; };
-		7381E2C327DBE42200134937 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7381E2C227DBE42200134937 /* MessageModel.swift */; };
 		7394F01C27CCBA7B001C58C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7394F01B27CCBA7B001C58C9 /* AppDelegate.swift */; };
 		7394F01E27CCBA7B001C58C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7394F01D27CCBA7B001C58C9 /* SceneDelegate.swift */; };
 		7394F02027CCBA7B001C58C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7394F01F27CCBA7B001C58C9 /* LoginViewController.swift */; };
@@ -81,7 +80,6 @@
 		7374A2D027D1321E00493821 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		7381E2BE27DB751F00134937 /* RequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCell.swift; sourceTree = "<group>"; };
 		7381E2BF27DB751F00134937 /* RequestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestCell.xib; sourceTree = "<group>"; };
-		7381E2C227DBE42200134937 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		7394F01827CCBA7B001C58C9 /* FlashHR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashHR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7394F01B27CCBA7B001C58C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7394F01D27CCBA7B001C58C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -310,7 +308,6 @@
 			isa = PBXGroup;
 			children = (
 				7374A2C227D124EE00493821 /* UserModel.swift */,
-				7381E2C227DBE42200134937 /* MessageModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -329,8 +326,6 @@
 			children = (
 				73A1823827E8E41F0042B648 /* EmployeeCell.swift */,
 				73A1823927E8E41F0042B648 /* EmployeeCell.xib */,
-				7369FC8A27F3CD9000E0A312 /* CRUDEmployees */,
-				73CBABF027EB4B8300D9A4FB /* DaysSchedules */,
 			);
 			path = EmployeeCell;
 			sourceTree = "<group>";
@@ -416,6 +411,8 @@
 				73DDCA7327D654150025BC14 /* EmployeesVC.swift */,
 				73ABEE4827D65A24001F4A2F /* Employees.storyboard */,
 				73A1823C27E8E4250042B648 /* EmployeeCell */,
+				7369FC8A27F3CD9000E0A312 /* CRUDEmployees */,
+				73CBABF027EB4B8300D9A4FB /* DaysSchedules */,
 			);
 			path = EmployeesPage;
 			sourceTree = "<group>";
@@ -599,7 +596,6 @@
 				7369FC8D27F3CDD800E0A312 /* CreateEmployeeVC.swift in Sources */,
 				73DDCA6D27D653B60025BC14 /* CommmunicationVC.swift in Sources */,
 				73556EE927E7A38C0051A2E5 /* infoCell.swift in Sources */,
-				7381E2C327DBE42200134937 /* MessageModel.swift in Sources */,
 				7374A2CA27D12C6000493821 /* UserDataService.swift in Sources */,
 				730FA0B927D0B91B00EB0C39 /* EmployeeViewController.swift in Sources */,
 				73067AAF27DBF28600FC7A7F /* MessageCell.swift in Sources */,

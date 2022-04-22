@@ -6,34 +6,83 @@
 //
 
 import UIKit
-
+import Firebase
 class EmployeesVC: UIViewController {
+    
+    
     
     @IBOutlet weak var searchBarField: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    static var showEmployee: [Employee] = []
+    let loginService = LoginService()
+    static var empIDHolder = EmpIDHolder()
+
+    
+    let db = Firestore.firestore()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
+        
         tableView.register(UINib(nibName: Constants.NibNames.employeeCell, bundle: nil) , forCellReuseIdentifier: Constants.Identifiers.employeeCellIdentifier)
+        
+        loadEmployees()
     }
-
+    
     @IBAction func addEmployee(_ sender: UIBarButtonItem) {
         
         presentFromSTB(stbName: Constants.Segues.createEmployeeSegue, vcID: Constants.Segues.createEmployeeSegue)
         
+    }
+    
+    
+    func loadEmployees(){
+        
+        db.collection("employee").addSnapshotListener{ querySnapshot, e in
+            if let error = e {
+                self.presentAlert(message: error.localizedDescription)
+            }else{
+                
+                EmployeesVC.showEmployee.removeAll()
+                
+                if let snapshotDocuments = querySnapshot?.documents {
+                    for doc in snapshotDocuments {
+                        let data = doc.data()
+                        if let empName = data["userName"] as? String,
+                           let empTitle = data["title"] as? String,
+                           let empID = data["empID"] as? String{
+                            
+                            let employeeInfo = Employee(empID: empID ,userName: empName, title: empTitle)
+                            
+                            EmployeesVC.showEmployee.append(employeeInfo)
+                            
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                                let indexPath = IndexPath(row: 0, section: 0)
+                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
 extension EmployeesVC: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
+        return EmployeesVC.showEmployee.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Identifiers.employeeCellIdentifier , for: indexPath) as! EmployeeCell
         
+        cell.empName.text = EmployeesVC.showEmployee[indexPath.row].userName
+        cell.empTitle.text = EmployeesVC.showEmployee[indexPath.row].title
+       
         return cell
         
     }
@@ -43,39 +92,19 @@ extension EmployeesVC: UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+        EmployeesVC.empIDHolder.employeeID = EmployeesVC.showEmployee[indexPath.row].empID
+        EmployeesVC.empIDHolder.employeeName = EmployeesVC.showEmployee[indexPath.row].userName
         self.presentFromSTB(stbName: Constants.Segues.daysSchedulesSegue, vcID: Constants.Segues.daysSchedulesSegue)
     }
-
-    func tableView(_ tableView: UITableView,
-                    trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?{
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?{
         return nil
     }
 }
 
-
-
-
-
-        
-//        let shareAction = UITableViewRowAction(style: .default, title: "Share" , handler: { (action:UITableViewRowAction, indexPath: IndexPath) -> Void in
-//
-//        })
-//
-//        let rateAction = UITableViewRowAction(style: .default, title: "Rate" , handler: { (action:UITableViewRowAction, indexPath:IndexPath) -> Void in
-//
-//      })
-//        // 5
-//        return [shareAction,rateAction]
-    
-    //    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-    //        if section == 7{
-    //            return 40
-    //        }else{
-    //            return 25
-    //        }
-    //    }
-    //    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-    //        return UIView()
-    //    }
-    
+struct EmpIDHolder {
+    var employeeID: String = ""
+    var employeeName: String = ""
+}
 

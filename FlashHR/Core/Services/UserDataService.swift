@@ -10,9 +10,9 @@
 import Foundation
 
 class UserDataService {
-    
     static let shared = UserDataService()
-    
+//    var employee: [Employee] = []
+
     var isEmployeer: Bool {
         return self.userID == Constants.Strings.employerID
     }

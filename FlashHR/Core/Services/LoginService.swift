@@ -22,7 +22,7 @@ class LoginService {
     }
     
     func performLogout(success: @escaping(()->(Void)), failure: @escaping ((String)->(Void))) {
-       
+        
         do {
             try Auth.auth().signOut()
             Constants.UserDataDefault.currentUserID = nil
@@ -38,6 +38,17 @@ class LoginService {
                 failure(e.localizedDescription)
             }else {
                 success()
+            }
+        }
+    }
+    
+    func performSignUp(_ employee: Employee, success: @escaping ((Employee)->Void), failure: @escaping ((String)->Void)) {
+        Auth.auth().createUser(withEmail: employee.email, password: employee.password) { result, error in
+            if let e = error {
+                failure(e.localizedDescription)
+            }else {
+                employee.empID = result?.user.uid ?? ""
+                success(employee)
             }
         }
     }

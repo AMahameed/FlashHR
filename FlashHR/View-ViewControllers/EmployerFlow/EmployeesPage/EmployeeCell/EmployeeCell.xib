@@ -19,8 +19,8 @@
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TwG-7k-TQs">
                         <rect key="frame" x="15" y="15" width="507" height="103"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="x9G-4s-7OF" userLabel="empImage">
-                                <rect key="frame" x="30.5" y="11.5" width="80" height="80"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="x9G-4s-7OF" userLabel="empImage">
+                                <rect key="frame" x="30.5" y="13" width="80" height="77.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="gf8-yw-CBC"/>
                                     <constraint firstAttribute="height" constant="80" id="tCx-Nq-aOw"/>
@@ -86,6 +86,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="userPhoto" width="1008" height="1344"/>
+        <image name="person" catalog="system" width="128" height="117"/>
     </resources>
 </document>
