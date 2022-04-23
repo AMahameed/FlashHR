@@ -58,6 +58,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="WCZ-qp-X0g" id="aq1-zI-rHd"/>
                         <outlet property="searchBarField" destination="WCZ-qp-X0g" id="fpk-iu-lK9"/>
                         <outlet property="tableView" destination="PZb-fL-I1v" id="9pX-U8-cKC"/>
                     </connections>

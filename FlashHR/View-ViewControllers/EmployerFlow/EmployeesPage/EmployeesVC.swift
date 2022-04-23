@@ -14,9 +14,11 @@ class EmployeesVC: UIViewController {
     @IBOutlet weak var searchBarField: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     static var showEmployee: [Employee] = []
+    var filteredEmployees: [Employee] = []
     let loginService = LoginService()
     static var empIDHolder = EmpIDHolder()
-
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     
     let db = Firestore.firestore()
     
@@ -27,6 +29,8 @@ class EmployeesVC: UIViewController {
         tableView.dataSource = self
         
         tableView.register(UINib(nibName: Constants.NibNames.employeeCell, bundle: nil) , forCellReuseIdentifier: Constants.Identifiers.employeeCellIdentifier)
+        
+        searchBar.delegate = self
         
         loadEmployees()
     }
@@ -71,20 +75,35 @@ class EmployeesVC: UIViewController {
     }
 }
 
+
+
+//MARK: - TableView Delegate and DataScource
+
 extension EmployeesVC: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return EmployeesVC.showEmployee.count
+        
+        if filteredEmployees.count == 0{
+            return EmployeesVC.showEmployee.count
+        }else{
+            return filteredEmployees.count
+        }
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Identifiers.employeeCellIdentifier , for: indexPath) as! EmployeeCell
         
-        cell.empName.text = EmployeesVC.showEmployee[indexPath.row].userName
-        cell.empTitle.text = EmployeesVC.showEmployee[indexPath.row].title
-       
-        return cell
-        
+        if filteredEmployees.count == 0 {
+            cell.empName.text = EmployeesVC.showEmployee[indexPath.row].userName
+            cell.empTitle.text = EmployeesVC.showEmployee[indexPath.row].title
+            return cell
+        }else{
+            cell.empName.text = filteredEmployees[indexPath.row].userName
+            cell.empTitle.text = filteredEmployees[indexPath.row].title
+            
+            return cell
+        }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
@@ -92,14 +111,43 @@ extension EmployeesVC: UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       
-        EmployeesVC.empIDHolder.employeeID = EmployeesVC.showEmployee[indexPath.row].empID
-        EmployeesVC.empIDHolder.employeeName = EmployeesVC.showEmployee[indexPath.row].userName
-        presentFromSTB(stbName: Constants.Segues.ProfileOrSchedule, vcID: Constants.Segues.ProfileOrSchedule)
+        
+        if filteredEmployees.count == 0 {
+            EmployeesVC.empIDHolder.employeeID = EmployeesVC.showEmployee[indexPath.row].empID
+            EmployeesVC.empIDHolder.employeeName = EmployeesVC.showEmployee[indexPath.row].userName
+            presentFromSTB(stbName: Constants.Segues.ProfileOrSchedule, vcID: Constants.Segues.ProfileOrSchedule)
+        }else{
+            EmployeesVC.empIDHolder.employeeID = filteredEmployees[indexPath.row].empID
+            EmployeesVC.empIDHolder.employeeName = filteredEmployees[indexPath.row].userName
+            presentFromSTB(stbName: Constants.Segues.ProfileOrSchedule, vcID: Constants.Segues.ProfileOrSchedule)
+        }
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?{
         return nil
+    }
+}
+
+//MARK: - SearchBar Delegate
+
+extension EmployeesVC: UISearchBarDelegate{
+    
+    
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredEmployees = []
+        
+        if searchText.isEmpty {
+            filteredEmployees = EmployeesVC.showEmployee
+        }
+        
+        for emp in EmployeesVC.showEmployee{
+            
+            if emp.userName.uppercased().contains(searchText.uppercased()){
+                filteredEmployees.append(emp)
+            }
+        }
+        self.tableView.reloadData()
     }
 }
 
