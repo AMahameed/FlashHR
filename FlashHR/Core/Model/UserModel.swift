@@ -16,6 +16,7 @@ struct Employer {
 
 class Employee {
     var empID: String = ""
+    var empImageData: Data = Data()
     var email: String = ""
     var password: String = ""
     var userName: String = ""
@@ -26,8 +27,9 @@ class Employee {
     var isEmployer: Bool = false
     var workTransactions: [WorkTansactions] = []
     
-    init(empID: String = "", email: String = "", password: String = "", userName: String = "", title: String = "", mobile: String = "", gender: String = "") {
+    init(empID: String = "", empImageData: Data = Data(), email: String = "", password: String = "", userName: String = "", title: String = "", mobile: String = "", gender: String = "") {
         self.empID = empID
+        self.empImageData = empImageData
         self.userName = userName
         self.mobile = mobile
         self.gender = gender

@@ -15,10 +15,9 @@ class SelectedEmpProfileVC: UIViewController{
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var empNameLabel: UILabel!
-    let db = Firestore.firestore()
+    private let db = Firestore.firestore()
     var documentsIDHolder = DocumentsIDHolder()
     var titles = ["Title","Email","Mobile No.","Gender"]
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +25,21 @@ class SelectedEmpProfileVC: UIViewController{
         tableView.dataSource = self
         tableView.register(UINib(nibName: Constants.NibNames.infoCell, bundle: nil) , forCellReuseIdentifier: Constants.Identifiers.infoCellIdentifier)
         
-        imageView.layer.cornerRadius = imageView.frame.size.height / 2.05
+        imageView.layer.cornerRadius = imageView.frame.size.height / 5
         infoView.layer.cornerRadius = infoView.frame.size.height / 11
         
         empNameLabel.text = EmployeesVC.empIDHolder.employeeName
+        
+        loadEmpImage()
     }
+    
+    func loadEmpImage() {
+        getEmpData { imageData in
+            let image = UIImage(data: imageData.empImageData)
+            self.imageView.image = image
+        }
+    }
+    
     
     @IBAction func chooseImage(_ sender: UIButton) {
         let vc = UIImagePickerController()
@@ -71,18 +80,21 @@ class SelectedEmpProfileVC: UIViewController{
                         let doc = document
 
                         if let email = doc["email"] as? String,
+                           let empImageData = doc["empImageData"] as? Data,
                            let title = doc["title"] as? String,
                            let mobile = doc["mobile"] as? String,
                            let gender = doc["gender"] as? String{
                             
-                            let employeeInfo = Employee(email: email ,title: title, mobile: mobile, gender: gender)
+                            
+                            let employeeInfo = Employee(empImageData: empImageData, email: email, title: title, mobile: mobile, gender: gender)
+                            
                             success(employeeInfo)
 
                         }
                     }
                 }
         } failure: { error in
-            self.presentAlert(message: error)
+            self.presentAlertInMainThread(message: error)
         }
     }
 }
@@ -92,10 +104,26 @@ class SelectedEmpProfileVC: UIViewController{
 extension SelectedEmpProfileVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
-            imageView.image = image
-        }
         picker.dismiss(animated: true)
+        
+        guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else{
+            return
+        }
+        imageView.image = image
+        
+        guard let imageData = image.pngData() else{
+            return
+        }
+        
+        getEmpDocID { docID in
+            self.db.collection("employee").document(docID).setData(["empImageData": imageData], merge: true) { error in
+                if let _ = error{
+                    self.presentAlertInMainThread(message: "Image size is more than 1 MB.")
+                }
+            }
+        } failure: { error in
+            self.presentAlertInMainThread(message: error)
+        }
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

@@ -76,7 +76,7 @@ class WorkDetailsVC: UIViewController {
                 }
             }
         } failure: { error in
-            self.presentAlert(message: error)
+            self.presentAlertInMainThread(message: error)
         }
     }
 
@@ -109,7 +109,7 @@ class WorkDetailsVC: UIViewController {
             }
 
         } failure: { error in
-            self.presentAlert(message: error)
+            self.presentAlertInMainThread(message: error)
         }
     }
     
@@ -141,7 +141,7 @@ class WorkDetailsVC: UIViewController {
                 self.dismiss(animated: true)
 
             } failure: { error in
-                self.presentAlert(message: error)
+                self.presentAlertInMainThread(message: error)
             }
     }
     
@@ -171,7 +171,7 @@ extension WorkDetailsVC: UITableViewDelegate, UITableViewDataSource{
                 break
             }
         } failure: { error in
-            self.presentAlert(message: error)
+            self.presentAlertInMainThread(message: error)
         }
         
         cell.titleLabel.text = titles[indexPath.row]

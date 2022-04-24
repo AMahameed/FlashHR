@@ -21,6 +21,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="x9G-4s-7OF" userLabel="empImage">
                                 <rect key="frame" x="30.5" y="13" width="80" height="77.5"/>
+                                <color key="tintColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="gf8-yw-CBC"/>
                                     <constraint firstAttribute="height" constant="80" id="tCx-Nq-aOw"/>
@@ -29,13 +30,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="trQ-B4-2Pm" userLabel="labelsView">
                                 <rect key="frame" x="120.5" y="15" width="386.5" height="73"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abdallah Mahameed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="SVd-Vc-cnt">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employee Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="SVd-Vc-cnt">
                                         <rect key="frame" x="13" y="13" width="348.5" height="14"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senior Developer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTh-xL-izr">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTh-xL-izr">
                                         <rect key="frame" x="13" y="35" width="336.5" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="EHt-Fc-tkG"/>
@@ -61,6 +62,7 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="trQ-B4-2Pm" secondAttribute="bottom" constant="15" id="58T-oF-QHu"/>
                             <constraint firstItem="trQ-B4-2Pm" firstAttribute="top" secondItem="TwG-7k-TQs" secondAttribute="top" constant="15" id="7nU-Ox-ZyS"/>
+                            <constraint firstItem="x9G-4s-7OF" firstAttribute="centerY" secondItem="TwG-7k-TQs" secondAttribute="centerY" id="MX6-9x-Plk"/>
                             <constraint firstItem="trQ-B4-2Pm" firstAttribute="leading" secondItem="x9G-4s-7OF" secondAttribute="trailing" constant="10" id="WYQ-HB-Dyc"/>
                             <constraint firstAttribute="trailing" secondItem="trQ-B4-2Pm" secondAttribute="trailing" id="X8U-8e-V5S"/>
                             <constraint firstItem="x9G-4s-7OF" firstAttribute="leading" secondItem="TwG-7k-TQs" secondAttribute="leading" constant="25" id="qs1-bM-OMO"/>

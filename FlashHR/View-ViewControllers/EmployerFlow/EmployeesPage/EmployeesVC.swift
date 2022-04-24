@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+
 class EmployeesVC: UIViewController {
     
     
@@ -18,9 +19,13 @@ class EmployeesVC: UIViewController {
     let loginService = LoginService()
     static var empIDHolder = EmpIDHolder()
     @IBOutlet weak var searchBar: UISearchBar!
+    private let db = Firestore.firestore()
+
     
-    
-    let db = Firestore.firestore()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,12 +46,11 @@ class EmployeesVC: UIViewController {
         
     }
     
-    
     func loadEmployees(){
         
         db.collection("employee").addSnapshotListener{ querySnapshot, e in
             if let error = e {
-                self.presentAlert(message: error.localizedDescription)
+                self.presentAlertInMainThread(message: error.localizedDescription)
             }else{
                 
                 EmployeesVC.showEmployee.removeAll()
@@ -55,10 +59,11 @@ class EmployeesVC: UIViewController {
                     for doc in snapshotDocuments {
                         let data = doc.data()
                         if let empName = data["userName"] as? String,
+                           let empImageData = doc["empImageData"] as? Data,
                            let empTitle = data["title"] as? String,
                            let empID = data["empID"] as? String{
                             
-                            let employeeInfo = Employee(empID: empID ,userName: empName, title: empTitle)
+                            let employeeInfo = Employee(empID: empID, empImageData: empImageData, userName: empName, title: empTitle)
                             
                             EmployeesVC.showEmployee.append(employeeInfo)
                             
@@ -74,8 +79,6 @@ class EmployeesVC: UIViewController {
         }
     }
 }
-
-
 
 //MARK: - TableView Delegate and DataScource
 
@@ -97,11 +100,14 @@ extension EmployeesVC: UITableViewDelegate,UITableViewDataSource{
         if filteredEmployees.count == 0 {
             cell.empName.text = EmployeesVC.showEmployee[indexPath.row].userName
             cell.empTitle.text = EmployeesVC.showEmployee[indexPath.row].title
+            let image = UIImage(data: EmployeesVC.showEmployee[indexPath.row].empImageData)
+            cell.empImage.image = image
             return cell
         }else{
             cell.empName.text = filteredEmployees[indexPath.row].userName
             cell.empTitle.text = filteredEmployees[indexPath.row].title
-            
+            let image = UIImage(data: filteredEmployees[indexPath.row].empImageData)
+            cell.empImage.image = image
             return cell
         }
     }
@@ -133,8 +139,8 @@ extension EmployeesVC: UITableViewDelegate,UITableViewDataSource{
 extension EmployeesVC: UISearchBarDelegate{
     
     
-    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
         filteredEmployees = []
         
         if searchText.isEmpty {
@@ -148,6 +154,10 @@ extension EmployeesVC: UISearchBarDelegate{
             }
         }
         self.tableView.reloadData()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }
 

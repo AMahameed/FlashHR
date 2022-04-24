@@ -34,9 +34,8 @@ class ProfileAsTableViewVC: UIViewController {
         loginService.performLogout {
             self.presentFromSTB(stbName: Constants.Segues.LoginSegue, vcID: Constants.Segues.LoginSegue)
         } failure: { signOutError in
-            self.presentAlert(message: signOutError)
+            self.presentAlertInMainThread(message: signOutError)
         }
-        
     }
 }
 

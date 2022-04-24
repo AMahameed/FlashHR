@@ -30,11 +30,39 @@ class CreateEmployeeVC: UIViewController {
         genderPickerView.dataSource = self
         genderPickerView.tag = 1
         
-        
-        
         tableView.register(UINib(nibName: Constants.NibNames.workDetailsCell, bundle: nil) , forCellReuseIdentifier: Constants.Identifiers.workDetailsCellIdentifier)
+        
+        imageView.layer.cornerRadius = imageView.frame.size.height / 5
         viewBackground.layer.cornerRadius = viewBackground.frame.size.height / 11
-        imageView.layer.cornerRadius = imageView.frame.size.height / 2.05
+    }
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        
+        guard !(createEmployee.email.isEmpty), !(createEmployee.password.isEmpty),
+        !(createEmployee.userName.isEmpty), !(createEmployee.title.isEmpty), !(createEmployee.mobile.isEmpty), !(createEmployee.gender.isEmpty) else{
+            presentAlert(message: "Please fill all required fields"); return}
+        
+        guard !(createEmployee.empImageData.isEmpty) else {
+            presentAlert(message: "Please Enter an Image, with size 1 MB or less"); return
+        }
+        
+        loginService.performSignUp(createEmployee) { _ in
+        //To send entred values to the firebase
+            
+            self.db.collection("employee").addDocument(data: [
+                "empID" : self.createEmployee.empID,
+                "empImageData" : self.createEmployee.empImageData,
+                "email" : self.createEmployee.email,
+                "password" : self.createEmployee.password,
+                "userName" : self.createEmployee.userName,
+                "title" : self.createEmployee.title,
+                "mobile" : self.createEmployee.mobile,
+                "gender" : self.createEmployee.gender,
+                "isDeleted" : self.createEmployee.isDeleted])
+            
+            self.dismiss(animated: true)
+        } failure: { error in
+            self.presentAlertInMainThread(message: error)
+        }
     }
     
     @IBAction func chooseImage(_ sender: UIButton) {
@@ -45,56 +73,9 @@ class CreateEmployeeVC: UIViewController {
         present(vc, animated: true)
     }
     
-  
-    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
-        
-        guard !(createEmployee.email.isEmpty), !(createEmployee.password.isEmpty),
-        !(createEmployee.userName.isEmpty), !(createEmployee.title.isEmpty), !(createEmployee.mobile.isEmpty), !(createEmployee.gender.isEmpty) else{
-            presentAlert(message: "Please fill all required fields"); return}
-        
-        loginService.performSignUp(createEmployee) { _ in
-        //To send entred values to the firebase
-            
-            self.db.collection("employee").addDocument(data: [
-                "empID" : self.createEmployee.empID,
-                "email" : self.createEmployee.email,
-                "password" : self.createEmployee.password,
-                "userName" : self.createEmployee.userName,
-                "title" : self.createEmployee.title,
-                "mobile" : self.createEmployee.mobile,
-                "gender" : self.createEmployee.gender,
-                "isDeleted" : self.createEmployee.isDeleted])
-            { error in
-                    self.presentAlert(message: error?.localizedDescription ?? "No Data Found")
-            }
-            
-            self.dismiss(animated: true)
-        } failure: { error in
-            self.presentAlert(message: error)
-        }
-    }
-    
     @IBAction func backPressed(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true)
     }
-}
-
-
-//MARK: - Image Picker
-
-extension CreateEmployeeVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
-            imageView.image = image
-        }
-        picker.dismiss(animated: true)
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true)
-    }
-    
 }
 
 //MARK: - TabelView
@@ -128,6 +109,32 @@ extension CreateEmployeeVC: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         UITableView.automaticDimension
     }
+}
+
+//MARK: - Image Picker
+
+extension CreateEmployeeVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true)
+        
+        guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else{
+            return
+        }
+        
+        guard let imageData = image.pngData(), imageData.count <= 103000 else{
+            
+            presentAlert(message: "Image size is more than 1 MB.")
+            return
+        }
+        imageView.image = image
+        createEmployee.empImageData = imageData
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true)
+    }
+    
 }
 
 //MARK: - TextFieldDelegate
