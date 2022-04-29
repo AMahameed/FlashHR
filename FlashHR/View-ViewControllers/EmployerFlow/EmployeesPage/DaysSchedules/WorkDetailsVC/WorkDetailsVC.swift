@@ -10,10 +10,11 @@ import Firebase
 
 class WorkDetailsVC: UIViewController {
     @IBOutlet weak var viewBackground: UIView!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     var workTransactions = WorkTansactions()
-    var documentsIDHolder = DocumentsIDHolder()
     var workingHoursPickerView = UIPickerView()
     var startTimePickerView = UIPickerView()
     let db = Firestore.firestore()
@@ -37,7 +38,13 @@ class WorkDetailsVC: UIViewController {
         tableView.register(UINib(nibName: Constants.NibNames.workDetailsCell, bundle: nil) , forCellReuseIdentifier: Constants.Identifiers.workDetailsCellIdentifier)
         viewBackground.layer.cornerRadius = viewBackground.frame.size.height / 11
         
-        navigationItem.title = EmployeesVC.empIDHolder.employeeName
+        nameLabel.text = EmployeesVC.empIDHolder.employeeName
+        dayLabel.text = DaysSchedulesVC.dayIDHolder.dayStr
+        
+        if !DaysSchedulesVC.dayIDHolder.canUpdate {
+            navigationItem.rightBarButtonItem?.isEnabled = false
+            presentAlert(title:" Warning", message: "This Record has already been done. No Manipulation of older records is allowed! ", preferredStyle: .alert )
+        }
     }
     
 
@@ -49,9 +56,7 @@ class WorkDetailsVC: UIViewController {
             }else{
                 if let documents = querySnapshot?.documents{
                     for doc in documents{
-                        self.documentsIDHolder.empDocumentID = doc.documentID
-                        
-                        success(self.documentsIDHolder.empDocumentID)
+                        success(doc.documentID)
                     }
                 }
             }
@@ -59,19 +64,20 @@ class WorkDetailsVC: UIViewController {
     }
 
     func getWorkTransactionDocID(success: @escaping ((String, String)->Void),  failure: @escaping ((String)->Void)){
-
+        
         getEmpDocID { empDocID in
-            self.db.collection("employee").document(empDocID).collection("workTransactions").whereField("dayNo", isEqualTo: DaysSchedulesVC.dayIDHolder.dayID).addSnapshotListener { querySnapshot, e in
-
+            self.db.collection("employee").document(empDocID).collection("workTransactions").whereField("dayStr", isEqualTo: DaysSchedulesVC.dayIDHolder.dayStr).addSnapshotListener { querySnapshot, e in
+                
                 if let error = e {
                     failure(error.localizedDescription)
                 }else{
                     if let documents = querySnapshot?.documents{
                         for doc in documents{
-                            self.documentsIDHolder.workTransactionsDocumentID = doc.documentID
                             self.wtDocIDHOlder = doc.documentID
-                            success(self.documentsIDHolder.workTransactionsDocumentID, empDocID)
+                            success(doc.documentID, empDocID)
                         }
+                        guard documents.count != 0 else { self.presentAlert(title:" Warning", message: "No Records Found for this day.", preferredStyle: .alert)
+                            return }
                     }
                 }
             }
@@ -81,71 +87,68 @@ class WorkDetailsVC: UIViewController {
     }
 
 
-    func isDayFilled(success: @escaping ((TansactionsHolder)->Void),  failure: @escaping ((String)->Void))  {
 
+    func isDayFilled(success: @escaping ((TransactionsHolder)->Void),  failure: @escaping ((String)->Void))  {
+        
         getWorkTransactionDocID { wtDocID, empDocID in
-
+            
             self.db.collection("employee").document(empDocID).collection("workTransactions").document(wtDocID).getDocument { docSnapShot, e in
                 if let error = e {
                     failure(error.localizedDescription)
                 }else{
-
-                    if let document = docSnapShot?.data() {
-
-                        let doc = document
-
-                        if let dayNo = doc["dayNo"] as? Int,
+                    
+                    if let doc = docSnapShot?.data() {
+                        
+                        if let dayStr = doc["dayStr"] as? String,
                            let projectName = doc["projectName"] as? String,
                            let contactNo = doc["contactNo"] as? String,
                            let startTime = doc["startTime"] as? String,
                            let workingHours = doc["workingHours"] as? Int{
-
-                            let thisDayWorkTransactions = TansactionsHolder( projectName: projectName, contactNo: contactNo, startTime: startTime, dayNo: dayNo, workingHours: workingHours)
-
+                            
+                            
+                            let thisDayWorkTransactions = TransactionsHolder( projectName: projectName, contactNo: contactNo, startTime: startTime, dayStr: dayStr,workingHours: workingHours)
+                            
                             success(thisDayWorkTransactions)
                         }
                     }
                 }
             }
-
+            
+        } failure: { error in
+            self.presentAlertInMainThread(message: error)
+        }
+    }
+  
+    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true)
+    }
+    
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        
+        guard !(workTransactions.projectName.isEmpty), !(workTransactions.contactNo.isEmpty),!(workTransactions.startTime.isEmpty) else{
+            presentAlert(message: "Please fill all required fields"); return}
+        
+        getEmpDocID { empDocID in
+            
+            self.db.collection("employee").document(empDocID).collection("workTransactions").document(self.wtDocIDHOlder).delete()
+            self.db.collection("employee").document(empDocID).collection("workTransactions").addDocument(data: [
+                "dayStr" : DaysSchedulesVC.dayIDHolder.dayStr,
+                "projectName" : self.workTransactions.projectName,
+                "contactNo" : self.workTransactions.contactNo,
+                "startTime" : self.workTransactions.startTime,
+                "workingHours" : self.workTransactions.workingHours,
+                "isRequestedLeave": self.workTransactions.isRequestedLeave])
+            
+            self.dismiss(animated: true)
+            
         } failure: { error in
             self.presentAlertInMainThread(message: error)
         }
     }
     
-
-    
-    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true)
-    }
-    
-    
-    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
-    
-        guard !(workTransactions.projectName.isEmpty), !(workTransactions.contactNo.isEmpty),!(workTransactions.startTime.isEmpty) else{
-            presentAlert(message: "Please fill all required fields"); return}
-        
-        
-        
-            getEmpDocID { empDocID in
-                self.db.collection("employee").document(empDocID).collection("workTransactions").document(self.wtDocIDHOlder).delete()
-                self.db.collection("employee").document(empDocID).collection("workTransactions").addDocument(data: [
-                    "dayNo" : DaysSchedulesVC.dayIDHolder.dayID,
-                    "projectName" : self.workTransactions.projectName,
-                    "contactNo" : self.workTransactions.contactNo,
-                    "startTime" : self.workTransactions.startTime,
-                    "workingHours" : self.workTransactions.workingHours,
-                    "date": Date().timeIntervalSince1970,
-                    "isRequestedLeave": self.workTransactions.isRequestedLeave])
-
-                self.dismiss(animated: true)
-
-            } failure: { error in
-                self.presentAlertInMainThread(message: error)
-            }
-    }
     
 }
+
 //MARK: - TableView
 
 extension WorkDetailsVC: UITableViewDelegate, UITableViewDataSource{
@@ -154,24 +157,29 @@ extension WorkDetailsVC: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Identifiers.workDetailsCellIdentifier, for: indexPath) as? WorkDetailsCell else {return UITableViewCell()}
         
-        isDayFilled { Tansactionsholder in
+        isDayFilled { transHolder in
 
             switch indexPath.row {
             case 0:
-                cell.textField.placeholder = Tansactionsholder.projectName
+                cell.textField.placeholder = transHolder.projectName
             case 1:
-                cell.textField.placeholder = Tansactionsholder.contactNo
+                cell.textField.placeholder = transHolder.contactNo
             case 2:
-                cell.textField.placeholder = Tansactionsholder.startTime
+                cell.textField.placeholder = transHolder.startTime
             case 3:
-                cell.textField.placeholder = String(Tansactionsholder.workingHours)
+                cell.textField.placeholder = String(transHolder.workingHours)
             default:
                 break
             }
         } failure: { error in
             self.presentAlertInMainThread(message: error)
+        }
+        
+        if !DaysSchedulesVC.dayIDHolder.canUpdate {
+            cell.textField.isUserInteractionEnabled = false
         }
         
         cell.titleLabel.text = titles[indexPath.row]
@@ -180,14 +188,16 @@ extension WorkDetailsVC: UITableViewDelegate, UITableViewDataSource{
         
         switch indexPath.row {
         case 2:
-            cell.textField.inputView = startTimePickerView
+            cell.textField.inputView = self.startTimePickerView
         case 3:
-            cell.textField.inputView = workingHoursPickerView
+            cell.textField.inputView = self.workingHoursPickerView
         default:
             break
         }
+    
         return cell
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
@@ -196,6 +206,8 @@ extension WorkDetailsVC: UITableViewDelegate, UITableViewDataSource{
 //MARK: - TextFieldDelegate
 
 extension WorkDetailsVC: UITextFieldDelegate {
+    
+
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         
@@ -259,14 +271,38 @@ extension WorkDetailsVC: UIPickerViewDelegate, UIPickerViewDataSource{
         switch pickerView.tag {
         case 1:
             workTransactions.startTime = Constants.WorkDetailsVCConstants.startTime[row]
-            //            pickerView.resignFirstResponder()
-            //            tableView.reloadRows(at: [IndexPath.init(row: 2, section: 0)], with: .automatic)
         case 2:
             workTransactions.workingHours = Constants.WorkDetailsVCConstants.workingHours[row]
-            //            pickerView.resignFirstResponder()
-            //            tableView.reloadRows(at: [IndexPath.init(row: 3, section: 0)], with: .automatic)
         default:
             return
         }
     }
 }
+
+
+//
+//
+//func isDayDetailsUpdatable()  {
+//
+//    isDayFilled { transactionsHolder in
+//
+//        let x = Double(Date().timeIntervalSince1970) - transactionsHolder.date
+//        print(x)
+//
+//        let today = Date()
+//        let c = Date(timeIntervalSince1970: transactionsHolder.date).timeIntervalSince1970
+//        let mc = Calendar.current.date(byAdding: .day, value: -7, to: today)?.timeIntervalSince1970
+//
+//
+//        if c < mc! {
+//            print(c)
+//        }else{
+//            print(mc!)
+//        }
+//
+//
+//    } failure: { error in
+//        self.presentAlertInMainThread(message: error)
+//    }
+//}
+//

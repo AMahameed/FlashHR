@@ -12,6 +12,7 @@
 		730FA0B527D0B8ED00EB0C39 /* Employee.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 730FA0B427D0B8ED00EB0C39 /* Employee.storyboard */; };
 		730FA0B927D0B91B00EB0C39 /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730FA0B827D0B91B00EB0C39 /* EmployeeViewController.swift */; };
 		730FA0BD27D0BF3E00EB0C39 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 730FA0BC27D0BF3E00EB0C39 /* GoogleService-Info.plist */; };
+		7338C11328183C2C0065CA3F /* FireBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338C11228183C2C0065CA3F /* FireBaseService.swift */; };
 		73556EE327E79EB70051A2E5 /* ProfileAsTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73556EE227E79EB70051A2E5 /* ProfileAsTableView.storyboard */; };
 		73556EE527E79FC70051A2E5 /* ProfileAsTableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73556EE427E79FC70051A2E5 /* ProfileAsTableViewVC.swift */; };
 		73556EE927E7A38C0051A2E5 /* infoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73556EE727E7A38C0051A2E5 /* infoCell.swift */; };
@@ -42,8 +43,6 @@
 		73C8942F27D140F200BA3A6A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C8942E27D140F200BA3A6A /* Extensions.swift */; };
 		73CBABF227EB4BF900D9A4FB /* DaysSchedulesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBABF127EB4BF900D9A4FB /* DaysSchedulesVC.swift */; };
 		73CBABF427EB4C1100D9A4FB /* DaysSchedules.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73CBABF327EB4C1100D9A4FB /* DaysSchedules.storyboard */; };
-		73CBABF827EB529E00D9A4FB /* DaysSchedulesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBABF627EB529E00D9A4FB /* DaysSchedulesCell.swift */; };
-		73CBABF927EB529E00D9A4FB /* DaysSchedulesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73CBABF727EB529E00D9A4FB /* DaysSchedulesCell.xib */; };
 		73CBABFC27EB626B00D9A4FB /* WorkDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBABFB27EB626B00D9A4FB /* WorkDetailsVC.swift */; };
 		73CBABFE27EB629000D9A4FB /* WorkDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73CBABFD27EB629000D9A4FB /* WorkDetails.storyboard */; };
 		73CBAC0227EB6AD900D9A4FB /* WorkDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBAC0027EB6AD900D9A4FB /* WorkDetailsCell.swift */; };
@@ -69,6 +68,7 @@
 		730FA0B427D0B8ED00EB0C39 /* Employee.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Employee.storyboard; sourceTree = "<group>"; };
 		730FA0B827D0B91B00EB0C39 /* EmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
 		730FA0BC27D0BF3E00EB0C39 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7338C11228183C2C0065CA3F /* FireBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseService.swift; sourceTree = "<group>"; };
 		73556EE227E79EB70051A2E5 /* ProfileAsTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileAsTableView.storyboard; sourceTree = "<group>"; };
 		73556EE427E79FC70051A2E5 /* ProfileAsTableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAsTableViewVC.swift; sourceTree = "<group>"; };
 		73556EE727E7A38C0051A2E5 /* infoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoCell.swift; sourceTree = "<group>"; };
@@ -101,8 +101,6 @@
 		73C8942E27D140F200BA3A6A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		73CBABF127EB4BF900D9A4FB /* DaysSchedulesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysSchedulesVC.swift; sourceTree = "<group>"; };
 		73CBABF327EB4C1100D9A4FB /* DaysSchedules.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DaysSchedules.storyboard; sourceTree = "<group>"; };
-		73CBABF627EB529E00D9A4FB /* DaysSchedulesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysSchedulesCell.swift; sourceTree = "<group>"; };
-		73CBABF727EB529E00D9A4FB /* DaysSchedulesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DaysSchedulesCell.xib; sourceTree = "<group>"; };
 		73CBABFB27EB626B00D9A4FB /* WorkDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsVC.swift; sourceTree = "<group>"; };
 		73CBABFD27EB629000D9A4FB /* WorkDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkDetails.storyboard; sourceTree = "<group>"; };
 		73CBAC0027EB6AD900D9A4FB /* WorkDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsCell.swift; sourceTree = "<group>"; };
@@ -250,6 +248,7 @@
 			children = (
 				7374A2C927D12C6000493821 /* UserDataService.swift */,
 				7374A2CC27D12C7E00493821 /* LoginService.swift */,
+				7338C11228183C2C0065CA3F /* FireBaseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -347,19 +346,9 @@
 			children = (
 				73CBABF127EB4BF900D9A4FB /* DaysSchedulesVC.swift */,
 				73CBABF327EB4C1100D9A4FB /* DaysSchedules.storyboard */,
-				73CBABF527EB527C00D9A4FB /* DaysSchedulesCell */,
 				73CBABFA27EB624200D9A4FB /* WorkDetailsVC */,
 			);
 			path = DaysSchedules;
-			sourceTree = "<group>";
-		};
-		73CBABF527EB527C00D9A4FB /* DaysSchedulesCell */ = {
-			isa = PBXGroup;
-			children = (
-				73CBABF627EB529E00D9A4FB /* DaysSchedulesCell.swift */,
-				73CBABF727EB529E00D9A4FB /* DaysSchedulesCell.xib */,
-			);
-			path = DaysSchedulesCell;
 			sourceTree = "<group>";
 		};
 		73CBABFA27EB624200D9A4FB /* WorkDetailsVC */ = {
@@ -548,7 +537,6 @@
 				73DDCA7C27D654560025BC14 /* Requests.storyboard in Resources */,
 				73CBABFE27EB629000D9A4FB /* WorkDetails.storyboard in Resources */,
 				73DDCA7A27D654470025BC14 /* Reports.storyboard in Resources */,
-				73CBABF927EB529E00D9A4FB /* DaysSchedulesCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,11 +609,11 @@
 				73DDCA6F27D653C70025BC14 /* ReportsVC.swift in Sources */,
 				73CBABF227EB4BF900D9A4FB /* DaysSchedulesVC.swift in Sources */,
 				73556EE527E79FC70051A2E5 /* ProfileAsTableViewVC.swift in Sources */,
-				73CBABF827EB529E00D9A4FB /* DaysSchedulesCell.swift in Sources */,
 				7374A2CD27D12C7E00493821 /* LoginService.swift in Sources */,
 				73CBAC0227EB6AD900D9A4FB /* WorkDetailsCell.swift in Sources */,
 				7394F03327CCBC9E001C58C9 /* Constants.swift in Sources */,
 				73CBABFC27EB626B00D9A4FB /* WorkDetailsVC.swift in Sources */,
+				7338C11328183C2C0065CA3F /* FireBaseService.swift in Sources */,
 				7374A2C327D124EE00493821 /* UserModel.swift in Sources */,
 				7374A2C627D1283C00493821 /* SplashViewController.swift in Sources */,
 			);

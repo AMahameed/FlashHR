@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WON-aN-7nm">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,14 +13,14 @@
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="CreateEmployeeVC" customModule="FlashHR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5az-TW-EqI" userLabel="infoView">
-                                <rect key="frame" x="0.0" y="284" width="428" height="642"/>
+                                <rect key="frame" x="0.0" y="240" width="375" height="477"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NX0-hb-PRu">
-                                        <rect key="frame" x="8" y="40" width="412" height="602"/>
+                                        <rect key="frame" x="8" y="40" width="359" height="387"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
@@ -28,12 +28,12 @@
                                 <constraints>
                                     <constraint firstItem="NX0-hb-PRu" firstAttribute="leading" secondItem="5az-TW-EqI" secondAttribute="leading" constant="8" id="MMu-3x-7zy"/>
                                     <constraint firstAttribute="trailing" secondItem="NX0-hb-PRu" secondAttribute="trailing" constant="8" id="VPo-35-Kkc"/>
-                                    <constraint firstAttribute="bottom" secondItem="NX0-hb-PRu" secondAttribute="bottom" id="YMr-Ux-YW5"/>
+                                    <constraint firstAttribute="bottom" secondItem="NX0-hb-PRu" secondAttribute="bottom" constant="50" id="YMr-Ux-YW5"/>
                                     <constraint firstItem="NX0-hb-PRu" firstAttribute="top" secondItem="5az-TW-EqI" secondAttribute="top" constant="40" id="p0a-9h-Gqp"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ErA-db-EbH">
-                                <rect key="frame" x="139" y="112.66666666666667" width="150" height="147.33333333333331"/>
+                                <rect key="frame" x="112.5" y="68.5" width="150" height="147.5"/>
                                 <color key="tintColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="Mbn-x5-V6l"/>
@@ -41,7 +41,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fs2-hf-hxy">
-                                <rect key="frame" x="139" y="111" width="150" height="150"/>
+                                <rect key="frame" x="112.5" y="67" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="GIn-Mg-R2I"/>
                                     <constraint firstAttribute="height" constant="150" id="VKv-1S-HGc"/>
@@ -59,10 +59,9 @@
                             <constraint firstItem="ErA-db-EbH" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="14F-kF-Olw"/>
                             <constraint firstItem="5az-TW-EqI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="1MW-E9-ogp"/>
                             <constraint firstItem="fs2-hf-hxy" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="23" id="4mL-PR-3vk"/>
-                            <constraint firstAttribute="bottom" secondItem="5az-TW-EqI" secondAttribute="bottom" id="L8s-VR-6Db"/>
+                            <constraint firstAttribute="bottom" secondItem="5az-TW-EqI" secondAttribute="bottom" constant="-50" id="L8s-VR-6Db"/>
                             <constraint firstItem="5az-TW-EqI" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="RVG-8u-f4v"/>
                             <constraint firstItem="5az-TW-EqI" firstAttribute="top" secondItem="ErA-db-EbH" secondAttribute="bottom" constant="23" id="UgC-8e-xjx"/>
-                            <constraint firstItem="5az-TW-EqI" firstAttribute="top" secondItem="fs2-hf-hxy" secondAttribute="bottom" constant="23" id="VsQ-WP-07H"/>
                             <constraint firstItem="fs2-hf-hxy" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="WDC-4X-4Mf"/>
                             <constraint firstItem="ErA-db-EbH" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="23" id="p71-Nu-Yz0"/>
                         </constraints>
@@ -98,7 +97,7 @@
                 <navigationController storyboardIdentifier="CreateEmployee" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WON-aN-7nm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XmB-Xx-NfJ">
-                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

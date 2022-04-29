@@ -23,6 +23,7 @@ class CreateEmployeeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        presentAlert(title: "Warning", message: "Dear User, when creating a new Employee, make sure that all information Provided is correct. Since it is not Editable", preferredStyle: .alert)
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -118,15 +119,12 @@ extension CreateEmployeeVC: UIImagePickerControllerDelegate, UINavigationControl
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true)
         
-        guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else{
-            return
-        }
-        
-        guard let imageData = image.pngData(), imageData.count <= 103000 else{
-            
+        guard let image = info[.editedImage] as? UIImage else{ return}
+ 
+        guard let imageData = image.pngData(), imageData.count >= 103000 else{
             presentAlert(message: "Image size is more than 1 MB.")
-            return
-        }
+            return }
+        
         imageView.image = image
         createEmployee.empImageData = imageData
     }

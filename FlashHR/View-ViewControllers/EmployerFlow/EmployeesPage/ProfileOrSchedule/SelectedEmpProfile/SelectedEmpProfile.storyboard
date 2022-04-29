@@ -17,16 +17,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOJ-0I-a1s" userLabel="infoView">
-                                <rect key="frame" x="0.0" y="308" width="414" height="588"/>
+                                <rect key="frame" x="0.0" y="302.5" width="414" height="643.5"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yKT-W1-emj">
-                                        <rect key="frame" x="8" y="40" width="398" height="548"/>
+                                        <rect key="frame" x="8" y="40" width="398" height="553.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="yKT-W1-emj" secondAttribute="bottom" id="1Yj-Gv-P0P"/>
+                                    <constraint firstAttribute="bottom" secondItem="yKT-W1-emj" secondAttribute="bottom" constant="50" id="1Yj-Gv-P0P"/>
                                     <constraint firstItem="yKT-W1-emj" firstAttribute="top" secondItem="EOJ-0I-a1s" secondAttribute="top" constant="40" id="8ur-px-U1H"/>
                                     <constraint firstItem="yKT-W1-emj" firstAttribute="leading" secondItem="EOJ-0I-a1s" secondAttribute="leading" constant="8" id="HUu-C5-uUc"/>
                                     <constraint firstAttribute="trailing" secondItem="yKT-W1-emj" secondAttribute="trailing" constant="8" id="JJI-mp-JXi"/>
@@ -40,15 +40,6 @@
                                     <constraint firstAttribute="height" constant="150" id="lQj-rw-Xqj"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employee Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwh-48-eAy">
-                                <rect key="frame" x="84.5" y="258" width="245" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="245" id="LFq-zk-je5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ods-cs-Wso">
                                 <rect key="frame" x="132" y="100" width="150" height="150"/>
                                 <constraints>
@@ -61,20 +52,27 @@
                                     <action selector="chooseImage:" destination="mLL-fA-ReI" eventType="touchUpInside" id="sde-Dx-yb7"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G6S-ts-hvV">
+                                <rect key="frame" x="84.5" y="258" width="245" height="18.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="8PW-KZ-QuV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="r6t-aN-BIi"/>
                         <color key="backgroundColor" red="0.84907907729999998" green="0.94099998470000001" blue="0.97299999000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Fwh-48-eAy" firstAttribute="top" secondItem="ods-cs-Wso" secondAttribute="bottom" constant="8" symbolic="YES" id="BRJ-x3-P4h"/>
+                            <constraint firstItem="EOJ-0I-a1s" firstAttribute="top" secondItem="G6S-ts-hvV" secondAttribute="bottom" constant="26" id="06N-sM-AfU"/>
                             <constraint firstItem="Xvh-5f-QVh" firstAttribute="top" secondItem="r6t-aN-BIi" secondAttribute="top" constant="12" id="EJe-Q7-xgV"/>
-                            <constraint firstItem="EOJ-0I-a1s" firstAttribute="top" secondItem="Fwh-48-eAy" secondAttribute="bottom" constant="26" id="YNd-u8-QtQ"/>
-                            <constraint firstItem="Fwh-48-eAy" firstAttribute="centerX" secondItem="DeS-om-uKr" secondAttribute="centerX" id="aTw-kL-INF"/>
+                            <constraint firstItem="G6S-ts-hvV" firstAttribute="centerX" secondItem="DeS-om-uKr" secondAttribute="centerX" id="Tw2-71-PGr"/>
                             <constraint firstItem="EOJ-0I-a1s" firstAttribute="trailing" secondItem="r6t-aN-BIi" secondAttribute="trailing" id="epK-Py-84b"/>
-                            <constraint firstItem="Fwh-48-eAy" firstAttribute="top" secondItem="Xvh-5f-QVh" secondAttribute="bottom" constant="8" id="hTC-ZE-Lls"/>
                             <constraint firstItem="ods-cs-Wso" firstAttribute="centerX" secondItem="DeS-om-uKr" secondAttribute="centerX" id="mcs-Ev-aZT"/>
                             <constraint firstItem="ods-cs-Wso" firstAttribute="top" secondItem="r6t-aN-BIi" secondAttribute="top" constant="12" id="ovY-2V-iON"/>
                             <constraint firstItem="EOJ-0I-a1s" firstAttribute="leading" secondItem="r6t-aN-BIi" secondAttribute="leading" id="r17-y1-WWX"/>
-                            <constraint firstAttribute="bottom" secondItem="EOJ-0I-a1s" secondAttribute="bottom" id="t8I-1g-hSb"/>
+                            <constraint firstItem="G6S-ts-hvV" firstAttribute="top" secondItem="Xvh-5f-QVh" secondAttribute="bottom" constant="8" symbolic="YES" id="sJr-Ds-ATv"/>
+                            <constraint firstAttribute="bottom" secondItem="EOJ-0I-a1s" secondAttribute="bottom" constant="-50" id="t8I-1g-hSb"/>
                             <constraint firstItem="Xvh-5f-QVh" firstAttribute="centerX" secondItem="DeS-om-uKr" secondAttribute="centerX" id="wiy-8C-Ymr"/>
                         </constraints>
                     </view>
@@ -87,7 +85,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="empNameLabel" destination="Fwh-48-eAy" id="Lh3-Nv-sqR"/>
+                        <outlet property="empNameTextField" destination="G6S-ts-hvV" id="byR-Cd-uDz"/>
                         <outlet property="imageView" destination="Xvh-5f-QVh" id="S8i-MU-j9u"/>
                         <outlet property="infoView" destination="EOJ-0I-a1s" id="x9q-FQ-PME"/>
                         <outlet property="tableView" destination="yKT-W1-emj" id="yJC-pG-f58"/>
@@ -95,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V9s-MU-sh6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1986.9565217391305" y="79.6875"/>
+            <point key="canvasLocation" x="2131.8840579710145" y="46.875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UAq-OO-eLV">

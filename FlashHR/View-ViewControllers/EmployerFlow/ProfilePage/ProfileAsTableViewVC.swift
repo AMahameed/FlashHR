@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ProfileAsTableViewVC: UIViewController {
     
@@ -13,8 +14,9 @@ class ProfileAsTableViewVC: UIViewController {
     @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
-    var titles = ["Company Name","Title","Email","Mobile No.","Gender"]
-    var text = ["Zain Jo","Senior Developer","A.Mahameed2000@gmail.com","0796957821","Male"]
+    let db = Firestore.firestore()
+    let fireBaseService = FireBaseService()
+    var titles = ["Title","Email","Mobile No.","Gender"]
     
     private let loginService = LoginService()
     
@@ -25,8 +27,9 @@ class ProfileAsTableViewVC: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: Constants.NibNames.infoCell, bundle: nil) , forCellReuseIdentifier: Constants.Identifiers.infoCellIdentifier)
         
-        imageView.layer.cornerRadius = imageView.frame.size.height / 2.05
+        imageView.layer.cornerRadius = imageView.frame.size.height / 5
         infoView.layer.cornerRadius = infoView.frame.size.height / 11
+        loadEmpImage()
     }
     
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
@@ -37,42 +40,105 @@ class ProfileAsTableViewVC: UIViewController {
             self.presentAlertInMainThread(message: signOutError)
         }
     }
+    
+    func loadEmpImage() {
+        fireBaseService.getEmpData(empID: UserDataService.shared.userID ?? ""){ imageData in
+            let image = UIImage(data: imageData.empImageData)
+            self.imageView.image = image
+        }
+    }
+    
+    @IBAction func chooseImage(_ sender: UIButton) {
+        let vc = UIImagePickerController()
+        vc.sourceType = .photoLibrary
+        vc.delegate = self
+        vc.allowsEditing = true
+        present(vc, animated: true)
+    }
 }
 
 //MARK: - TableView Delegate
 extension ProfileAsTableViewVC: UITableViewDataSource,UITableViewDelegate{
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return titles.count
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Identifiers.infoCellIdentifier, for: indexPath) as! infoCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Identifiers.infoCellIdentifier, for: indexPath) as? infoCell else {return UITableViewCell()}
         
-        cell.titleLabel.text = titles[indexPath.section]
-        cell.textField.text = text[indexPath.section]
+        cell.titleLabel.text = titles[indexPath.row]
+        cell.textField.delegate = self
+        
+        fireBaseService.getEmpData(empID: UserDataService.shared.userID ?? ""){ empData in
+            
+            self.empNameLabel.text = empData.userName
+            
+            switch indexPath.row {
+            case 0:
+                cell.textField.text = empData.title
+            case 1:
+                cell.textField.text = empData.email
+            case 2:
+                cell.textField.text = empData.mobile
+            case 3:
+                cell.textField.text = empData.gender
+            default:
+                break
+            }
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
+        return UITableView.automaticDimension
         
     }
+}
+//MARK: - Cell TextField Delegate
+
+extension ProfileAsTableViewVC: UITextFieldDelegate {
     
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        if section == 4{
-            return 30
-        }else{
-            return 20
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        return false
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+//MARK: - ImagePicker Delegate
+
+extension ProfileAsTableViewVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true)
+        
+        guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else{
+            return
+        }
+        imageView.image = image
+        
+        guard let imageData = image.pngData() else{
+            return
+        }
+        
+        fireBaseService.getEmpDocID(empID: UserDataService.shared.userID ?? "") { docID in
+            self.db.collection("employee").document(docID).setData(["empImageData": imageData], merge: true) { error in
+                if let _ = error{
+                    self.presentAlertInMainThread(message: "Image size is more than 1 MB.")
+                }
+            }
+        } failure: { error in
+            self.presentAlertInMainThread(message: error)
         }
     }
     
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return UIView()
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true)
     }
-
+    
 }

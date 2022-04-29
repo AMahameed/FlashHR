@@ -18,9 +18,9 @@ extension UIViewController{
 
 
 extension UIViewController{
-    func presentAlert(title: String = "Error", message: String) {
+    func presentAlert(title: String = "Error", message: String, preferredStyle: UIAlertController.Style = .actionSheet ) {
         
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
         alert.addAction(UIAlertAction(title: "Done", style: .default, handler: nil))
         present(alert, animated: true)
     }

@@ -32,7 +32,6 @@ class EmployeesVC: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        
         tableView.register(UINib(nibName: Constants.NibNames.employeeCell, bundle: nil) , forCellReuseIdentifier: Constants.Identifiers.employeeCellIdentifier)
         
         searchBar.delegate = self
@@ -95,7 +94,7 @@ extension EmployeesVC: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Identifiers.employeeCellIdentifier , for: indexPath) as! EmployeeCell
+       guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Identifiers.employeeCellIdentifier , for: indexPath) as? EmployeeCell else {return UITableViewCell()}
         
         if filteredEmployees.count == 0 {
             cell.empName.text = EmployeesVC.showEmployee[indexPath.row].userName
@@ -112,7 +111,7 @@ extension EmployeesVC: UITableViewDelegate,UITableViewDataSource{
         }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return UITableView.automaticDimension
         
     }
     
@@ -127,10 +126,6 @@ extension EmployeesVC: UITableViewDelegate,UITableViewDataSource{
             EmployeesVC.empIDHolder.employeeName = filteredEmployees[indexPath.row].userName
             presentFromSTB(stbName: Constants.Segues.ProfileOrSchedule, vcID: Constants.Segues.ProfileOrSchedule)
         }
-    }
-    
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?{
-        return nil
     }
 }
 

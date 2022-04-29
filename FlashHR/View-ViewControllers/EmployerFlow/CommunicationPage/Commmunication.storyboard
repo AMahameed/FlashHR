@@ -49,10 +49,13 @@
                                                     <constraint firstAttribute="width" constant="140" id="xdY-H7-bZs"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Submit">
+                                                <buttonConfiguration key="configuration" style="plain" title="Send">
                                                     <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="20"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="sendPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ud0-dS-kTu"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write an Announcement " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwT-yS-Zff" userLabel="Write an Announcement">
                                                 <rect key="frame" x="15" y="8" width="398" height="30"/>
@@ -106,6 +109,7 @@
                     <connections>
                         <outlet property="submitButton" destination="wBZ-2R-ioB" id="OlZ-PE-gYG"/>
                         <outlet property="tableView" destination="Yjp-ox-pGL" id="zoC-1c-qJX"/>
+                        <outlet property="textView" destination="fpO-fk-4ua" id="r93-4C-yBX"/>
                         <outlet property="viewUnderneathText" destination="khy-TU-jo2" id="zd6-m7-2qp"/>
                     </connections>
                 </viewController>

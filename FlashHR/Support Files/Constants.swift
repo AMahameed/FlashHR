@@ -12,6 +12,7 @@ struct Constants {
     struct Strings {
         static var logo = "FlashHR"
         static var employerID = "Afej9lwEGmZspb1ZXx89o45sVcs2"
+        static var employerName: String = "Abdallah Mahameed"
     }
     
     struct Colors {
@@ -37,7 +38,6 @@ struct Constants {
     struct NibNames {
         static var employeeCell = "EmployeeCell"
         static var workDetailsCell =  "WorkDetailsCell"
-        static var daysSchedules  = "DaysSchedulesCell"
         static var messgaeCell =  "MessageCell"
         static var requestCell = "RequestCell"
         static var infoCell = "infoCell"
@@ -46,15 +46,12 @@ struct Constants {
     struct Identifiers {
         static var employeeCellIdentifier = "employeeCell"
         static var workDetailsCellIdentifier = "workDetailsCell"
-        static var daysSchedulesCellIdentifier = "daysSchedulesCell"
         static var messgaeCellIdentifier = "messageCell"
         static var requestCellIdentifier = "reusableRequestCell"
         static var infoCellIdentifier = "infoCell"
     }
     
     struct FStore {
-//        static let collectionName = "Firs"
-    
     }
     
     struct WorkDetailsVCConstants {

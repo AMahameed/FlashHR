@@ -32,14 +32,15 @@
                                     <constraint firstItem="Opg-Gm-QrO" firstAttribute="top" secondItem="9T7-lQ-BFQ" secondAttribute="top" constant="40" id="qJ8-Kh-HmB"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="ik0-Hr-TSY">
-                                <rect key="frame" x="129" y="100" width="170" height="170"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ik0-Hr-TSY">
+                                <rect key="frame" x="129" y="101.66666666666667" width="170" height="167.33333333333331"/>
+                                <color key="tintColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="do6-VK-Ghv"/>
                                     <constraint firstAttribute="width" constant="170" id="unh-OQ-an0"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abdallah Mahameed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThP-Ib-t3w">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employee Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThP-Ib-t3w">
                                 <rect key="frame" x="91.666666666666686" y="278" width="245" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="245" id="r0o-al-PSI"/>
@@ -48,17 +49,32 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJG-vG-mi5">
+                                <rect key="frame" x="129" y="100" width="170" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="FNI-GT-Hdq"/>
+                                    <constraint firstAttribute="width" constant="170" id="LVK-SO-SW8"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="chooseImage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="t7L-GK-tUI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.84907907729999998" green="0.94099998470000001" blue="0.97299999000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ThP-Ib-t3w" firstAttribute="top" secondItem="HJG-vG-mi5" secondAttribute="bottom" constant="8" symbolic="YES" id="4GZ-2f-M0x"/>
                             <constraint firstAttribute="bottom" secondItem="9T7-lQ-BFQ" secondAttribute="bottom" id="Ayl-9C-RAf"/>
                             <constraint firstItem="9T7-lQ-BFQ" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="FOV-8E-WPN"/>
+                            <constraint firstItem="HJG-vG-mi5" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="Orf-fx-iPG"/>
                             <constraint firstItem="ThP-Ib-t3w" firstAttribute="top" secondItem="ik0-Hr-TSY" secondAttribute="bottom" constant="8" id="XYl-aq-rZE"/>
                             <constraint firstItem="9T7-lQ-BFQ" firstAttribute="top" secondItem="ThP-Ib-t3w" secondAttribute="bottom" constant="26" id="esx-JV-Muy"/>
                             <constraint firstItem="9T7-lQ-BFQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="flk-Gb-lAR"/>
                             <constraint firstItem="ik0-Hr-TSY" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="hcC-tW-pVx"/>
                             <constraint firstItem="ThP-Ib-t3w" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="nK9-CI-Sfz"/>
+                            <constraint firstItem="HJG-vG-mi5" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="raE-a6-jv5"/>
                             <constraint firstItem="ik0-Hr-TSY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="wXI-3p-n45"/>
                         </constraints>
                     </view>
@@ -101,7 +117,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="userPhoto" width="1008" height="1344"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

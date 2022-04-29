@@ -9,7 +9,7 @@ import UIKit
 
 class MessageCell: UITableViewCell {
 
-    @IBOutlet weak var LabelsView: UIView!
+//    @IBOutlet weak var LabelsView: UIView!
     @IBOutlet weak var senderLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
     

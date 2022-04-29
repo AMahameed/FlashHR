@@ -17,6 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                        <color key="tintColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                         <tabBarAppearance key="scrollEdgeAppearance"/>
                     </tabBar>
                     <connections>
@@ -137,11 +140,11 @@
             </objects>
             <point key="canvasLocation" x="-1383" y="394"/>
         </scene>
-        <!--Communication-->
+        <!--Announcements-->
         <scene sceneID="LK9-6C-Cb6">
             <objects>
                 <navigationController id="3tX-1i-lP7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Communication" image="bolt.horizontal" catalog="system" selectedImage="bolt.horizontal.fill" id="owW-ai-VG5"/>
+                    <tabBarItem key="tabBarItem" title="Announcements" image="bolt.horizontal" catalog="system" selectedImage="bolt.horizontal.fill" id="owW-ai-VG5"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jK2-eU-Heh">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

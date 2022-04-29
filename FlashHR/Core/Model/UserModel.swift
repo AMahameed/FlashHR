@@ -7,13 +7,6 @@
 
 import Foundation
 
-
-struct Employer {
-    let employerID: String = "Afej9lwEGmZspb1ZXx89o45sVcs2"
-    let message: Message
-    let employee: Employee
-}
-
 class Employee {
     var empID: String = ""
     var empImageData: Data = Data()
@@ -43,8 +36,7 @@ struct WorkTansactions {
     var projectName: String = ""
     var contactNo: String = ""
     var startTime: String = ""
-    var dayNo: Int = 0
-    var date: Date = Date()
+    var dayStr: String = ""
     var workingHours: Int = 0
     var long: Float = 0.0
     var lat: Float = 0.0
@@ -52,12 +44,11 @@ struct WorkTansactions {
     var leaveHours: Float = 0.0
 }
 
-struct TansactionsHolder {
+struct TransactionsHolder {
     var projectName: String = ""
     var contactNo: String = ""
     var startTime: String = ""
-    var dayNo: Int = 0
-    var date: Date = Date()
+    var dayStr: String = ""
     var workingHours: Int = 0
     var long: Float = 0.0
     var lat: Float = 0.0
@@ -65,13 +56,8 @@ struct TansactionsHolder {
     var leaveHours: Float = 0.0
 }
 
-struct DocumentsIDHolder {
-    var empDocumentID: String = ""
-    var workTransactionsDocumentID : String = ""
-}
-
 struct Message {
-    let sender: String
-    let body: String
-    let date: Date
+    var sender: String = ""
+    var body: String = ""
+    var date: Date = Date()
 }

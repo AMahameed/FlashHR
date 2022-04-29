@@ -16,47 +16,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="Xnc-8o-Y1L">
-                                <rect key="frame" x="45" y="108" width="338" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="4Oc-oB-xHy"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="Past Week "/>
-                                    <segment title="Current Week "/>
-                                    <segment title="Next Week"/>
-                                </segments>
-                                <connections>
-                                    <action selector="SeagmentBarPressed:" destination="Y6W-OH-hqX" eventType="valueChanged" id="PQX-PB-zni"/>
-                                </connections>
-                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMp-ci-9Cl">
+                                <rect key="frame" x="75" y="138" width="278" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v14-HF-L62">
-                                <rect key="frame" x="0.0" y="184" width="428" height="742"/>
+                                <rect key="frame" x="0.0" y="197" width="428" height="779"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OEF-j7-r8Q">
-                                        <rect key="frame" x="8" y="40" width="412" height="702"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lku-Sj-Vgd" customClass="FSCalendar">
+                                        <rect key="frame" x="8" y="40" width="412" height="350"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </tableView>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="350" id="ZoA-1o-L4g"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="OEF-j7-r8Q" firstAttribute="leading" secondItem="v14-HF-L62" secondAttribute="leading" constant="8" id="3vr-KA-Cfg"/>
-                                    <constraint firstAttribute="trailing" secondItem="OEF-j7-r8Q" secondAttribute="trailing" constant="8" id="C6F-8l-582"/>
-                                    <constraint firstItem="OEF-j7-r8Q" firstAttribute="top" secondItem="v14-HF-L62" secondAttribute="top" constant="40" id="h2K-DL-O5u"/>
-                                    <constraint firstAttribute="bottom" secondItem="OEF-j7-r8Q" secondAttribute="bottom" id="vPF-TF-w7c"/>
+                                    <constraint firstAttribute="trailing" secondItem="lku-Sj-Vgd" secondAttribute="trailing" constant="8" id="Krw-3l-TKS"/>
+                                    <constraint firstItem="lku-Sj-Vgd" firstAttribute="top" secondItem="v14-HF-L62" secondAttribute="top" constant="40" id="ZRD-dj-QhU"/>
+                                    <constraint firstItem="lku-Sj-Vgd" firstAttribute="leading" secondItem="v14-HF-L62" secondAttribute="leading" constant="8" id="ce8-Oz-HOL"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.84907907729999998" green="0.94099998470000001" blue="0.97299999000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Xnc-8o-Y1L" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="54q-35-RbY"/>
-                            <constraint firstItem="v14-HF-L62" firstAttribute="top" secondItem="Xnc-8o-Y1L" secondAttribute="bottom" constant="45" id="OJh-TC-t1T"/>
-                            <constraint firstItem="v14-HF-L62" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="VMy-TD-1aQ"/>
-                            <constraint firstAttribute="bottom" secondItem="v14-HF-L62" secondAttribute="bottom" id="bX3-fJ-bDT"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Xnc-8o-Y1L" secondAttribute="trailing" constant="45" id="tiu-Qf-Uwx"/>
-                            <constraint firstItem="v14-HF-L62" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="w57-2j-TgJ"/>
-                            <constraint firstItem="Xnc-8o-Y1L" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="45" id="wb7-FQ-z3V"/>
+                            <constraint firstItem="v14-HF-L62" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="NFl-X9-Dxj"/>
+                            <constraint firstItem="v14-HF-L62" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="NVV-0s-TWa"/>
+                            <constraint firstItem="gMp-ci-9Cl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="75" id="Shs-an-hA8"/>
+                            <constraint firstAttribute="bottom" secondItem="v14-HF-L62" secondAttribute="bottom" constant="-50" id="ag8-5U-Mn3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gMp-ci-9Cl" secondAttribute="trailing" constant="75" id="f5W-mB-vKv"/>
+                            <constraint firstItem="v14-HF-L62" firstAttribute="top" secondItem="gMp-ci-9Cl" secondAttribute="bottom" constant="23" id="few-nU-wNR"/>
+                            <constraint firstItem="gMp-ci-9Cl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="sSO-BJ-Q41"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jI9-wu-vda">
@@ -66,23 +60,15 @@
                                 <action selector="backButtonPressed:" destination="Y6W-OH-hqX" id="gXf-bv-HON"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="All Week" id="RW2-gf-AkF">
-                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="allWeekPressed:" destination="Y6W-OH-hqX" id="Ge4-lV-19w"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="allWeekFill" destination="RW2-gf-AkF" id="dOs-f5-5pZ"/>
-                        <outlet property="segBar" destination="Xnc-8o-Y1L" id="FwB-z3-eSW"/>
-                        <outlet property="tableView" destination="OEF-j7-r8Q" id="ICI-T1-Yg6"/>
-                        <outlet property="viewBackground" destination="v14-HF-L62" id="Ke7-cU-6HT"/>
+                        <outlet property="calendar" destination="lku-Sj-Vgd" id="S0r-BU-hIl"/>
+                        <outlet property="viewBackground" destination="v14-HF-L62" id="rel-Bi-EQU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="934.78260869565224" y="80.357142857142847"/>
+            <point key="canvasLocation" x="933.64485981308405" y="80.345572354211669"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8Kv-fA-2wU">
