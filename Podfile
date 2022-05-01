@@ -10,6 +10,5 @@ pod 'Firebase/Firestore'
 pod 'IQKeyboardManagerSwift', '~> 6.5.9'
 pod 'FSCalendar'
 pod 'GoogleMaps'
-pod 'GooglePlaces'
 
 end
