@@ -29,9 +29,9 @@ class FireBaseService: UIViewController{
     
     func getEmpData(empID: String, success: @escaping ((Employee)->Void))  {
         
-        getEmpDocID(empID: empID){ empDocID in
+        getEmpDocID(empID: empID){ [weak self] empDocID in
             
-            self.db.collection("employee").document(empDocID).getDocument { docSnapShot, e in
+            self?.db.collection("employee").document(empDocID).getDocument { docSnapShot, e in
                 
                 if let document = docSnapShot?.data() {
                     let doc = document

@@ -33,6 +33,7 @@ struct Constants {
         static var ProfileOrSchedule = "ProfileOrSchedule"
         static var ProfileAsTableView = "ProfileAsTableView"
         static var SelectedEmpProfile = "SelectedEmpProfile"
+        static var GoogleMaps = "GoogleMaps"
     }
     
     struct NibNames {
@@ -41,6 +42,7 @@ struct Constants {
         static var messgaeCell =  "MessageCell"
         static var requestCell = "RequestCell"
         static var infoCell = "infoCell"
+        static var GoogleMapsCell =  "GoogleMapsCell"
     }
     
     struct Identifiers {
@@ -49,6 +51,7 @@ struct Constants {
         static var messgaeCellIdentifier = "messageCell"
         static var requestCellIdentifier = "reusableRequestCell"
         static var infoCellIdentifier = "infoCell"
+        static var GoogleMapsCellIdentifier =  "googleMapsCell"
     }
     
     struct FStore {
@@ -58,10 +61,6 @@ struct Constants {
         static var startTime = ["00", "01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"]
         
         static var workingHours : [Int] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
-    }
-    
-    struct CommunicationVCConstants {
-        static let message = "In many geographic areas mobile telephones are the only economical way to provide phone service to the population. The dominant first-generation wireless network in North America mobile telephones are the only economical way to provide phone service to the population. The dominant first-generation wireless network in North America mobile telephones are the only economical way to provide phone service to the population. The dominant first-generation wireless network in North America mobile telephones are the only economical way to provide phone service to the population. The dominant first-generation wireless network in North America mobile telephones are the only economical way to provide phone service to the population. The dominant first-generation wireless network in North America mobile telephones are the only economical way to provide phone service to the population. The dominant first-generation wireless network in North America"
     }
     
     struct UserDefaultKeys {

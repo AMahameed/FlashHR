@@ -47,9 +47,9 @@ class EmployeesVC: UIViewController {
     
     func loadEmployees(){
         
-        db.collection("employee").addSnapshotListener{ querySnapshot, e in
+        db.collection("employee").addSnapshotListener{ [weak self] querySnapshot, e in
             if let error = e {
-                self.presentAlertInMainThread(message: error.localizedDescription)
+                self?.presentAlertInMainThread(message: error.localizedDescription)
             }else{
                 
                 EmployeesVC.showEmployee.removeAll()
@@ -67,9 +67,9 @@ class EmployeesVC: UIViewController {
                             EmployeesVC.showEmployee.append(employeeInfo)
                             
                             DispatchQueue.main.async {
-                                self.tableView.reloadData()
+                                self?.tableView.reloadData()
                                 let indexPath = IndexPath(row: 0, section: 0)
-                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
+                                self?.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
                             }
                         }
                     }

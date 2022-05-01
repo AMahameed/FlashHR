@@ -7,17 +7,16 @@
 
 import UIKit
 import FSCalendar
+import CoreLocation
 
 class DaysSchedulesVC: UIViewController {
     
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var viewBackground: UIView!
     static var dayIDHolder = DayIDHolder()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         calendar.delegate = self
-        
         viewBackground.layer.cornerRadius = viewBackground.frame.size.height / 11
         navigationItem.title = EmployeesVC.empIDHolder.employeeName
     }

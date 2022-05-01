@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import GoogleMaps
 import IQKeyboardManagerSwift
 
 @main
@@ -19,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         Firestore.firestore()
         
-//        let db = Firestore.firestore()
+        GMSServices.provideAPIKey("AIzaSyAhBpreqt9Z5JP_dvSVjHZO7pw3sVuAPnY")
 
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = true

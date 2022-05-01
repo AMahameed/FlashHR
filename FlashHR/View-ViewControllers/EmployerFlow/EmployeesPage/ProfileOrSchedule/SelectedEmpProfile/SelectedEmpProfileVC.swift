@@ -59,12 +59,12 @@ extension SelectedEmpProfileVC: UITableViewDataSource,UITableViewDelegate{
         cell.titleLabel.text = titles[indexPath.row]
         cell.textField.delegate = self
         
-        fireBaseService.getEmpData(empID: EmployeesVC.empIDHolder.employeeID) { empData in
+        fireBaseService.getEmpData(empID: EmployeesVC.empIDHolder.employeeID) { [weak self] empData in
             
             switch indexPath.row {
             case 0:
                 cell.textField.text = empData.title
-                self.imageView.image = UIImage(data: empData.empImageData)
+                self?.imageView.image = UIImage(data: empData.empImageData)
             case 1:
                 cell.textField.text = empData.email
             case 2:
@@ -114,10 +114,10 @@ extension SelectedEmpProfileVC: UIImagePickerControllerDelegate, UINavigationCon
             return
         }
         
-        fireBaseService.getEmpDocID(empID: EmployeesVC.empIDHolder.employeeID) { docID in
-            self.db.collection("employee").document(docID).setData(["empImageData": imageData], merge: true) { error in
+        fireBaseService.getEmpDocID(empID: EmployeesVC.empIDHolder.employeeID) { [weak self] docID in
+            self?.db.collection("employee").document(docID).setData(["empImageData": imageData], merge: true) { error in
                 if let _ = error{
-                    self.presentAlertInMainThread(message: "Image size is more than 1 MB.")
+                    self?.presentAlertInMainThread(message: "Image size is more than 1 MB.")
                 }
             }
         } failure: { error in

@@ -13,10 +13,18 @@
 		730FA0B927D0B91B00EB0C39 /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730FA0B827D0B91B00EB0C39 /* EmployeeViewController.swift */; };
 		730FA0BD27D0BF3E00EB0C39 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 730FA0BC27D0BF3E00EB0C39 /* GoogleService-Info.plist */; };
 		7338C11328183C2C0065CA3F /* FireBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338C11228183C2C0065CA3F /* FireBaseService.swift */; };
+		73403099281D695B00531E42 /* GoogleMapsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73403098281D695B00531E42 /* GoogleMapsVC.swift */; };
+		7340309B281D696400531E42 /* GoogleMaps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7340309A281D696400531E42 /* GoogleMaps.storyboard */; };
 		73556EE327E79EB70051A2E5 /* ProfileAsTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73556EE227E79EB70051A2E5 /* ProfileAsTableView.storyboard */; };
 		73556EE527E79FC70051A2E5 /* ProfileAsTableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73556EE427E79FC70051A2E5 /* ProfileAsTableViewVC.swift */; };
 		73556EE927E7A38C0051A2E5 /* infoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73556EE727E7A38C0051A2E5 /* infoCell.swift */; };
 		73556EEA27E7A38C0051A2E5 /* infoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73556EE827E7A38C0051A2E5 /* infoCell.xib */; };
+		73680261281D4ED70039C251 /* WorkDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73680260281D4ED70039C251 /* WorkDetailsVC.swift */; };
+		73680263281D4EEB0039C251 /* WorkDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73680262281D4EEB0039C251 /* WorkDetails.storyboard */; };
+		73680268281D508A0039C251 /* WorkDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73680267281D508A0039C251 /* WorkDetailsCell.swift */; };
+		7368026A281D50A90039C251 /* WorkDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73680269281D50A90039C251 /* WorkDetailsCell.xib */; };
+		7368026D281D54830039C251 /* GoogleMapsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7368026C281D54830039C251 /* GoogleMapsCell.xib */; };
+		7368026F281D548C0039C251 /* GoogleMapsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7368026E281D548C0039C251 /* GoogleMapsCell.swift */; };
 		7369FC8D27F3CDD800E0A312 /* CreateEmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369FC8C27F3CDD800E0A312 /* CreateEmployeeVC.swift */; };
 		7369FC8F27F3CDEA00E0A312 /* CreateEmployee.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7369FC8E27F3CDE900E0A312 /* CreateEmployee.storyboard */; };
 		7374A2C327D124EE00493821 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7374A2C227D124EE00493821 /* UserModel.swift */; };
@@ -43,10 +51,6 @@
 		73C8942F27D140F200BA3A6A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C8942E27D140F200BA3A6A /* Extensions.swift */; };
 		73CBABF227EB4BF900D9A4FB /* DaysSchedulesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBABF127EB4BF900D9A4FB /* DaysSchedulesVC.swift */; };
 		73CBABF427EB4C1100D9A4FB /* DaysSchedules.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73CBABF327EB4C1100D9A4FB /* DaysSchedules.storyboard */; };
-		73CBABFC27EB626B00D9A4FB /* WorkDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBABFB27EB626B00D9A4FB /* WorkDetailsVC.swift */; };
-		73CBABFE27EB629000D9A4FB /* WorkDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73CBABFD27EB629000D9A4FB /* WorkDetails.storyboard */; };
-		73CBAC0227EB6AD900D9A4FB /* WorkDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBAC0027EB6AD900D9A4FB /* WorkDetailsCell.swift */; };
-		73CBAC0327EB6AD900D9A4FB /* WorkDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73CBAC0127EB6AD900D9A4FB /* WorkDetailsCell.xib */; };
 		73DDCA6D27D653B60025BC14 /* CommmunicationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DDCA6C27D653B60025BC14 /* CommmunicationVC.swift */; };
 		73DDCA6F27D653C70025BC14 /* ReportsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DDCA6E27D653C70025BC14 /* ReportsVC.swift */; };
 		73DDCA7127D653DF0025BC14 /* RequestsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DDCA7027D653DF0025BC14 /* RequestsVC.swift */; };
@@ -69,10 +73,18 @@
 		730FA0B827D0B91B00EB0C39 /* EmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
 		730FA0BC27D0BF3E00EB0C39 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7338C11228183C2C0065CA3F /* FireBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseService.swift; sourceTree = "<group>"; };
+		73403098281D695B00531E42 /* GoogleMapsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsVC.swift; sourceTree = "<group>"; };
+		7340309A281D696400531E42 /* GoogleMaps.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GoogleMaps.storyboard; sourceTree = "<group>"; };
 		73556EE227E79EB70051A2E5 /* ProfileAsTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileAsTableView.storyboard; sourceTree = "<group>"; };
 		73556EE427E79FC70051A2E5 /* ProfileAsTableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAsTableViewVC.swift; sourceTree = "<group>"; };
 		73556EE727E7A38C0051A2E5 /* infoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoCell.swift; sourceTree = "<group>"; };
 		73556EE827E7A38C0051A2E5 /* infoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = infoCell.xib; sourceTree = "<group>"; };
+		73680260281D4ED70039C251 /* WorkDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsVC.swift; sourceTree = "<group>"; };
+		73680262281D4EEB0039C251 /* WorkDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkDetails.storyboard; sourceTree = "<group>"; };
+		73680267281D508A0039C251 /* WorkDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsCell.swift; sourceTree = "<group>"; };
+		73680269281D50A90039C251 /* WorkDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkDetailsCell.xib; sourceTree = "<group>"; };
+		7368026C281D54830039C251 /* GoogleMapsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoogleMapsCell.xib; sourceTree = "<group>"; };
+		7368026E281D548C0039C251 /* GoogleMapsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsCell.swift; sourceTree = "<group>"; };
 		7369FC8C27F3CDD800E0A312 /* CreateEmployeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEmployeeVC.swift; sourceTree = "<group>"; };
 		7369FC8E27F3CDE900E0A312 /* CreateEmployee.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateEmployee.storyboard; sourceTree = "<group>"; };
 		7374A2C227D124EE00493821 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -101,10 +113,6 @@
 		73C8942E27D140F200BA3A6A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		73CBABF127EB4BF900D9A4FB /* DaysSchedulesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysSchedulesVC.swift; sourceTree = "<group>"; };
 		73CBABF327EB4C1100D9A4FB /* DaysSchedules.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DaysSchedules.storyboard; sourceTree = "<group>"; };
-		73CBABFB27EB626B00D9A4FB /* WorkDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsVC.swift; sourceTree = "<group>"; };
-		73CBABFD27EB629000D9A4FB /* WorkDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkDetails.storyboard; sourceTree = "<group>"; };
-		73CBAC0027EB6AD900D9A4FB /* WorkDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsCell.swift; sourceTree = "<group>"; };
-		73CBAC0127EB6AD900D9A4FB /* WorkDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkDetailsCell.xib; sourceTree = "<group>"; };
 		73DDCA6C27D653B60025BC14 /* CommmunicationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommmunicationVC.swift; sourceTree = "<group>"; };
 		73DDCA6E27D653C70025BC14 /* ReportsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsVC.swift; sourceTree = "<group>"; };
 		73DDCA7027D653DF0025BC14 /* RequestsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsVC.swift; sourceTree = "<group>"; };
@@ -188,6 +196,15 @@
 			path = EmployeeProfile;
 			sourceTree = "<group>";
 		};
+		73403097281D693A00531E42 /* GoogleMapsVC */ = {
+			isa = PBXGroup;
+			children = (
+				73403098281D695B00531E42 /* GoogleMapsVC.swift */,
+				7340309A281D696400531E42 /* GoogleMaps.storyboard */,
+			);
+			path = GoogleMapsVC;
+			sourceTree = "<group>";
+		};
 		73556EE627E7A35D0051A2E5 /* infoCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +212,36 @@
 				73556EE827E7A38C0051A2E5 /* infoCell.xib */,
 			);
 			path = infoCell;
+			sourceTree = "<group>";
+		};
+		7368025F281D4EB70039C251 /* WorkDeatilsVC */ = {
+			isa = PBXGroup;
+			children = (
+				73680260281D4ED70039C251 /* WorkDetailsVC.swift */,
+				73680262281D4EEB0039C251 /* WorkDetails.storyboard */,
+				73680264281D50340039C251 /* WorkDetailsCell */,
+				7368026B281D544F0039C251 /* GoogleMapsCell */,
+				73403097281D693A00531E42 /* GoogleMapsVC */,
+			);
+			path = WorkDeatilsVC;
+			sourceTree = "<group>";
+		};
+		73680264281D50340039C251 /* WorkDetailsCell */ = {
+			isa = PBXGroup;
+			children = (
+				73680267281D508A0039C251 /* WorkDetailsCell.swift */,
+				73680269281D50A90039C251 /* WorkDetailsCell.xib */,
+			);
+			path = WorkDetailsCell;
+			sourceTree = "<group>";
+		};
+		7368026B281D544F0039C251 /* GoogleMapsCell */ = {
+			isa = PBXGroup;
+			children = (
+				7368026E281D548C0039C251 /* GoogleMapsCell.swift */,
+				7368026C281D54830039C251 /* GoogleMapsCell.xib */,
+			);
+			path = GoogleMapsCell;
 			sourceTree = "<group>";
 		};
 		7369FC8A27F3CD9000E0A312 /* CreateEmployees */ = {
@@ -346,36 +393,9 @@
 			children = (
 				73CBABF127EB4BF900D9A4FB /* DaysSchedulesVC.swift */,
 				73CBABF327EB4C1100D9A4FB /* DaysSchedules.storyboard */,
-				73CBABFA27EB624200D9A4FB /* WorkDetailsVC */,
+				7368025F281D4EB70039C251 /* WorkDeatilsVC */,
 			);
 			path = DaysSchedules;
-			sourceTree = "<group>";
-		};
-		73CBABFA27EB624200D9A4FB /* WorkDetailsVC */ = {
-			isa = PBXGroup;
-			children = (
-				73CBABFB27EB626B00D9A4FB /* WorkDetailsVC.swift */,
-				73CBABFD27EB629000D9A4FB /* WorkDetails.storyboard */,
-				73CBABFF27EB6ABA00D9A4FB /* WorkDetailsCell */,
-			);
-			path = WorkDetailsVC;
-			sourceTree = "<group>";
-		};
-		73CBABFF27EB6ABA00D9A4FB /* WorkDetailsCell */ = {
-			isa = PBXGroup;
-			children = (
-				73CBAC0027EB6AD900D9A4FB /* WorkDetailsCell.swift */,
-				73CBAC0127EB6AD900D9A4FB /* WorkDetailsCell.xib */,
-				73CBAC0427EB6AE700D9A4FB /* GoogleMapsCell */,
-			);
-			path = WorkDetailsCell;
-			sourceTree = "<group>";
-		};
-		73CBAC0427EB6AE700D9A4FB /* GoogleMapsCell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = GoogleMapsCell;
 			sourceTree = "<group>";
 		};
 		73DDCA7D27D6545D0025BC14 /* ReportsPage */ = {
@@ -459,14 +479,13 @@
 				7394F01527CCBA7B001C58C9 /* Frameworks */,
 				7394F01627CCBA7B001C58C9 /* Resources */,
 				533641A8F5DBC0D93BC6E66B /* [CP] Embed Pods Frameworks */,
+				50A9B0DC8E4ECA51971BD119 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = FlashHR;
-			packageProductDependencies = (
-			);
 			productName = FlashHR;
 			productReference = 7394F01827CCBA7B001C58C9 /* FlashHR.app */;
 			productType = "com.apple.product-type.application";
@@ -498,8 +517,6 @@
 				Base,
 			);
 			mainGroup = 7394F00F27CCBA7B001C58C9;
-			packageReferences = (
-			);
 			productRefGroup = 7394F01927CCBA7B001C58C9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -515,27 +532,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				7374A2D127D1321E00493821 /* Login.storyboard in Resources */,
-				73CBAC0327EB6AD900D9A4FB /* WorkDetailsCell.xib in Resources */,
 				73CBABF427EB4C1100D9A4FB /* DaysSchedules.storyboard in Resources */,
 				7381E2C127DB751F00134937 /* RequestCell.xib in Resources */,
 				7394F02827CCBA7B001C58C9 /* LaunchScreen.storyboard in Resources */,
+				73680263281D4EEB0039C251 /* WorkDetails.storyboard in Resources */,
 				73A1823B27E8E41F0042B648 /* EmployeeCell.xib in Resources */,
 				730FA0BD27D0BF3E00EB0C39 /* GoogleService-Info.plist in Resources */,
 				7394F02527CCBA7B001C58C9 /* Assets.xcassets in Resources */,
 				730FA0B527D0B8ED00EB0C39 /* Employee.storyboard in Resources */,
+				7368026D281D54830039C251 /* GoogleMapsCell.xib in Resources */,
 				73ABEE4927D65A24001F4A2F /* Employees.storyboard in Resources */,
 				73A735A327CF62D700FA9253 /* Main.storyboard in Resources */,
+				7340309B281D696400531E42 /* GoogleMaps.storyboard in Resources */,
 				73ABEE4B27D65FB9001F4A2F /* TabBar.storyboard in Resources */,
 				73556EEA27E7A38C0051A2E5 /* infoCell.xib in Resources */,
 				73067AB027DBF28600FC7A7F /* MessageCell.xib in Resources */,
 				7369FC8F27F3CDEA00E0A312 /* CreateEmployee.storyboard in Resources */,
+				7368026A281D50A90039C251 /* WorkDetailsCell.xib in Resources */,
 				73A735A027CF5F1F00FA9253 /* ResetPassword.storyboard in Resources */,
 				73A96AA6281340B0003A5CF6 /* SelectedEmpProfile.storyboard in Resources */,
 				73556EE327E79EB70051A2E5 /* ProfileAsTableView.storyboard in Resources */,
 				73E4D70A281336A40067B407 /* ProfileOrSchedule.storyboard in Resources */,
 				73DDCA7627D654300025BC14 /* Commmunication.storyboard in Resources */,
 				73DDCA7C27D654560025BC14 /* Requests.storyboard in Resources */,
-				73CBABFE27EB629000D9A4FB /* WorkDetails.storyboard in Resources */,
 				73DDCA7A27D654470025BC14 /* Reports.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,6 +562,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		50A9B0DC8E4ECA51971BD119 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlashHR/Pods-FlashHR-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlashHR/Pods-FlashHR-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlashHR/Pods-FlashHR-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		533641A8F5DBC0D93BC6E66B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -589,11 +625,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73680261281D4ED70039C251 /* WorkDetailsVC.swift in Sources */,
+				7368026F281D548C0039C251 /* GoogleMapsCell.swift in Sources */,
 				7394F02027CCBA7B001C58C9 /* LoginViewController.swift in Sources */,
 				7394F01C27CCBA7B001C58C9 /* AppDelegate.swift in Sources */,
 				73FBD99A27CD73A90061B864 /* ResetPassViewController.swift in Sources */,
 				73A1823A27E8E41F0042B648 /* EmployeeCell.swift in Sources */,
 				7394F01E27CCBA7B001C58C9 /* SceneDelegate.swift in Sources */,
+				73403099281D695B00531E42 /* GoogleMapsVC.swift in Sources */,
 				73DDCA7427D654150025BC14 /* EmployeesVC.swift in Sources */,
 				73DDCA7127D653DF0025BC14 /* RequestsVC.swift in Sources */,
 				7369FC8D27F3CDD800E0A312 /* CreateEmployeeVC.swift in Sources */,
@@ -601,6 +640,7 @@
 				73A96AA4281340A6003A5CF6 /* SelectedEmpProfileVC.swift in Sources */,
 				73556EE927E7A38C0051A2E5 /* infoCell.swift in Sources */,
 				7374A2CA27D12C6000493821 /* UserDataService.swift in Sources */,
+				73680268281D508A0039C251 /* WorkDetailsCell.swift in Sources */,
 				730FA0B927D0B91B00EB0C39 /* EmployeeViewController.swift in Sources */,
 				73067AAF27DBF28600FC7A7F /* MessageCell.swift in Sources */,
 				7381E2C027DB751F00134937 /* RequestCell.swift in Sources */,
@@ -610,9 +650,7 @@
 				73CBABF227EB4BF900D9A4FB /* DaysSchedulesVC.swift in Sources */,
 				73556EE527E79FC70051A2E5 /* ProfileAsTableViewVC.swift in Sources */,
 				7374A2CD27D12C7E00493821 /* LoginService.swift in Sources */,
-				73CBAC0227EB6AD900D9A4FB /* WorkDetailsCell.swift in Sources */,
 				7394F03327CCBC9E001C58C9 /* Constants.swift in Sources */,
-				73CBABFC27EB626B00D9A4FB /* WorkDetailsVC.swift in Sources */,
 				7338C11328183C2C0065CA3F /* FireBaseService.swift in Sources */,
 				7374A2C327D124EE00493821 /* UserModel.swift in Sources */,
 				7374A2C627D1283C00493821 /* SplashViewController.swift in Sources */,

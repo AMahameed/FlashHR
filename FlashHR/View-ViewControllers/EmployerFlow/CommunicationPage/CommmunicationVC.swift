@@ -33,16 +33,16 @@ class CommmunicationVC: UIViewController {
     
     func loadMessages() {
 
-        fireBaseService.getEmpDocID(empID: Constants.Strings.employerID) { empDocID in
-            self.docID = empDocID
-            self.db.collection("employee").document(empDocID).collection("messages").order(by: "date", descending: true).addSnapshotListener { (querySnapshot, error) in
+        fireBaseService.getEmpDocID(empID: Constants.Strings.employerID) { [weak self] empDocID in
+            self?.docID = empDocID
+            self?.db.collection("employee").document(empDocID).collection("messages").order(by: "date", descending: true).addSnapshotListener { (querySnapshot, error) in
                 
-                self.messages.removeAll()
+                self?.messages.removeAll()
                 
                 if let error = error {
-                    self.presentAlertInMainThread(message: error.localizedDescription)
+                    self?.presentAlertInMainThread(message: error.localizedDescription)
                 } else{
-                    self.messages.removeAll()
+                    self?.messages.removeAll()
                     
                     if let snapshotDocuments = querySnapshot?.documents {
                         for doc in snapshotDocuments {
@@ -51,12 +51,12 @@ class CommmunicationVC: UIViewController {
                                let body = data["body"] as? String{
                                 
                                 let newMessage = Message(sender: sender, body: body)
-                                self.messages.append(newMessage)
+                                self?.messages.append(newMessage)
                                 
                                 DispatchQueue.main.async {
-                                    self.tableView.reloadData()
+                                    self?.tableView.reloadData()
                                     let indexPath = IndexPath(row: 0, section: 0)
-                                    self.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
+                                    self?.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
                                 }
                             }
                         }
@@ -76,13 +76,13 @@ class CommmunicationVC: UIViewController {
             self.db.collection("employee").document(self.docID).collection("messages").addDocument(data: [
                 "sender": Constants.Strings.employerName,
                 "body": messageBody,
-                "date": Date().timeIntervalSince1970]){ error in
+                "date": Date().timeIntervalSince1970]){ [weak self] error in
                     
                     if let error = error {
-                        self.presentAlertInMainThread(message: error.localizedDescription)
+                        self?.presentAlertInMainThread(message: error.localizedDescription)
                     }
                     DispatchQueue.main.async {
-                        self.textView.text = ""
+                        self?.textView.text = ""
                     }
                 }
         }
@@ -109,8 +109,8 @@ class CommmunicationVC: UIViewController {
             let alert = UIAlertController(title: "Warning", message: "Are you sure you want to proceed ", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
             alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { _ in
-                self.getMessageID(indexPathForRowAT: indexPath) { messageID in
-                    self.db.collection("employee").document(self.docID).collection("messages").document(messageID).delete()
+                self.getMessageID(indexPathForRowAT: indexPath) { [weak self] messageID in
+                    self?.db.collection("employee").document(self!.docID).collection("messages").document(messageID).delete()
                 }
             }))
             self.present(alert,animated: true)

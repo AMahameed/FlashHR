@@ -38,8 +38,8 @@ struct WorkTansactions {
     var startTime: String = ""
     var dayStr: String = ""
     var workingHours: Int = 0
-    var long: Float = 0.0
-    var lat: Float = 0.0
+    var long: Double = 0.0
+    var lat: Double = 0.0
     var isRequestedLeave: Bool = false
     var leaveHours: Float = 0.0
 }
@@ -50,8 +50,8 @@ struct TransactionsHolder {
     var startTime: String = ""
     var dayStr: String = ""
     var workingHours: Int = 0
-    var long: Float = 0.0
-    var lat: Float = 0.0
+    var long: Double = 0.0
+    var lat: Double = 0.0
     var isRequestedLeave: Bool = false
     var leaveHours: Float = 0.0
 }

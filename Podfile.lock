@@ -642,6 +642,12 @@ PODS:
     - GoogleUtilities/Environment (~> 7.2)
     - nanopb (~> 2.30908.0)
     - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleMaps (6.2.0):
+    - GoogleMaps/Maps (= 6.2.0)
+  - GoogleMaps/Base (6.2.0)
+  - GoogleMaps/Maps (6.2.0):
+    - GoogleMaps/Base
+  - GooglePlaces (6.2.0)
   - GoogleUtilities/AppDelegateSwizzler (7.7.0):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -728,6 +734,8 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Firestore
   - FSCalendar
+  - GoogleMaps
+  - GooglePlaces
   - IQKeyboardManagerSwift (~> 6.5.9)
 
 SPEC REPOS:
@@ -741,6 +749,8 @@ SPEC REPOS:
     - FirebaseFirestore
     - FSCalendar
     - GoogleDataTransport
+    - GoogleMaps
+    - GooglePlaces
     - GoogleUtilities
     - "gRPC-C++"
     - gRPC-Core
@@ -761,6 +771,8 @@ SPEC CHECKSUMS:
   FirebaseFirestore: d7023faff8e1b4fd69d0adbcf18e65129bc03842
   FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
   GoogleDataTransport: 629c20a4d363167143f30ea78320d5a7eb8bd940
+  GoogleMaps: c1b9de14cecc940b2d334dd4e6dfa116bff4a40e
+  GooglePlaces: 53ce075bac2ea015afbd6577f47d186426a3a388
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
   "gRPC-C++": 9675f953ace2b3de7c506039d77be1f2e77a8db2
   gRPC-Core: 943e491cb0d45598b0b0eb9e910c88080369290b
@@ -771,6 +783,6 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
 
-PODFILE CHECKSUM: 9ff59a37e42f9c65bce5bc1d77a03176897af973
+PODFILE CHECKSUM: 582c7123f1ec99a1eb2f6b86ca9e52019077d05b
 
 COCOAPODS: 1.11.2

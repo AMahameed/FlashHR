@@ -42,9 +42,9 @@ class ProfileAsTableViewVC: UIViewController {
     }
     
     func loadEmpImage() {
-        fireBaseService.getEmpData(empID: UserDataService.shared.userID ?? ""){ imageData in
+        fireBaseService.getEmpData(empID: UserDataService.shared.userID ?? ""){ [weak self] imageData in
             let image = UIImage(data: imageData.empImageData)
-            self.imageView.image = image
+            self?.imageView.image = image
         }
     }
     
@@ -126,10 +126,10 @@ extension ProfileAsTableViewVC: UIImagePickerControllerDelegate, UINavigationCon
             return
         }
         
-        fireBaseService.getEmpDocID(empID: UserDataService.shared.userID ?? "") { docID in
-            self.db.collection("employee").document(docID).setData(["empImageData": imageData], merge: true) { error in
+        fireBaseService.getEmpDocID(empID: UserDataService.shared.userID ?? "") { [weak self] docID in
+            self?.db.collection("employee").document(docID).setData(["empImageData": imageData], merge: true) { error in
                 if let _ = error{
-                    self.presentAlertInMainThread(message: "Image size is more than 1 MB.")
+                    self?.presentAlertInMainThread(message: "Image size is more than 1 MB.")
                 }
             }
         } failure: { error in

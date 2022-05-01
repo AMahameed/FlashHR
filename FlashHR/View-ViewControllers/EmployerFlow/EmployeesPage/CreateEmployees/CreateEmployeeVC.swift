@@ -143,22 +143,16 @@ extension CreateEmployeeVC: UITextFieldDelegate {
        
         switch textField.tag {
         case 0:
-            //userName
             createEmployee.userName = textField.text ?? ""
         case 1:
-            //password
             createEmployee.password = textField.text ?? ""
         case 2:
-            //email
             createEmployee.email = textField.text ?? ""
         case 3:
-            //title
             createEmployee.title = textField.text ?? ""
         case 4:
-            //mobile No.
             createEmployee.mobile = textField.text ?? ""
         case 5:
-            //gender has already been entered from the pickerView unlike other attributes
             textField.text = createEmployee.gender
         default:
             return
