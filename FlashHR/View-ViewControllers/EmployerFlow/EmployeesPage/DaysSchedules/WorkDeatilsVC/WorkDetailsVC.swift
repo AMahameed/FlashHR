@@ -22,16 +22,10 @@ class WorkDetailsVC: UIViewController{
     var startTimePickerView = UIPickerView()
     let db = Firestore.firestore()
     let fireBaseService = FireBaseService()
-    var mapsVC = MapsViewC() // class instance
     
     var titles = [ "Project Name", "Contact Number", "Start Time", "Working Hours"]
     var wtDocIDHOlder: String = "no data"
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        mapsVC.delegate = self  // delegate  , the extension that conforms to the protocol is at the End !
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -147,7 +141,11 @@ class WorkDetailsVC: UIViewController{
 extension WorkDetailsVC: UITableViewDelegate, UITableViewDataSource, GoogleMapsCellDelegate{
     
     func buttonDidClicked() {
-        presentFromSTB(stbName: Constants.Segues.MapsView, vcID: Constants.Segues.MapsView) // here is where I go to the Maps STB
+        if let vc = UIStoryboard(name: Constants.Segues.MapsView, bundle: Bundle.main).instantiateViewController(identifier: Constants.Segues.MapsView) as? MapsViewC {
+            vc.delegate = self
+            vc.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
