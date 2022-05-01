@@ -12,9 +12,8 @@
 		730FA0B527D0B8ED00EB0C39 /* Employee.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 730FA0B427D0B8ED00EB0C39 /* Employee.storyboard */; };
 		730FA0B927D0B91B00EB0C39 /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730FA0B827D0B91B00EB0C39 /* EmployeeViewController.swift */; };
 		730FA0BD27D0BF3E00EB0C39 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 730FA0BC27D0BF3E00EB0C39 /* GoogleService-Info.plist */; };
+		73354A09281EECB000239127 /* MapsViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73354A08281EECB000239127 /* MapsViewC.swift */; };
 		7338C11328183C2C0065CA3F /* FireBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338C11228183C2C0065CA3F /* FireBaseService.swift */; };
-		73403099281D695B00531E42 /* GoogleMapsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73403098281D695B00531E42 /* GoogleMapsVC.swift */; };
-		7340309B281D696400531E42 /* GoogleMaps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7340309A281D696400531E42 /* GoogleMaps.storyboard */; };
 		73556EE327E79EB70051A2E5 /* ProfileAsTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73556EE227E79EB70051A2E5 /* ProfileAsTableView.storyboard */; };
 		73556EE527E79FC70051A2E5 /* ProfileAsTableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73556EE427E79FC70051A2E5 /* ProfileAsTableViewVC.swift */; };
 		73556EE927E7A38C0051A2E5 /* infoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73556EE727E7A38C0051A2E5 /* infoCell.swift */; };
@@ -60,6 +59,7 @@
 		73DDCA7C27D654560025BC14 /* Requests.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73DDCA7B27D654560025BC14 /* Requests.storyboard */; };
 		73E4D70A281336A40067B407 /* ProfileOrSchedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73E4D709281336A40067B407 /* ProfileOrSchedule.storyboard */; };
 		73E4D70C281336AF0067B407 /* ProfileOrScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E4D70B281336AF0067B407 /* ProfileOrScheduleVC.swift */; };
+		73E61AC0281EF4E900E2BBE0 /* Maps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73E61ABF281EF4E900E2BBE0 /* Maps.storyboard */; };
 		73FBD99A27CD73A90061B864 /* ResetPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBD99927CD73A90061B864 /* ResetPassViewController.swift */; };
 		ABC2E132C1AF08CDB9826C25 /* Pods_FlashHR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C276AF36410A344916FB7C1 /* Pods_FlashHR.framework */; };
 /* End PBXBuildFile section */
@@ -72,9 +72,8 @@
 		730FA0B427D0B8ED00EB0C39 /* Employee.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Employee.storyboard; sourceTree = "<group>"; };
 		730FA0B827D0B91B00EB0C39 /* EmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
 		730FA0BC27D0BF3E00EB0C39 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		73354A08281EECB000239127 /* MapsViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewC.swift; sourceTree = "<group>"; };
 		7338C11228183C2C0065CA3F /* FireBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseService.swift; sourceTree = "<group>"; };
-		73403098281D695B00531E42 /* GoogleMapsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsVC.swift; sourceTree = "<group>"; };
-		7340309A281D696400531E42 /* GoogleMaps.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GoogleMaps.storyboard; sourceTree = "<group>"; };
 		73556EE227E79EB70051A2E5 /* ProfileAsTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileAsTableView.storyboard; sourceTree = "<group>"; };
 		73556EE427E79FC70051A2E5 /* ProfileAsTableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAsTableViewVC.swift; sourceTree = "<group>"; };
 		73556EE727E7A38C0051A2E5 /* infoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoCell.swift; sourceTree = "<group>"; };
@@ -122,6 +121,7 @@
 		73DDCA7B27D654560025BC14 /* Requests.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Requests.storyboard; sourceTree = "<group>"; };
 		73E4D709281336A40067B407 /* ProfileOrSchedule.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileOrSchedule.storyboard; sourceTree = "<group>"; };
 		73E4D70B281336AF0067B407 /* ProfileOrScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOrScheduleVC.swift; sourceTree = "<group>"; };
+		73E61ABF281EF4E900E2BBE0 /* Maps.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Maps.storyboard; sourceTree = "<group>"; };
 		73FBD99927CD73A90061B864 /* ResetPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassViewController.swift; sourceTree = "<group>"; };
 		BD537B4C9017A29F0631B0E3 /* Pods-FlashHR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashHR.debug.xcconfig"; path = "Target Support Files/Pods-FlashHR/Pods-FlashHR.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -196,13 +196,13 @@
 			path = EmployeeProfile;
 			sourceTree = "<group>";
 		};
-		73403097281D693A00531E42 /* GoogleMapsVC */ = {
+		73354A05281EEC6F00239127 /* MapsVC */ = {
 			isa = PBXGroup;
 			children = (
-				73403098281D695B00531E42 /* GoogleMapsVC.swift */,
-				7340309A281D696400531E42 /* GoogleMaps.storyboard */,
+				73354A08281EECB000239127 /* MapsViewC.swift */,
+				73E61ABF281EF4E900E2BBE0 /* Maps.storyboard */,
 			);
-			path = GoogleMapsVC;
+			path = MapsVC;
 			sourceTree = "<group>";
 		};
 		73556EE627E7A35D0051A2E5 /* infoCell */ = {
@@ -221,7 +221,7 @@
 				73680262281D4EEB0039C251 /* WorkDetails.storyboard */,
 				73680264281D50340039C251 /* WorkDetailsCell */,
 				7368026B281D544F0039C251 /* GoogleMapsCell */,
-				73403097281D693A00531E42 /* GoogleMapsVC */,
+				73354A05281EEC6F00239127 /* MapsVC */,
 			);
 			path = WorkDeatilsVC;
 			sourceTree = "<group>";
@@ -543,7 +543,7 @@
 				7368026D281D54830039C251 /* GoogleMapsCell.xib in Resources */,
 				73ABEE4927D65A24001F4A2F /* Employees.storyboard in Resources */,
 				73A735A327CF62D700FA9253 /* Main.storyboard in Resources */,
-				7340309B281D696400531E42 /* GoogleMaps.storyboard in Resources */,
+				73E61AC0281EF4E900E2BBE0 /* Maps.storyboard in Resources */,
 				73ABEE4B27D65FB9001F4A2F /* TabBar.storyboard in Resources */,
 				73556EEA27E7A38C0051A2E5 /* infoCell.xib in Resources */,
 				73067AB027DBF28600FC7A7F /* MessageCell.xib in Resources */,
@@ -628,11 +628,11 @@
 				73680261281D4ED70039C251 /* WorkDetailsVC.swift in Sources */,
 				7368026F281D548C0039C251 /* GoogleMapsCell.swift in Sources */,
 				7394F02027CCBA7B001C58C9 /* LoginViewController.swift in Sources */,
+				73354A09281EECB000239127 /* MapsViewC.swift in Sources */,
 				7394F01C27CCBA7B001C58C9 /* AppDelegate.swift in Sources */,
 				73FBD99A27CD73A90061B864 /* ResetPassViewController.swift in Sources */,
 				73A1823A27E8E41F0042B648 /* EmployeeCell.swift in Sources */,
 				7394F01E27CCBA7B001C58C9 /* SceneDelegate.swift in Sources */,
-				73403099281D695B00531E42 /* GoogleMapsVC.swift in Sources */,
 				73DDCA7427D654150025BC14 /* EmployeesVC.swift in Sources */,
 				73DDCA7127D653DF0025BC14 /* RequestsVC.swift in Sources */,
 				7369FC8D27F3CDD800E0A312 /* CreateEmployeeVC.swift in Sources */,

@@ -22,14 +22,14 @@ class WorkDetailsVC: UIViewController{
     var startTimePickerView = UIPickerView()
     let db = Firestore.firestore()
     let fireBaseService = FireBaseService()
-    var googleMapsVC = GoogleMapsVC() // class instance
+    var mapsVC = MapsViewC() // class instance
     
     var titles = [ "Project Name", "Contact Number", "Start Time", "Working Hours"]
     var wtDocIDHOlder: String = "no data"
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        googleMapsVC.delegate = self  // delegate  , the extension that conforms to the protocol is at the End !
+        mapsVC.delegate = self  // delegate  , the extension that conforms to the protocol is at the End !
     }
     
     override func viewDidLoad() {
@@ -72,8 +72,8 @@ class WorkDetailsVC: UIViewController{
                             self?.wtDocIDHOlder = doc.documentID
                             success(doc.documentID, empDocID)
                         }
-                        guard documents.count != 0 else { self?.presentAlert(title:" Warning", message: "No Records Found for this day.", preferredStyle: .alert)
-                            return }
+//                        guard documents.count != 0 else { self?.presentAlert(title:" Warning", message: "No Records Found for this day.", preferredStyle: .alert)
+//                            return }
                     }
                 }
             }
@@ -81,9 +81,7 @@ class WorkDetailsVC: UIViewController{
             self.presentAlertInMainThread(message: error)
         }
     }
-
-
-
+    
     func isDayFilled(success: @escaping ((TransactionsHolder)->Void),  failure: @escaping ((String)->Void))  {
         
         getWorkTransactionDocID { [weak self] wtDocID, empDocID in
@@ -149,7 +147,7 @@ class WorkDetailsVC: UIViewController{
 extension WorkDetailsVC: UITableViewDelegate, UITableViewDataSource, GoogleMapsCellDelegate{
     
     func buttonDidClicked() {
-        presentFromSTB(stbName: Constants.Segues.GoogleMaps, vcID: Constants.Segues.GoogleMaps)
+        presentFromSTB(stbName: Constants.Segues.MapsView, vcID: Constants.Segues.MapsView) // here is where I go to the Maps STB
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -285,7 +283,7 @@ extension WorkDetailsVC: UIPickerViewDelegate, UIPickerViewDataSource{
 }
 //MARK: - GoogleMapsVC Delegate
 
-extension WorkDetailsVC: GoogleMapsVCDelegate{
+extension WorkDetailsVC: MapsViewCDelegate{
     
     func locationConfirmed(newLocation: CLLocation) {
         print(newLocation.coordinate.longitude)

@@ -33,7 +33,7 @@ struct Constants {
         static var ProfileOrSchedule = "ProfileOrSchedule"
         static var ProfileAsTableView = "ProfileAsTableView"
         static var SelectedEmpProfile = "SelectedEmpProfile"
-        static var GoogleMaps = "GoogleMaps"
+        static var MapsView = "Maps"
     }
     
     struct NibNames {
