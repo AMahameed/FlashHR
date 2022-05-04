@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lhj-hX-CFY">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Available Work -->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="WorkTranacitons" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="WorkTranacitonsVC" customModule="FlashHR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="n2m-vu-zIR">
+                                <rect key="frame" x="70" y="108" width="288" height="32"/>
+                                <segments>
+                                    <segment title="Available Work"/>
+                                    <segment title="Work Records"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentPressed:" destination="Y6W-OH-hqX" eventType="valueChanged" id="5M5-bs-sYi"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PzO-GY-xkd">
+                                <rect key="frame" x="0.0" y="154" width="428" height="772"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="n2m-vu-zIR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="70" id="1lv-Sc-ABf"/>
+                            <constraint firstAttribute="bottom" secondItem="PzO-GY-xkd" secondAttribute="bottom" id="Ahp-St-m0w"/>
+                            <constraint firstItem="n2m-vu-zIR" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="KE9-Hv-MLa"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="n2m-vu-zIR" secondAttribute="trailing" constant="70" id="Ya5-6Y-M33"/>
+                            <constraint firstItem="PzO-GY-xkd" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="ghK-op-KUa"/>
+                            <constraint firstItem="PzO-GY-xkd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="gkB-3h-eLl"/>
+                            <constraint firstItem="PzO-GY-xkd" firstAttribute="top" secondItem="n2m-vu-zIR" secondAttribute="bottom" constant="15" id="jwT-70-za7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Available Work " id="UIi-wq-mt5"/>
+                    <connections>
+                        <outlet property="segment" destination="n2m-vu-zIR" id="7Ae-g3-yac"/>
+                        <outlet property="tableView" destination="PzO-GY-xkd" id="QAk-KA-C65"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937.68115942028987" y="97.767857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mu2-cr-Sf1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lhj-hX-CFY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="38l-bU-xl4">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="OuK-le-jvP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gak-SY-LlZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244" y="97"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

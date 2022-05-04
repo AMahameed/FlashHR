@@ -9,6 +9,7 @@ import Foundation
 import Firebase
 
 class FireBaseService: UIViewController{
+    
     private let db = Firestore.firestore()
     
     func getEmpDocID(empID: String ,success: @escaping ((String)->Void),  failure: @escaping ((String)->Void)){
@@ -55,7 +56,4 @@ class FireBaseService: UIViewController{
             self.presentAlertInMainThread(message: error)
         }
     }
-    
-    
-    
 }

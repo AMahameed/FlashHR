@@ -19,10 +19,10 @@
             </objects>
             <point key="canvasLocation" x="1266" y="376"/>
         </scene>
-        <!--Employee-->
+        <!--WorkTranacitons-->
         <scene sceneID="bXg-xK-mGj">
             <objects>
-                <viewControllerPlaceholder storyboardName="Employee" id="YnP-mJ-NBd" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="WorkTranacitons" id="YnP-mJ-NBd" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Gy1-PH-9oV"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U13-L5-IlM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

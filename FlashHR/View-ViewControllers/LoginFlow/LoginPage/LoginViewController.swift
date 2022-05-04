@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
                 if UserDataService.shared.isEmployeer {
                     self.presentFromSTB(stbName: "TabBar", vcID: "TabBar")
                 }else {
-                    self.presentFromSTB(stbName: "Employee", vcID: "Employee")
+                    self.presentFromSTB(stbName: "EmployeeTabBar", vcID: "EmployeeTabBar")
                 
                 }
             } failure: { errorString in

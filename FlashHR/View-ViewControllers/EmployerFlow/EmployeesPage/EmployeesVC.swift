@@ -108,7 +108,7 @@ extension EmployeesVC: UITableViewDelegate,UITableViewDataSource{
             let image = UIImage(data: filteredEmployees[indexPath.row].empImageData)
             cell.empImage.image = image
             return cell
-        }
+        } 
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension

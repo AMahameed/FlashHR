@@ -38,3 +38,15 @@ extension UIViewController{
         }
     }
 }
+
+extension UINavigationController {
+    override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+}
+
+extension UITabBarController {
+    override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+}

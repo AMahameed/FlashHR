@@ -42,7 +42,6 @@ class CommmunicationVC: UIViewController {
                 if let error = error {
                     self?.presentAlertInMainThread(message: error.localizedDescription)
                 } else{
-                    self?.messages.removeAll()
                     
                     if let snapshotDocuments = querySnapshot?.documents {
                         for doc in snapshotDocuments {
@@ -92,7 +91,7 @@ class CommmunicationVC: UIViewController {
         
         db.collection("employee").document(docID).collection("messages").whereField("body", isEqualTo: messages[indexPath.row].body).addSnapshotListener { querysnapShot, error in
             if let error = error{
-                print(error.localizedDescription)
+                self.presentAlertInMainThread(message: error.localizedDescription)
             }
             if let documents = querysnapShot?.documents{
                 for doc in documents{
@@ -130,7 +129,6 @@ extension CommmunicationVC: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Identifiers.messgaeCellIdentifier, for: indexPath) as? MessageCell else {return UITableViewCell()}
         
         guard !messages.isEmpty else{return UITableViewCell()}

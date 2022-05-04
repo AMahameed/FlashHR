@@ -7,7 +7,7 @@
 
 import UIKit
 import Firebase
-import CoreLocation
+import CoreLocation 
 
 class WorkDetailsVC: UIViewController{
 
@@ -17,11 +17,11 @@ class WorkDetailsVC: UIViewController{
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var saveButton: UIBarButtonItem!
-    var workTransactions = WorkTansactions()
-    var workingHoursPickerView = UIPickerView()
-    var startTimePickerView = UIPickerView()
-    let db = Firestore.firestore()
-    let fireBaseService = FireBaseService()
+    private  var workTransactions = WorkTansactions()
+    private var workingHoursPickerView = UIPickerView()
+    private var startTimePickerView = UIPickerView()
+    private let db = Firestore.firestore()
+    private let fireBaseService = FireBaseService()
     
     var titles = [ "Project Name", "Contact Number", "Start Time", "Working Hours"]
     var wtDocIDHOlder: String = "no data"
@@ -53,7 +53,7 @@ class WorkDetailsVC: UIViewController{
         }
     }
     
-    func getWorkTransactionDocID(success: @escaping ((String, String)->Void),  failure: @escaping ((String)->Void)){
+    private func getWorkTransactionDocID(success: @escaping ((String, String)->Void),  failure: @escaping ((String)->Void)){
         
         fireBaseService.getEmpDocID(empID: EmployeesVC.empIDHolder.employeeID) { [weak self] empDocID in
             self?.db.collection("employee").document(empDocID).collection("workTransactions").whereField("dayStr", isEqualTo: DaysSchedulesVC.dayIDHolder.dayStr).addSnapshotListener { querySnapshot, e in
@@ -66,8 +66,6 @@ class WorkDetailsVC: UIViewController{
                             self?.wtDocIDHOlder = doc.documentID
                             success(doc.documentID, empDocID)
                         }
-//                        guard documents.count != 0 else { self?.presentAlert(title:" Warning", message: "No Records Found for this day.", preferredStyle: .alert)
-//                            return }
                     }
                 }
             }
@@ -76,11 +74,11 @@ class WorkDetailsVC: UIViewController{
         }
     }
     
-    func isDayFilled(success: @escaping ((TransactionsHolder)->Void),  failure: @escaping ((String)->Void))  {
+    private func isDayFilled(success: @escaping ((TransactionsHolder)->Void),  failure: @escaping ((String)->Void))  {
         
         getWorkTransactionDocID { [weak self] wtDocID, empDocID in
             
-            self?.db.collection("employee").document(empDocID).collection("workTransactions").document(wtDocID).getDocument { docSnapShot, e in
+            self?.db.collection("employee").document(empDocID).collection("workTransactions").document(wtDocID).addSnapshotListener { docSnapShot, e in
                 if let error = e {
                     failure(error.localizedDescription)
                 }else{
@@ -91,10 +89,11 @@ class WorkDetailsVC: UIViewController{
                            let projectName = doc["projectName"] as? String,
                            let contactNo = doc["contactNo"] as? String,
                            let startTime = doc["startTime"] as? String,
-                           let workingHours = doc["workingHours"] as? Int{
+                           let workingHours = doc["workingHours"] as? Int,
+                           let long = doc["long"] as? Double,
+                           let lat = doc["lat"] as? Double{
                             
-                            
-                            let thisDayWorkTransactions = TransactionsHolder( projectName: projectName, contactNo: contactNo, startTime: startTime, dayStr: dayStr,workingHours: workingHours)
+                            let thisDayWorkTransactions = TransactionsHolder( projectName: projectName, contactNo: contactNo, startTime: startTime, dayStr: dayStr,workingHours: workingHours, long: long, lat: lat)
                             
                             success(thisDayWorkTransactions)
                         }
@@ -114,7 +113,9 @@ class WorkDetailsVC: UIViewController{
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         
         guard !(workTransactions.projectName.isEmpty), !(workTransactions.contactNo.isEmpty),!(workTransactions.startTime.isEmpty) else{
-            presentAlert(message: "Please fill all required fields"); return}
+            presentAlert(message: "Please fill all required fields to continue"); return}
+        guard !(workTransactions.long.isZero), !(workTransactions.lat.isZero) else {
+            presentAlert(message: "Please Select a Work Location to continue"); return}
         
         fireBaseService.getEmpDocID(empID: EmployeesVC.empIDHolder.employeeID){ empDocID in
             
@@ -125,6 +126,8 @@ class WorkDetailsVC: UIViewController{
                 "contactNo" : self.workTransactions.contactNo,
                 "startTime" : self.workTransactions.startTime,
                 "workingHours" : self.workTransactions.workingHours,
+                "long": self.workTransactions.long,
+                "lat": self.workTransactions.lat,
                 "isRequestedLeave": self.workTransactions.isRequestedLeave])
             
             self.dismiss(animated: true)
@@ -141,10 +144,10 @@ class WorkDetailsVC: UIViewController{
 extension WorkDetailsVC: UITableViewDelegate, UITableViewDataSource, GoogleMapsCellDelegate{
     
     func buttonDidClicked() {
-        if let vc = UIStoryboard(name: Constants.Segues.MapsView, bundle: Bundle.main).instantiateViewController(identifier: Constants.Segues.MapsView) as? MapsViewC {
+        if let vc = UIStoryboard(name: Constants.Segues.MapsView, bundle: nil).instantiateViewController(identifier: Constants.Segues.MapsView) as? MapsViewC {
             vc.delegate = self
             vc.modalPresentationStyle = .fullScreen
-            self.navigationController?.pushViewController(vc, animated: true)
+            self.present(vc, animated: true, completion: nil)
         }
     }
     
@@ -284,43 +287,11 @@ extension WorkDetailsVC: UIPickerViewDelegate, UIPickerViewDataSource{
 extension WorkDetailsVC: MapsViewCDelegate{
     
     func locationConfirmed(newLocation: CLLocation) {
-        print(newLocation.coordinate.longitude)
-        print(newLocation.coordinate.latitude)
+        workTransactions.long = newLocation.coordinate.longitude
+        workTransactions.lat = newLocation.coordinate.latitude
     }
     
     func selectLocationCancelled() {
         print("error 111")
     }
-    
 }
-
-
-
-
-
-
-
-
-//func isDayDetailsUpdatable()  {
-//
-//    isDayFilled { transactionsHolder in
-//
-//        let x = Double(Date().timeIntervalSince1970) - transactionsHolder.date
-//        print(x)
-//
-//        let today = Date()
-//        let c = Date(timeIntervalSince1970: transactionsHolder.date).timeIntervalSince1970
-//        let mc = Calendar.current.date(byAdding: .day, value: -7, to: today)?.timeIntervalSince1970
-//
-//
-//        if c < mc! {
-//            print(c)
-//        }else{
-//            print(mc!)
-//        }
-//
-//
-//    } failure: { error in
-//        self.presentAlertInMainThread(message: error)
-//    }
-//}

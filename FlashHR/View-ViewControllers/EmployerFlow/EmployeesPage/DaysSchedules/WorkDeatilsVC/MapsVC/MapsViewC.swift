@@ -9,14 +9,14 @@ import UIKit
 import GoogleMaps
 
 protocol MapsViewCDelegate: AnyObject{
-    func locationConfirmed(newLocation: CLLocation)     //used protocol
+    func locationConfirmed(newLocation: CLLocation)
     func selectLocationCancelled()
 }
 
 class MapsViewC: UIViewController {
     
     
-    @IBOutlet weak var getPlaceButton: UIBarButtonItem!
+    @IBOutlet weak var getPlaceButton: UIButton!
     @IBOutlet weak var mapVV: GMSMapView!
     
     weak var delegate: MapsViewCDelegate?
@@ -46,24 +46,20 @@ class MapsViewC: UIViewController {
         mapVV.camera = camera
     }
     
-    @IBAction func getPlacePressed(_ sender: UIBarButtonItem) {
+    @IBAction func getPlacePressed(_ sender: UIButton) {
         if let location = selectedLocation {
-            delegate?.locationConfirmed(newLocation: location)  // calling the protocol method
+            delegate?.locationConfirmed(newLocation: location)
         }else{
             presentAlert(message: "There was an error getting the desired Location")
         }
         dismiss(animated: true)
-        
     }
     
-    @IBAction func backPressed(_ sender: UIBarButtonItem) {
-        delegate?.selectLocationCancelled()                   // calling the protocol method
+    @IBAction func cancelPressed(_ sender: UIButton) {
+        delegate?.selectLocationCancelled()
         dismiss(animated: true)
     }
-    
 }
-
-
 
 extension MapsViewC: GMSMapViewDelegate{
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {

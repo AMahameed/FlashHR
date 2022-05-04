@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7304B89B2823479400EE416B /* AvaliableWorkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7304B89A2823479400EE416B /* AvaliableWorkVC.swift */; };
+		7304B89D2823479F00EE416B /* AvaliableWork.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7304B89C2823479F00EE416B /* AvaliableWork.storyboard */; };
+		7304B89F282347AC00EE416B /* WorkRecord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7304B89E282347AC00EE416B /* WorkRecord.storyboard */; };
+		7304B8A1282347B800EE416B /* WorkRecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7304B8A0282347B800EE416B /* WorkRecordVC.swift */; };
 		73067AAF27DBF28600FC7A7F /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73067AAD27DBF28600FC7A7F /* MessageCell.swift */; };
 		73067AB027DBF28600FC7A7F /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73067AAE27DBF28600FC7A7F /* MessageCell.xib */; };
-		730FA0B527D0B8ED00EB0C39 /* Employee.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 730FA0B427D0B8ED00EB0C39 /* Employee.storyboard */; };
-		730FA0B927D0B91B00EB0C39 /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730FA0B827D0B91B00EB0C39 /* EmployeeViewController.swift */; };
 		730FA0BD27D0BF3E00EB0C39 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 730FA0BC27D0BF3E00EB0C39 /* GoogleService-Info.plist */; };
 		73354A09281EECB000239127 /* MapsViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73354A08281EECB000239127 /* MapsViewC.swift */; };
 		7338C11328183C2C0065CA3F /* FireBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338C11228183C2C0065CA3F /* FireBaseService.swift */; };
@@ -47,6 +49,11 @@
 		73A96AA6281340B0003A5CF6 /* SelectedEmpProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73A96AA5281340B0003A5CF6 /* SelectedEmpProfile.storyboard */; };
 		73ABEE4927D65A24001F4A2F /* Employees.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73ABEE4827D65A24001F4A2F /* Employees.storyboard */; };
 		73ABEE4B27D65FB9001F4A2F /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73ABEE4A27D65FB9001F4A2F /* TabBar.storyboard */; };
+		73B246BC28214C610077B9AD /* EmployeeTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B246BB28214C610077B9AD /* EmployeeTabBar.storyboard */; };
+		73B246BE2821508B0077B9AD /* WorkTranacitons.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B246BD2821508B0077B9AD /* WorkTranacitons.storyboard */; };
+		73B246C0282150940077B9AD /* WorkTranacitonsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B246BF282150940077B9AD /* WorkTranacitonsVC.swift */; };
+		73B246C4282150E40077B9AD /* EmpCommmunication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B246C3282150E40077B9AD /* EmpCommmunication.storyboard */; };
+		73B246C6282150F50077B9AD /* EmpCommmunicationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B246C5282150F50077B9AD /* EmpCommmunicationVC.swift */; };
 		73C8942F27D140F200BA3A6A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C8942E27D140F200BA3A6A /* Extensions.swift */; };
 		73CBABF227EB4BF900D9A4FB /* DaysSchedulesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBABF127EB4BF900D9A4FB /* DaysSchedulesVC.swift */; };
 		73CBABF427EB4C1100D9A4FB /* DaysSchedules.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73CBABF327EB4C1100D9A4FB /* DaysSchedules.storyboard */; };
@@ -67,10 +74,12 @@
 /* Begin PBXFileReference section */
 		0C276AF36410A344916FB7C1 /* Pods_FlashHR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlashHR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D270E593635B02F0649083 /* Pods-FlashHR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashHR.release.xcconfig"; path = "Target Support Files/Pods-FlashHR/Pods-FlashHR.release.xcconfig"; sourceTree = "<group>"; };
+		7304B89A2823479400EE416B /* AvaliableWorkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvaliableWorkVC.swift; sourceTree = "<group>"; };
+		7304B89C2823479F00EE416B /* AvaliableWork.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AvaliableWork.storyboard; sourceTree = "<group>"; };
+		7304B89E282347AC00EE416B /* WorkRecord.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkRecord.storyboard; sourceTree = "<group>"; };
+		7304B8A0282347B800EE416B /* WorkRecordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkRecordVC.swift; sourceTree = "<group>"; };
 		73067AAD27DBF28600FC7A7F /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		73067AAE27DBF28600FC7A7F /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
-		730FA0B427D0B8ED00EB0C39 /* Employee.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Employee.storyboard; sourceTree = "<group>"; };
-		730FA0B827D0B91B00EB0C39 /* EmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
 		730FA0BC27D0BF3E00EB0C39 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		73354A08281EECB000239127 /* MapsViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewC.swift; sourceTree = "<group>"; };
 		7338C11228183C2C0065CA3F /* FireBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseService.swift; sourceTree = "<group>"; };
@@ -109,6 +118,11 @@
 		73A96AA5281340B0003A5CF6 /* SelectedEmpProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectedEmpProfile.storyboard; sourceTree = "<group>"; };
 		73ABEE4827D65A24001F4A2F /* Employees.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Employees.storyboard; sourceTree = "<group>"; };
 		73ABEE4A27D65FB9001F4A2F /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		73B246BB28214C610077B9AD /* EmployeeTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmployeeTabBar.storyboard; sourceTree = "<group>"; };
+		73B246BD2821508B0077B9AD /* WorkTranacitons.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkTranacitons.storyboard; sourceTree = "<group>"; };
+		73B246BF282150940077B9AD /* WorkTranacitonsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTranacitonsVC.swift; sourceTree = "<group>"; };
+		73B246C3282150E40077B9AD /* EmpCommmunication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmpCommmunication.storyboard; sourceTree = "<group>"; };
+		73B246C5282150F50077B9AD /* EmpCommmunicationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpCommmunicationVC.swift; sourceTree = "<group>"; };
 		73C8942E27D140F200BA3A6A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		73CBABF127EB4BF900D9A4FB /* DaysSchedulesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysSchedulesVC.swift; sourceTree = "<group>"; };
 		73CBABF327EB4C1100D9A4FB /* DaysSchedules.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DaysSchedules.storyboard; sourceTree = "<group>"; };
@@ -138,6 +152,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7304B8982823474B00EE416B /* AvaliableWorkVC */ = {
+			isa = PBXGroup;
+			children = (
+				7304B89A2823479400EE416B /* AvaliableWorkVC.swift */,
+				7304B89C2823479F00EE416B /* AvaliableWork.storyboard */,
+			);
+			path = AvaliableWorkVC;
+			sourceTree = "<group>";
+		};
+		7304B8992823476900EE416B /* WorkRecordVC */ = {
+			isa = PBXGroup;
+			children = (
+				7304B8A0282347B800EE416B /* WorkRecordVC.swift */,
+				7304B89E282347AC00EE416B /* WorkRecord.storyboard */,
+			);
+			path = WorkRecordVC;
+			sourceTree = "<group>";
+		};
 		73067AA727DBF1B100FC7A7F /* RequestCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,18 +214,11 @@
 		7333064E27D257660019ECF0 /* EmployeeFlow */ = {
 			isa = PBXGroup;
 			children = (
-				7333064F27D2577D0019ECF0 /* EmployeeProfile */,
+				73B246BB28214C610077B9AD /* EmployeeTabBar.storyboard */,
+				73B246BA28214C160077B9AD /* WorkTransacions */,
+				73B246B928214C010077B9AD /* Cmmunication */,
 			);
 			path = EmployeeFlow;
-			sourceTree = "<group>";
-		};
-		7333064F27D2577D0019ECF0 /* EmployeeProfile */ = {
-			isa = PBXGroup;
-			children = (
-				730FA0B827D0B91B00EB0C39 /* EmployeeViewController.swift */,
-				730FA0B427D0B8ED00EB0C39 /* Employee.storyboard */,
-			);
-			path = EmployeeProfile;
 			sourceTree = "<group>";
 		};
 		73354A05281EEC6F00239127 /* MapsVC */ = {
@@ -379,6 +404,26 @@
 			path = SelectedEmpProfile;
 			sourceTree = "<group>";
 		};
+		73B246B928214C010077B9AD /* Cmmunication */ = {
+			isa = PBXGroup;
+			children = (
+				73B246C5282150F50077B9AD /* EmpCommmunicationVC.swift */,
+				73B246C3282150E40077B9AD /* EmpCommmunication.storyboard */,
+			);
+			path = Cmmunication;
+			sourceTree = "<group>";
+		};
+		73B246BA28214C160077B9AD /* WorkTransacions */ = {
+			isa = PBXGroup;
+			children = (
+				73B246BF282150940077B9AD /* WorkTranacitonsVC.swift */,
+				73B246BD2821508B0077B9AD /* WorkTranacitons.storyboard */,
+				7304B8982823474B00EE416B /* AvaliableWorkVC */,
+				7304B8992823476900EE416B /* WorkRecordVC */,
+			);
+			path = WorkTransacions;
+			sourceTree = "<group>";
+		};
 		73C8942D27D140CE00BA3A6A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -535,19 +580,23 @@
 				73CBABF427EB4C1100D9A4FB /* DaysSchedules.storyboard in Resources */,
 				7381E2C127DB751F00134937 /* RequestCell.xib in Resources */,
 				7394F02827CCBA7B001C58C9 /* LaunchScreen.storyboard in Resources */,
+				73B246BC28214C610077B9AD /* EmployeeTabBar.storyboard in Resources */,
+				73B246BE2821508B0077B9AD /* WorkTranacitons.storyboard in Resources */,
 				73680263281D4EEB0039C251 /* WorkDetails.storyboard in Resources */,
 				73A1823B27E8E41F0042B648 /* EmployeeCell.xib in Resources */,
 				730FA0BD27D0BF3E00EB0C39 /* GoogleService-Info.plist in Resources */,
 				7394F02527CCBA7B001C58C9 /* Assets.xcassets in Resources */,
-				730FA0B527D0B8ED00EB0C39 /* Employee.storyboard in Resources */,
 				7368026D281D54830039C251 /* GoogleMapsCell.xib in Resources */,
 				73ABEE4927D65A24001F4A2F /* Employees.storyboard in Resources */,
+				7304B89F282347AC00EE416B /* WorkRecord.storyboard in Resources */,
 				73A735A327CF62D700FA9253 /* Main.storyboard in Resources */,
 				73E61AC0281EF4E900E2BBE0 /* Maps.storyboard in Resources */,
 				73ABEE4B27D65FB9001F4A2F /* TabBar.storyboard in Resources */,
+				73B246C4282150E40077B9AD /* EmpCommmunication.storyboard in Resources */,
 				73556EEA27E7A38C0051A2E5 /* infoCell.xib in Resources */,
 				73067AB027DBF28600FC7A7F /* MessageCell.xib in Resources */,
 				7369FC8F27F3CDEA00E0A312 /* CreateEmployee.storyboard in Resources */,
+				7304B89D2823479F00EE416B /* AvaliableWork.storyboard in Resources */,
 				7368026A281D50A90039C251 /* WorkDetailsCell.xib in Resources */,
 				73A735A027CF5F1F00FA9253 /* ResetPassword.storyboard in Resources */,
 				73A96AA6281340B0003A5CF6 /* SelectedEmpProfile.storyboard in Resources */,
@@ -633,6 +682,7 @@
 				73FBD99A27CD73A90061B864 /* ResetPassViewController.swift in Sources */,
 				73A1823A27E8E41F0042B648 /* EmployeeCell.swift in Sources */,
 				7394F01E27CCBA7B001C58C9 /* SceneDelegate.swift in Sources */,
+				7304B8A1282347B800EE416B /* WorkRecordVC.swift in Sources */,
 				73DDCA7427D654150025BC14 /* EmployeesVC.swift in Sources */,
 				73DDCA7127D653DF0025BC14 /* RequestsVC.swift in Sources */,
 				7369FC8D27F3CDD800E0A312 /* CreateEmployeeVC.swift in Sources */,
@@ -640,11 +690,12 @@
 				73A96AA4281340A6003A5CF6 /* SelectedEmpProfileVC.swift in Sources */,
 				73556EE927E7A38C0051A2E5 /* infoCell.swift in Sources */,
 				7374A2CA27D12C6000493821 /* UserDataService.swift in Sources */,
+				7304B89B2823479400EE416B /* AvaliableWorkVC.swift in Sources */,
 				73680268281D508A0039C251 /* WorkDetailsCell.swift in Sources */,
-				730FA0B927D0B91B00EB0C39 /* EmployeeViewController.swift in Sources */,
 				73067AAF27DBF28600FC7A7F /* MessageCell.swift in Sources */,
 				7381E2C027DB751F00134937 /* RequestCell.swift in Sources */,
 				73C8942F27D140F200BA3A6A /* Extensions.swift in Sources */,
+				73B246C0282150940077B9AD /* WorkTranacitonsVC.swift in Sources */,
 				73E4D70C281336AF0067B407 /* ProfileOrScheduleVC.swift in Sources */,
 				73DDCA6F27D653C70025BC14 /* ReportsVC.swift in Sources */,
 				73CBABF227EB4BF900D9A4FB /* DaysSchedulesVC.swift in Sources */,
@@ -652,6 +703,7 @@
 				7374A2CD27D12C7E00493821 /* LoginService.swift in Sources */,
 				7394F03327CCBC9E001C58C9 /* Constants.swift in Sources */,
 				7338C11328183C2C0065CA3F /* FireBaseService.swift in Sources */,
+				73B246C6282150F50077B9AD /* EmpCommmunicationVC.swift in Sources */,
 				7374A2C327D124EE00493821 /* UserModel.swift in Sources */,
 				7374A2C627D1283C00493821 /* SplashViewController.swift in Sources */,
 			);
@@ -798,10 +850,12 @@
 				DEVELOPMENT_TEAM = LBM5YFV4LP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlashHR/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location is required to determine the current location of the user.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to choose a photo for your profile.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
@@ -830,10 +884,12 @@
 				DEVELOPMENT_TEAM = LBM5YFV4LP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlashHR/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location is required to determine the current location of the user.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to choose a photo for your profile.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;

@@ -54,7 +54,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2lW-DO-7EI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036" y="648"/>
+            <point key="canvasLocation" x="893" y="647"/>
         </scene>
         <!--Reports-->
         <scene sceneID="0BF-0S-qeQ">
@@ -82,12 +82,12 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VD4-Hd-eLR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="225" y="791"/>
+            <point key="canvasLocation" x="58" y="923"/>
         </scene>
-        <!--ProfileAs-->
+        <!--ProfileAsTableView-->
         <scene sceneID="yEN-ee-1qx">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Profile" storyboardName="ProfileAsTableView" referencedIdentifier="ProfileAs" id="S30-uT-uXJ" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="Profile" storyboardName="ProfileAsTableView" referencedIdentifier="ProfileAsTableView" id="S30-uT-uXJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="NwY-Xa-rlB"/>
                     <navigationItem key="navigationItem" id="5SP-a0-CI5"/>
                 </viewControllerPlaceholder>
@@ -121,7 +121,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9i-rj-ydQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1035" y="246"/>
+            <point key="canvasLocation" x="893" y="246"/>
         </scene>
         <!--Employees-->
         <scene sceneID="y2l-tT-1Ap">
@@ -140,11 +140,11 @@
             </objects>
             <point key="canvasLocation" x="-1383" y="394"/>
         </scene>
-        <!--Announcements-->
+        <!--Broadcast-->
         <scene sceneID="LK9-6C-Cb6">
             <objects>
                 <navigationController id="3tX-1i-lP7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Announcements" image="bolt.horizontal" catalog="system" selectedImage="bolt.horizontal.fill" id="owW-ai-VG5"/>
+                    <tabBarItem key="tabBarItem" title="Broadcast" image="bolt.horizontal" catalog="system" selectedImage="bolt.horizontal.fill" id="owW-ai-VG5"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jK2-eU-Heh">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -155,7 +155,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bz-ra-SxD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="225" y="395"/>
+            <point key="canvasLocation" x="58" y="518"/>
         </scene>
         <!--Profile-->
         <scene sceneID="cxT-Ef-fDZ">

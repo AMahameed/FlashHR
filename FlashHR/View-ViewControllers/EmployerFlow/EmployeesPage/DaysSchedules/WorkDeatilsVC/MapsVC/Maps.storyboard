@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mp2-fm-DCR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Select a Location-->
+        <!--Maps ViewC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="Maps" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="MapsViewC" customModule="FlashHR" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,35 +18,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gwh-qI-pc1" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oU7-A8-JpK">
+                                <rect key="frame" x="297" y="110" width="87" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Get Place">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="12"/>
+                                    <color key="baseBackgroundColor" name="blue"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="getPlacePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="egD-mZ-ElB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGb-Pi-tv5">
+                                <rect key="frame" x="30" y="110" width="39" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" image="xmark" catalog="system">
+                                    <color key="baseBackgroundColor" name="blue"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="cancelPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="nUk-Gs-3nY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Gwh-qI-pc1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="2ig-Gf-1PQ"/>
-                            <constraint firstItem="Gwh-qI-pc1" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="8aS-vU-Hj0"/>
+                            <constraint firstItem="Gwh-qI-pc1" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="FA5-ur-6ht"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Gwh-qI-pc1" secondAttribute="trailing" id="Ggz-rQ-fBf"/>
                             <constraint firstAttribute="bottom" secondItem="Gwh-qI-pc1" secondAttribute="bottom" id="xYB-f7-mwd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Select a Location" id="Vzt-US-hfR">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="7yM-xJ-8nM">
-                            <color key="tintColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="backPressed:" destination="Y6W-OH-hqX" id="ptw-No-Dtr"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Get Place" id="i1p-jm-bok">
-                            <color key="tintColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="getPlacePressed:" destination="Y6W-OH-hqX" id="k3L-V9-Fz8"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
-                        <outlet property="getPlaceButton" destination="i1p-jm-bok" id="gMM-I2-Mp9"/>
+                        <outlet property="getPlaceButton" destination="oU7-A8-JpK" id="X3g-ok-Tdg"/>
                         <outlet property="mapVV" destination="Gwh-qI-pc1" id="jbb-B0-6w3"/>
                     </connections>
                 </viewController>
@@ -53,26 +65,12 @@
             </objects>
             <point key="canvasLocation" x="1021.7391304347827" y="83.705357142857139"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="7Rj-95-O2J">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Mp2-fm-DCR" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pKk-2G-Lxq">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="VOj-TZ-ezT"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZtB-MR-frN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="111.59420289855073" y="83.705357142857139"/>
-        </scene>
     </scenes>
     <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="blue">
+            <color red="0.0030000000260770321" green="0.70499998331069946" blue="0.84799998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
