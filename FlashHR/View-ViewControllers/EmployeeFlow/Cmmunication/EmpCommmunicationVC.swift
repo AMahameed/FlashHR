@@ -61,9 +61,6 @@ class EmpCommmunicationVC: UIViewController {
             self.presentAlertInMainThread(message: error)
         }
     }
-    
-    @IBAction func backPressed(_ sender: UIBarButtonItem) {
-    }
 }
 
 

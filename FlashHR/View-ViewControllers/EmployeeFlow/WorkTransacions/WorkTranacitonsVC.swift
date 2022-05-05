@@ -8,10 +8,6 @@
 import UIKit
 import Firebase
 
-protocol WorkTransactionsDelegate {
-    func workTransactionsObject(wt: [WorkTansactions])
-}
-
 class WorkTranacitonsVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -21,7 +17,8 @@ class WorkTranacitonsVC: UIViewController {
     private var newWT: [WorkTansactions] = []
     private let db = Firestore.firestore()
     private let fireBaseService = FireBaseService()
-    var delegate: WorkTransactionsDelegate?
+    static var newWTItem: WorkTansactions?
+    static var oldWTItem: WorkTansactions?
     
     var segmentNoHolder = -1
     var wkNumber: Int = 0
@@ -121,9 +118,11 @@ class WorkTranacitonsVC: UIViewController {
         
         if segmentNoHolder == 1 {
             segmentNoHolder = 0
+            navigationItem.title = "Available Work"
             tableView.reloadData()
         }else if segmentNoHolder == 0 {
             segmentNoHolder = 1
+            navigationItem.title = "Work Records"
             tableView.reloadData()
         }
     }
@@ -168,11 +167,11 @@ extension WorkTranacitonsVC: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if segmentNoHolder == 0{
             // sending newWt obj to the next VC
-            delegate?.workTransactionsObject(wt: newWT)
+            WorkTranacitonsVC.newWTItem = newWT[indexPath.row]
             presentFromSTB(stbName: "AvaliableWork", vcID: "AvaliableWork")
         }else{
             // sending oldWt obj to the next VC
-            delegate?.workTransactionsObject(wt: oldWT)
+            WorkTranacitonsVC.oldWTItem = oldWT[indexPath.row]
             presentFromSTB(stbName: "WorkRecord", vcID: "WorkRecord")
         }
     }

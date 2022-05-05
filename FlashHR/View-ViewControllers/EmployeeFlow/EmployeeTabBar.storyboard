@@ -81,6 +81,7 @@
         <!--Announcments-->
         <scene sceneID="X0Y-w5-gOc">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oXy-0G-Pw0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController modalPresentationStyle="fullScreen" id="IUq-Cz-YTQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Announcments" image="bolt.horizontal" catalog="system" selectedImage="bolt.horizontal.fill" id="SqM-jH-6AH"/>
                     <navigationItem key="navigationItem" id="2eD-p1-HdO"/>
@@ -92,7 +93,6 @@
                         <segue destination="DWG-E6-6Me" kind="relationship" relationship="rootViewController" id="nTl-fL-1X4"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oXy-0G-Pw0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="400" y="860"/>
         </scene>

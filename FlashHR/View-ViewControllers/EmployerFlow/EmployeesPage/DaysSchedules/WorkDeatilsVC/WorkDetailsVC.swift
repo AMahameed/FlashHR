@@ -23,7 +23,7 @@ class WorkDetailsVC: UIViewController{
     private let db = Firestore.firestore()
     private let fireBaseService = FireBaseService()
     
-    var titles = [ "Project Name", "Contact Number", "Start Time", "Working Hours"]
+    private var titles = [ "Project Name", "Contact Number", "Start Time", "Working Hours"]
     var wtDocIDHOlder: String = "no data"
 
     override func viewDidLoad() {
