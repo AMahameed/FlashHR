@@ -41,6 +41,7 @@ struct WorkTansactions {
     var long: Double = 0.0
     var lat: Double = 0.0
     var isRequestedLeave: Bool = false
+    var isWorked: Bool = false
     var leaveHours: Float = 0.0
 }
 
@@ -53,6 +54,7 @@ struct TransactionsHolder {
     var long: Double = 0.0
     var lat: Double = 0.0
     var isRequestedLeave: Bool = false
+    var isWorked: Bool = false
     var leaveHours: Float = 0.0
 }
 

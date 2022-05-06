@@ -7,11 +7,15 @@
 
 import UIKit
 import Firebase
+import CoreLocation
 
 class WorkTranacitonsVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segment: UISegmentedControl!
+    @IBOutlet var mainView: UIView!
+    var viewDemo = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+    var indicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
     private var workTransactions: [WorkTansactions] = []
     private var oldWT: [WorkTansactions] = []
     private var newWT: [WorkTansactions] = []
@@ -19,17 +23,32 @@ class WorkTranacitonsVC: UIViewController {
     private let fireBaseService = FireBaseService()
     static var newWTItem: WorkTansactions?
     static var oldWTItem: WorkTansactions?
-    
+    private let manager = CLLocationManager()
+    static var lat: Double = 0.0
+    static var long: Double = 0.0
     var segmentNoHolder = -1
     var wkNumber: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        manager.requestAlwaysAuthorization()
+        manager.requestWhenInUseAuthorization()
+        
+        guard CLLocationManager.locationServicesEnabled() else {
+            presentAlert(message: "Please Enable Location Services to continue")
+            return
+        }
+        
+        manager.delegate = self
+        manager.requestLocation()
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: Constants.NibNames.messgaeCell, bundle: nil) , forCellReuseIdentifier: Constants.Identifiers.messgaeCellIdentifier)
-        
+        tableView.reloadData()
         loadAllWorkTransactions()
     }
     
@@ -52,9 +71,10 @@ class WorkTranacitonsVC: UIViewController {
                                let startTime = doc["startTime"] as? String,
                                let workingHours = doc["workingHours"] as? Int,
                                let long = doc["long"] as? Double,
-                               let lat = doc["lat"] as? Double{
+                               let lat = doc["lat"] as? Double,
+                               let isWorked = doc["isWorked"] as? Bool{
                                 
-                                let thisDayWorkTransactions = WorkTansactions( projectName: projectName, contactNo: contactNo, startTime: startTime, dayStr: dayStr,workingHours: workingHours, long: long, lat: lat)
+                                let thisDayWorkTransactions = WorkTansactions( projectName: projectName, contactNo: contactNo, startTime: startTime, dayStr: dayStr,workingHours: workingHours, long: long, lat: lat, isWorked: isWorked)
                                 
                                 self?.workTransactions.append(thisDayWorkTransactions)
                                 
@@ -100,6 +120,14 @@ class WorkTranacitonsVC: UIViewController {
     // checking whether the date is newer than today's date or not
     private func convertDateFormat(inputDate: String) -> Bool {
         
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy"
+        let dayStr = formatter.string(from: Date())
+        
+        if dayStr == inputDate {
+            return true
+        }
+        
         let olDateFormatter = DateFormatter()
         olDateFormatter.locale = NSLocale.current
         olDateFormatter.dateFormat = "dd-MM-yyyy"
@@ -126,7 +154,23 @@ class WorkTranacitonsVC: UIViewController {
             tableView.reloadData()
         }
     }
+    
+    func activityIndicator() {
+        
+        viewDemo.center = self.view.center
+        viewDemo.backgroundColor = UIColor(named: "myGray")?.withAlphaComponent(0.5)
+        viewDemo.layer.cornerRadius = 10
+        self.view.addSubview(viewDemo)
+        viewDemo.isHidden = false
+        
+        indicator.style = .large
+        indicator.center = viewDemo.center
+        self.view.addSubview(indicator)
+        
+    }
+    
 }
+
 
 //MARK: - TableView Delegate and Data Source
 
@@ -166,14 +210,42 @@ extension WorkTranacitonsVC: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if segmentNoHolder == 0{
-            // sending newWt obj to the next VC
+            // sending newWt obj to the AvaliableWork VC
+            activityIndicator()
+            indicator.startAnimating()
+            
             WorkTranacitonsVC.newWTItem = newWT[indexPath.row]
-            presentFromSTB(stbName: "AvaliableWork", vcID: "AvaliableWork")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 8){
+                
+                self.viewDemo.isHidden = true
+                self.indicator.stopAnimating()
+                self.indicator.hidesWhenStopped = true
+                self.presentFromSTB(stbName: "AvaliableWork", vcID: "AvaliableWork")
+                
+            }
         }else{
-            // sending oldWt obj to the next VC
+            // sending oldWt obj to the WorkRecord VC
             WorkTranacitonsVC.oldWTItem = oldWT[indexPath.row]
             presentFromSTB(stbName: "WorkRecord", vcID: "WorkRecord")
         }
+    }
+}
+
+// MARK: - CLLocationManagerDelegate
+
+extension WorkTranacitonsVC: CLLocationManagerDelegate {
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        if let location = locations.first {
+            manager.stopUpdatingLocation()
+            WorkTranacitonsVC.lat = Double(location.coordinate.latitude)
+            WorkTranacitonsVC.long = Double(location.coordinate.longitude)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error.localizedDescription)
     }
 }
 

@@ -7,7 +7,7 @@ use_frameworks!
 
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
-pod 'IQKeyboardManagerSwift', '~> 6.5.9'
+pod 'IQKeyboardManagerSwift'
 pod 'FSCalendar'
 pod 'GoogleMaps'
 

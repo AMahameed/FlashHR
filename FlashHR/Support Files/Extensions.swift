@@ -39,14 +39,11 @@ extension UIViewController{
     }
 }
 
-extension UINavigationController {
-    override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return .portrait
+extension Double{
+    func roundTo3Decimals(toBeRounded theValue: Double) -> Double {
+        
+        let roundedValue = (theValue * 1000) / 1000
+        return roundedValue
     }
 }
 
-extension UITabBarController {
-    override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return .portrait
-    }
-}

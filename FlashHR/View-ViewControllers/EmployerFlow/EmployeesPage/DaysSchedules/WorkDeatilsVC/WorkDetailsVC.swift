@@ -23,7 +23,7 @@ class WorkDetailsVC: UIViewController{
     private let db = Firestore.firestore()
     private let fireBaseService = FireBaseService()
     
-    private var titles = [ "Project Name", "Contact Number", "Start Time", "Working Hours"]
+    private var titles = [ "Project Name", "Contact Number", "Start Time", "Working Hours","Did he/she work?"]
     var wtDocIDHOlder: String = "no data"
 
     override func viewDidLoad() {
@@ -91,9 +91,10 @@ class WorkDetailsVC: UIViewController{
                            let startTime = doc["startTime"] as? String,
                            let workingHours = doc["workingHours"] as? Int,
                            let long = doc["long"] as? Double,
-                           let lat = doc["lat"] as? Double{
+                           let lat = doc["lat"] as? Double,
+                           let isWorked = doc["isWorked"] as? Bool{
                             
-                            let thisDayWorkTransactions = TransactionsHolder( projectName: projectName, contactNo: contactNo, startTime: startTime, dayStr: dayStr,workingHours: workingHours, long: long, lat: lat)
+                            let thisDayWorkTransactions = TransactionsHolder( projectName: projectName, contactNo: contactNo, startTime: startTime, dayStr: dayStr,workingHours: workingHours, long: long, lat: lat, isWorked: isWorked)
                             
                             success(thisDayWorkTransactions)
                         }
@@ -128,7 +129,8 @@ class WorkDetailsVC: UIViewController{
                 "workingHours" : self.workTransactions.workingHours,
                 "long": self.workTransactions.long,
                 "lat": self.workTransactions.lat,
-                "isRequestedLeave": self.workTransactions.isRequestedLeave])
+                "isRequestedLeave": self.workTransactions.isRequestedLeave,
+                "isWorked": self.workTransactions.isWorked])
             
             self.dismiss(animated: true)
             
@@ -172,6 +174,9 @@ extension WorkDetailsVC: UITableViewDelegate, UITableViewDataSource, GoogleMapsC
                 cell.textField.placeholder = transHolder.startTime
             case 3:
                 cell.textField.placeholder = String(transHolder.workingHours)
+            case 4:
+                cell.textField.placeholder = String(transHolder.isWorked)
+                cell.textField.isUserInteractionEnabled = false
             default:
                 break
             }
@@ -184,7 +189,7 @@ extension WorkDetailsVC: UITableViewDelegate, UITableViewDataSource, GoogleMapsC
             googleMapsCell.locationButton.isUserInteractionEnabled = false
         }
         
-        if indexPath.row <= 3{
+        if indexPath.row <= 4{
             cell.titleLabel.text = titles[indexPath.row]
             cell.textField.delegate = self
             cell.textField.tag = indexPath.row}
@@ -194,7 +199,7 @@ extension WorkDetailsVC: UITableViewDelegate, UITableViewDataSource, GoogleMapsC
             cell.textField.inputView = self.startTimePickerView
         case 3:
             cell.textField.inputView = self.workingHoursPickerView
-        case 4:
+        case 5:
             googleMapsCell.delegate = self
             return googleMapsCell
         default:

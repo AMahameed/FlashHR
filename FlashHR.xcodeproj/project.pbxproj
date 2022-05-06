@@ -35,6 +35,10 @@
 		7374A2D127D1321E00493821 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7374A2D027D1321E00493821 /* Login.storyboard */; };
 		7381E2C027DB751F00134937 /* RequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7381E2BE27DB751F00134937 /* RequestCell.swift */; };
 		7381E2C127DB751F00134937 /* RequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7381E2BF27DB751F00134937 /* RequestCell.xib */; };
+		738B902728240492009243D2 /* WorkLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738B902528240492009243D2 /* WorkLocationCell.swift */; };
+		738B902828240492009243D2 /* WorkLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 738B902628240492009243D2 /* WorkLocationCell.xib */; };
+		738B902C28241973009243D2 /* StartEndShiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738B902A28241973009243D2 /* StartEndShiftCell.swift */; };
+		738B902D28241973009243D2 /* StartEndShiftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 738B902B28241973009243D2 /* StartEndShiftCell.xib */; };
 		7394F01C27CCBA7B001C58C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7394F01B27CCBA7B001C58C9 /* AppDelegate.swift */; };
 		7394F01E27CCBA7B001C58C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7394F01D27CCBA7B001C58C9 /* SceneDelegate.swift */; };
 		7394F02027CCBA7B001C58C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7394F01F27CCBA7B001C58C9 /* LoginViewController.swift */; };
@@ -102,6 +106,10 @@
 		7374A2D027D1321E00493821 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		7381E2BE27DB751F00134937 /* RequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCell.swift; sourceTree = "<group>"; };
 		7381E2BF27DB751F00134937 /* RequestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestCell.xib; sourceTree = "<group>"; };
+		738B902528240492009243D2 /* WorkLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkLocationCell.swift; sourceTree = "<group>"; };
+		738B902628240492009243D2 /* WorkLocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkLocationCell.xib; sourceTree = "<group>"; };
+		738B902A28241973009243D2 /* StartEndShiftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartEndShiftCell.swift; sourceTree = "<group>"; };
+		738B902B28241973009243D2 /* StartEndShiftCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartEndShiftCell.xib; sourceTree = "<group>"; };
 		7394F01827CCBA7B001C58C9 /* FlashHR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashHR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7394F01B27CCBA7B001C58C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7394F01D27CCBA7B001C58C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +165,8 @@
 			children = (
 				7304B89A2823479400EE416B /* AvaliableWorkVC.swift */,
 				7304B89C2823479F00EE416B /* AvaliableWork.storyboard */,
+				738B90222824043A009243D2 /* WorkLocationCell */,
+				738B902928241935009243D2 /* StartEndShiftCell */,
 			);
 			path = AvaliableWorkVC;
 			sourceTree = "<group>";
@@ -342,6 +352,24 @@
 				7374A2CE27D131A100493821 /* ResetPasswordPage */,
 			);
 			path = LoginFlow;
+			sourceTree = "<group>";
+		};
+		738B90222824043A009243D2 /* WorkLocationCell */ = {
+			isa = PBXGroup;
+			children = (
+				738B902528240492009243D2 /* WorkLocationCell.swift */,
+				738B902628240492009243D2 /* WorkLocationCell.xib */,
+			);
+			path = WorkLocationCell;
+			sourceTree = "<group>";
+		};
+		738B902928241935009243D2 /* StartEndShiftCell */ = {
+			isa = PBXGroup;
+			children = (
+				738B902A28241973009243D2 /* StartEndShiftCell.swift */,
+				738B902B28241973009243D2 /* StartEndShiftCell.xib */,
+			);
+			path = StartEndShiftCell;
 			sourceTree = "<group>";
 		};
 		7394F00F27CCBA7B001C58C9 = {
@@ -581,6 +609,8 @@
 				7381E2C127DB751F00134937 /* RequestCell.xib in Resources */,
 				7394F02827CCBA7B001C58C9 /* LaunchScreen.storyboard in Resources */,
 				73B246BC28214C610077B9AD /* EmployeeTabBar.storyboard in Resources */,
+				738B902D28241973009243D2 /* StartEndShiftCell.xib in Resources */,
+				738B902828240492009243D2 /* WorkLocationCell.xib in Resources */,
 				73B246BE2821508B0077B9AD /* WorkTranacitons.storyboard in Resources */,
 				73680263281D4EEB0039C251 /* WorkDetails.storyboard in Resources */,
 				73A1823B27E8E41F0042B648 /* EmployeeCell.xib in Resources */,
@@ -675,6 +705,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73680261281D4ED70039C251 /* WorkDetailsVC.swift in Sources */,
+				738B902728240492009243D2 /* WorkLocationCell.swift in Sources */,
 				7368026F281D548C0039C251 /* GoogleMapsCell.swift in Sources */,
 				7394F02027CCBA7B001C58C9 /* LoginViewController.swift in Sources */,
 				73354A09281EECB000239127 /* MapsViewC.swift in Sources */,
@@ -698,6 +729,7 @@
 				73B246C0282150940077B9AD /* WorkTranacitonsVC.swift in Sources */,
 				73E4D70C281336AF0067B407 /* ProfileOrScheduleVC.swift in Sources */,
 				73DDCA6F27D653C70025BC14 /* ReportsVC.swift in Sources */,
+				738B902C28241973009243D2 /* StartEndShiftCell.swift in Sources */,
 				73CBABF227EB4BF900D9A4FB /* DaysSchedulesVC.swift in Sources */,
 				73556EE527E79FC70051A2E5 /* ProfileAsTableViewVC.swift in Sources */,
 				7374A2CD27D12C7E00493821 /* LoginService.swift in Sources */,

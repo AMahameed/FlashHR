@@ -22,7 +22,7 @@
                         <rect key="frame" x="15" y="10" width="287" height="83"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43s-QZ-iEK">
-                                <rect key="frame" x="43.5" y="22.5" width="200" height="38"/>
+                                <rect key="frame" x="43.5" y="16" width="200" height="51"/>
                                 <color key="backgroundColor" name="blue"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -37,8 +37,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="43s-QZ-iEK" secondAttribute="trailing" constant="43.5" id="DAh-aN-xRW"/>
-                            <constraint firstAttribute="bottom" secondItem="43s-QZ-iEK" secondAttribute="bottom" constant="22.5" id="Ft1-pk-BiR"/>
-                            <constraint firstItem="43s-QZ-iEK" firstAttribute="top" secondItem="ho9-ce-Rwz" secondAttribute="top" constant="22.5" id="k7m-DI-UqU"/>
+                            <constraint firstAttribute="bottom" secondItem="43s-QZ-iEK" secondAttribute="bottom" constant="16" id="Ft1-pk-BiR"/>
+                            <constraint firstItem="43s-QZ-iEK" firstAttribute="top" secondItem="ho9-ce-Rwz" secondAttribute="top" constant="16" id="k7m-DI-UqU"/>
                             <constraint firstItem="43s-QZ-iEK" firstAttribute="leading" secondItem="ho9-ce-Rwz" secondAttribute="leading" constant="43.5" id="tLc-CF-vhV"/>
                         </constraints>
                     </view>

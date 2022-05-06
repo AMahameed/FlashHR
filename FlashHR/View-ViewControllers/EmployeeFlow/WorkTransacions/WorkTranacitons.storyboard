@@ -45,13 +45,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="Available Work " id="UIi-wq-mt5"/>
                     <connections>
+                        <outlet property="mainView" destination="5EZ-qb-Rvc" id="Z99-3D-zEl"/>
                         <outlet property="segment" destination="n2m-vu-zIR" id="7Ae-g3-yac"/>
                         <outlet property="tableView" destination="PzO-GY-xkd" id="QAk-KA-C65"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="937.68115942028987" y="97.767857142857139"/>
+            <point key="canvasLocation" x="936.44859813084111" y="97.192224622030238"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mu2-cr-Sf1">
