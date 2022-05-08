@@ -15,6 +15,7 @@ class SelectedEmpProfileVC: UIViewController{
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var empNameTextField: UITextField!
+    @IBOutlet weak var tabToEdit: UILabel!
     private let db = Firestore.firestore()
     let fireBaseService = FireBaseService()
     var titles = ["Title","Email","Mobile No.","Gender"]
@@ -26,16 +27,24 @@ class SelectedEmpProfileVC: UIViewController{
         tableView.dataSource = self
         tableView.register(UINib(nibName: Constants.NibNames.infoCell, bundle: nil) , forCellReuseIdentifier: Constants.Identifiers.infoCellIdentifier)
         
+        empNameTextField.text = EmployeesVC.empIDHolder.employeeName
+        tabToEdit.layer.cornerRadius = 8
+        tabToEdit.layer.masksToBounds = true
         imageView.layer.cornerRadius = imageView.frame.size.height / 5
         infoView.layer.cornerRadius = infoView.frame.size.height / 11
     }
     
     @IBAction func chooseImage(_ sender: UIButton) {
-        let vc = UIImagePickerController()
-        vc.sourceType = .photoLibrary
-        vc.delegate = self
-        vc.allowsEditing = true
-        present(vc, animated: true)
+        let alert = UIAlertController(title: "Beware", message: "Only images with (.png extension with 1 mB size) are allowed", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: { _ in
+            let vc = UIImagePickerController()
+            vc.sourceType = .photoLibrary
+            vc.delegate = self
+            vc.allowsEditing = true
+            self.present(vc, animated: true)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive))
+        present(alert,animated: true)
     }
     
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {

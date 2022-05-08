@@ -41,7 +41,7 @@ extension AvaliableWorkVC: UITableViewDataSource, UITableViewDelegate, StartEndS
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in
             complition(false)
         }))
-        alert.addAction(UIAlertAction(title: "Proceed", style: .default, handler: { _ in
+        alert.addAction(UIAlertAction(title: "Proceed", style: .destructive, handler: { _ in
             complition(true)
         }))
         present(alert,animated: true)

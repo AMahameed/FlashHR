@@ -26,6 +26,8 @@ class EndShiftCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        self.endShiftButt.isEnabled = false
+        
         endShiftButt.layer.cornerRadius = endShiftButt.frame.size.height / 5
         guard let latitude = WorkTranacitonsVC.oldWTItem?.lat, let longitude = WorkTranacitonsVC.oldWTItem?.long else {return}
 
@@ -60,6 +62,7 @@ class EndShiftCell: UITableViewCell {
                     self.updateActualEnd(self.convertTimeToString())
                     self.updateIfDayWasWorkedTotally(true)
                     self.actualWorkingHours()
+                    
                     self.delegate?.failOrSuccess(tag: 4)
                 }
             })
@@ -89,12 +92,12 @@ class EndShiftCell: UITableViewCell {
     //MARK: - Firebase functions
     
     private func getWorkTransactionDocID(success: @escaping ((String, String)->Void),  failure: @escaping ((String)->Void)){
-        
+
         guard let dayStr = WorkTranacitonsVC.oldWTItem?.dayStr else { return }
-        
+
         fireBaseService.getEmpDocID(empID: UserDataService.shared.userID!) { [weak self] empDocID in
             self?.db.collection("employee").document(empDocID).collection("workTransactions").whereField("dayStr", isEqualTo: dayStr).addSnapshotListener { querySnapshot, e in
-                
+
                 if let error = e {
                     failure(error.localizedDescription)
                 }else{
@@ -109,30 +112,30 @@ class EndShiftCell: UITableViewCell {
             self.delegate?.failOrSuccess(tag: 1)
         }
     }
-    
+
     private func updateIfDayWasWorkedTotally(_ currentIsWorked: Bool) {
-        
+
         getWorkTransactionDocID { wtDocID, empDocID in
             self.db.collection("employee").document(empDocID).collection("workTransactions").document(wtDocID).updateData([ "isWorkedTotally": currentIsWorked ])
         } failure: { error in
             self.delegate?.failOrSuccess(tag: 2)
         }
     }
-    
+
     private func updateActualEnd(_ actualEnd: String) {
-        
+
         getWorkTransactionDocID { wtDocID, empDocID in
             self.db.collection("employee").document(empDocID).collection("workTransactions").document(wtDocID).updateData([ "actualEnd": actualEnd])
         } failure: { error in
             print(error)
         }
     }
-    
+
     private func isDayWorkedTotally(success: @escaping (Bool)->Void) {
-        
+
         getWorkTransactionDocID { wtDocID, empDocID in
             self.db.collection("employee").document(empDocID).collection("workTransactions").document(wtDocID).addSnapshotListener { querySnapShot, _ in
-                
+
                 if let doc = querySnapShot?.data(){
                     if let thisDayWork = doc["isWorkedTotally"] as? Bool{
                         success(thisDayWork)
@@ -143,12 +146,12 @@ class EndShiftCell: UITableViewCell {
             self.delegate?.failOrSuccess(tag: 3)
         }
     }
-    
+
     private func isDayWorked(success: @escaping (Bool)->Void) {
-        
+
         getWorkTransactionDocID { wtDocID, empDocID in
             self.db.collection("employee").document(empDocID).collection("workTransactions").document(wtDocID).addSnapshotListener { querySnapShot, _ in
-                
+
                 if let doc = querySnapShot?.data(){
                     if let thisDayWork = doc["isWorked"] as? Bool{
                         success(thisDayWork)
@@ -159,28 +162,29 @@ class EndShiftCell: UITableViewCell {
             self.delegate?.failOrSuccess(tag: 6)
         }
     }
-    
+
     private func actualWorkingHours() {
-        
+
         let nformatter = DateFormatter()
-        nformatter.dateFormat = "HH:mm"
+        nformatter.dateFormat = "dd-MM-yyyy HH:mm"
         nformatter.locale = Locale(identifier: "ar_JO")
-        
+
         getWorkTransactionDocID { wtDocID, empDocID in
             self.db.collection("employee").document(empDocID).collection("workTransactions").document(wtDocID).addSnapshotListener { querySnapShot, _ in
-                
+
                 if let doc = querySnapShot?.data(){
-                    if let actualStart = doc["actualStart"] as? String,
-                       let actualEnd = doc["actualEnd"] as? String{
-                        
-                        let startTime = nformatter.date(from: actualStart)
-                        let endTime = nformatter.date(from: actualEnd)
+                    if let actualStart = doc["actualStart"] as? String{
+
+                        let timeStr = ((WorkTranacitonsVC.oldWTItem?.dayStr)! + " " + actualStart)
+                        let startTime = nformatter.date(from: timeStr)
+
+                        let timeStr2 = nformatter.string(from: Date())
+                        let endTime = nformatter.date(from: timeStr2)
 
                         let difference = Calendar.current.dateComponents([.hour, .minute], from: startTime!, to: endTime!)
                         let formattedString = String(format: "%02ld:%02ld", difference.hour!, difference.minute!)
-                        
+
                         self.db.collection("employee").document(empDocID).collection("workTransactions").document(wtDocID).updateData([ "actualWorkingHours": formattedString])
-                        
                     }
                 }
             }

@@ -18,9 +18,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         submitButton.layer.cornerRadius = submitButton.frame.size.height / 5
-        
     }
     
     @IBAction func submitPressed(_ sender: UIButton) {
@@ -29,13 +27,19 @@ class LoginViewController: UIViewController {
             
             loginService.performLogin(for: email, password: pass) {
                 if UserDataService.shared.isEmployeer {
-                    self.presentFromSTB(stbName: "TabBar", vcID: "TabBar")
+                    self.loginAsEmployeeOrHR { trueIfHR in
+                        if trueIfHR{
+                            self.presentFromSTB(stbName: "TabBar", vcID: "TabBar")
+                        }else{
+                            self.presentFromSTB(stbName: "EmployeeTabBar", vcID: "EmployeeTabBar")
+                        }
+                    }
                 }else {
                     self.presentFromSTB(stbName: "EmployeeTabBar", vcID: "EmployeeTabBar")
                 
                 }
-            } failure: { errorString in
-                self.presentAlert(message: errorString.description)
+            } failure: { error in
+                self.presentAlert(message: error)
             }
         }else{
             presentAlert(message: "Email or Password is not correct!")
@@ -45,5 +49,18 @@ class LoginViewController: UIViewController {
     @IBAction func forgotPassPressed(_ sender: UIButton) {
         presentFromSTB(stbName: "ResetPassword", vcID: "ResetPassword", presentingStyle: .automatic)
     }
+    
+    private func loginAsEmployeeOrHR(_ asHRorEmployee: @escaping (Bool)->()){
+        
+        let alert = UIAlertController(title: "", message: "Do you want to sign in as an HR or as an Employee", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Login as HR", style: .destructive, handler: { _ in
+            asHRorEmployee(true)
+        }))
+        alert.addAction(UIAlertAction(title: "Login as Employee", style: .default, handler: { _ in
+            asHRorEmployee(false)
+        }))
+        self.present(alert,animated: true)
+    }
+    
 }
 

@@ -28,6 +28,7 @@ class StartEndShiftCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        self.startShift.isEnabled = false
         startShift.layer.cornerRadius = startShift.frame.size.height / 5
         endShiftButton.layer.cornerRadius = endShiftButton.frame.size.height / 5
         
@@ -68,8 +69,8 @@ class StartEndShiftCell: UITableViewCell {
                         sender.isHidden = true
                         endShiftButton.isHidden = false
                         
-//                        updateActualStart(convertTimeToString())
-                        updateIfDayWasWorked(true)
+                   updateActualStart(convertTimeToString())
+                    updateIfDayWasWorked(true)
                         
                         delegate?.failOrSuccess(tag: 1)
                 }else{delegate?.failOrSuccess(tag: 2)}
@@ -83,6 +84,7 @@ class StartEndShiftCell: UITableViewCell {
                         sender.isEnabled = false
                         self.updateActualEnd(self.convertTimeToString())
                         self.updateIfDayWasWorkedTotally(true)
+                        
                         self.actualWorkingHours()
                         self.delegate?.failOrSuccess(tag: 4)
                     }
@@ -125,12 +127,12 @@ class StartEndShiftCell: UITableViewCell {
 //MARK: - Firebase functions
     
     private func getWorkTransactionDocID(success: @escaping ((String, String)->Void),  failure: @escaping ((String)->Void)){
-        
+
         guard let dayStr = WorkTranacitonsVC.newWTItem?.dayStr else { return }
-        
+
         fireBaseService.getEmpDocID(empID: UserDataService.shared.userID!) { [weak self] empDocID in
             self?.db.collection("employee").document(empDocID).collection("workTransactions").whereField("dayStr", isEqualTo: dayStr).addSnapshotListener { querySnapshot, e in
-                
+
                 if let error = e {
                     failure(error.localizedDescription)
                 }else{
@@ -146,8 +148,7 @@ class StartEndShiftCell: UITableViewCell {
         }
     }
     
-    
-    private func updateIfDayWasWorked(_ currentIsWorked: Bool) {
+     func updateIfDayWasWorked(_ currentIsWorked: Bool) {
         
         getWorkTransactionDocID { wtDocID, empDocID in
             self.db.collection("employee").document(empDocID).collection("workTransactions").document(wtDocID).updateData([ "isWorked": currentIsWorked ])
@@ -217,22 +218,24 @@ func isDayWorkedTotally(success: @escaping (Bool)->Void) {
     }
     
     
-    func actualWorkingHours() {
+    private func actualWorkingHours() {
         
         let nformatter = DateFormatter()
-        nformatter.dateFormat = "HH:mm"
+        nformatter.dateFormat = "dd-MM-yyyy HH:mm"
         nformatter.locale = Locale(identifier: "ar_JO")
         
         getWorkTransactionDocID { wtDocID, empDocID in
             self.db.collection("employee").document(empDocID).collection("workTransactions").document(wtDocID).addSnapshotListener { querySnapShot, _ in
                 
                 if let doc = querySnapShot?.data(){
-                    if let actualStart = doc["actualStart"] as? String,
-                       let actualEnd = doc["actualEnd"] as? String{
+                    if let actualStart = doc["actualStart"] as? String{
                         
-                        let startTime = nformatter.date(from: actualStart)
-                        let endTime = nformatter.date(from: actualEnd)
-
+                        let timeStr = ((WorkTranacitonsVC.newWTItem?.dayStr)! + " " + actualStart)
+                        let startTime = nformatter.date(from: timeStr)
+                        
+                        let timeStr2 = nformatter.string(from: Date())
+                        let endTime = nformatter.date(from: timeStr2)
+                        
                         let difference = Calendar.current.dateComponents([.hour, .minute], from: startTime!, to: endTime!)
                         let formattedString = String(format: "%02ld:%02ld", difference.hour!, difference.minute!)
                         
@@ -244,10 +247,7 @@ func isDayWorkedTotally(success: @escaping (Bool)->Void) {
         } failure: { error in
             self.delegate?.failOrSuccess(tag: 3)
         }
-
     }
-    
-    
 }
 
 

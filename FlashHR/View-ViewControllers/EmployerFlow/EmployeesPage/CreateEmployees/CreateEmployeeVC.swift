@@ -13,6 +13,7 @@ class CreateEmployeeVC: UIViewController {
     @IBOutlet weak var viewBackground: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var tabToEdit: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     var createEmployee = Employee()
     let db = Firestore.firestore()
@@ -33,6 +34,8 @@ class CreateEmployeeVC: UIViewController {
         
         tableView.register(UINib(nibName: Constants.NibNames.workDetailsCell, bundle: nil) , forCellReuseIdentifier: Constants.Identifiers.workDetailsCellIdentifier)
         
+        tabToEdit.layer.cornerRadius = 7
+        tabToEdit.layer.masksToBounds = true
         imageView.layer.cornerRadius = imageView.frame.size.height / 5
         viewBackground.layer.cornerRadius = viewBackground.frame.size.height / 11
     }
@@ -67,11 +70,16 @@ class CreateEmployeeVC: UIViewController {
     }
     
     @IBAction func chooseImage(_ sender: UIButton) {
-        let vc = UIImagePickerController()
-        vc.sourceType = .photoLibrary
-        vc.delegate = self
-        vc.allowsEditing = true
-        present(vc, animated: true)
+        let alert = UIAlertController(title: "Beware", message: "Only images with (.png extension with 1 mB size) are allowed", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: { _ in
+            let vc = UIImagePickerController()
+            vc.sourceType = .photoLibrary
+            vc.delegate = self
+            vc.allowsEditing = true
+            self.present(vc, animated: true)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive))
+        present(alert,animated: true)
     }
     
     @IBAction func backPressed(_ sender: UIBarButtonItem) {

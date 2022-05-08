@@ -61,6 +61,13 @@
                                     <action selector="chooseImage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="t7L-GK-tUI"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Edit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBS-o8-3Ls">
+                                <rect key="frame" x="169" y="249" width="89" height="19"/>
+                                <color key="backgroundColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.84907907729999998" green="0.94099998470000001" blue="0.97299999000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -68,13 +75,17 @@
                             <constraint firstItem="ThP-Ib-t3w" firstAttribute="top" secondItem="HJG-vG-mi5" secondAttribute="bottom" constant="8" symbolic="YES" id="4GZ-2f-M0x"/>
                             <constraint firstAttribute="bottom" secondItem="9T7-lQ-BFQ" secondAttribute="bottom" id="Ayl-9C-RAf"/>
                             <constraint firstItem="9T7-lQ-BFQ" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="FOV-8E-WPN"/>
+                            <constraint firstItem="ik0-Hr-TSY" firstAttribute="trailing" secondItem="sBS-o8-3Ls" secondAttribute="trailing" constant="41" id="Gse-8h-uCY"/>
                             <constraint firstItem="HJG-vG-mi5" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="Orf-fx-iPG"/>
                             <constraint firstItem="ThP-Ib-t3w" firstAttribute="top" secondItem="ik0-Hr-TSY" secondAttribute="bottom" constant="8" id="XYl-aq-rZE"/>
                             <constraint firstItem="9T7-lQ-BFQ" firstAttribute="top" secondItem="ThP-Ib-t3w" secondAttribute="bottom" constant="26" id="esx-JV-Muy"/>
                             <constraint firstItem="9T7-lQ-BFQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="flk-Gb-lAR"/>
                             <constraint firstItem="ik0-Hr-TSY" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="hcC-tW-pVx"/>
+                            <constraint firstItem="ThP-Ib-t3w" firstAttribute="top" secondItem="sBS-o8-3Ls" secondAttribute="bottom" constant="10" id="kjK-J3-yOU"/>
                             <constraint firstItem="ThP-Ib-t3w" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="nK9-CI-Sfz"/>
+                            <constraint firstItem="sBS-o8-3Ls" firstAttribute="leading" secondItem="ik0-Hr-TSY" secondAttribute="leading" constant="40" id="neH-Md-LN1"/>
                             <constraint firstItem="HJG-vG-mi5" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="raE-a6-jv5"/>
+                            <constraint firstItem="sBS-o8-3Ls" firstAttribute="top" secondItem="ik0-Hr-TSY" secondAttribute="top" constant="149" id="wEo-yL-Qhn"/>
                             <constraint firstItem="ik0-Hr-TSY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="wXI-3p-n45"/>
                         </constraints>
                     </view>
@@ -90,12 +101,13 @@
                         <outlet property="empNameLabel" destination="ThP-Ib-t3w" id="UZY-Pk-fmr"/>
                         <outlet property="imageView" destination="ik0-Hr-TSY" id="oav-7f-paD"/>
                         <outlet property="infoView" destination="9T7-lQ-BFQ" id="ODL-Mg-ScV"/>
+                        <outlet property="tabToEdit" destination="sBS-o8-3Ls" id="VK1-SS-UKC"/>
                         <outlet property="tableView" destination="Opg-Gm-QrO" id="uo9-VA-U1O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1825.233644859813" y="80.345572354211669"/>
+            <point key="canvasLocation" x="1803" y="80"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cPy-Ex-iPY">

@@ -31,30 +31,29 @@ class WorkTranacitonsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         manager.requestAlwaysAuthorization()
         manager.requestWhenInUseAuthorization()
-        
+
         guard CLLocationManager.locationServicesEnabled() else {
             presentAlert(message: "Please Enable Location Services to continue")
             return
         }
-        
+
         manager.delegate = self
         manager.requestLocation()
         manager.desiredAccuracy = kCLLocationAccuracyBest
-        
+
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: Constants.NibNames.messgaeCell, bundle: nil) , forCellReuseIdentifier: Constants.Identifiers.messgaeCellIdentifier)
-        tableView.reloadData()
         loadAllWorkTransactions()
-        
     }
     
-    private func loadAllWorkTransactions(){ //success: @escaping ([WorkTansactions])->Void ){
+    private func loadAllWorkTransactions(){
         
         if let empID = UserDataService.shared.userID{
+            print(empID)
             
             fireBaseService.getEmpDocID(empID: empID) { [weak self] empDocID in
                 self?.db.collection("employee").document(empDocID).collection("workTransactions").addSnapshotListener { docSnapShot, _ in
@@ -98,7 +97,7 @@ class WorkTranacitonsVC: UIViewController {
     }
     
     private func sortWT() {
-        
+
         // after calling the func convertDateFormat it appends it in the old or the new depending on the date.
         while wkNumber < workTransactions.count {
             
@@ -227,11 +226,11 @@ extension WorkTranacitonsVC: UITableViewDataSource, UITableViewDelegate{
                 
             }
         }else{
+            // sending oldWt obj to the WorkRecord VC
             activityIndicator()
             indicator.startAnimating()
-            // sending oldWt obj to the WorkRecord VC
+           
             WorkTranacitonsVC.oldWTItem = oldWT[indexPath.row]
-            
             DispatchQueue.main.asyncAfter(deadline: .now() + 8){
             
                 self.viewDemo.isHidden = true

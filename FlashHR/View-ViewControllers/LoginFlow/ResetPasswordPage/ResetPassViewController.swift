@@ -26,8 +26,8 @@ class ResetPassViewController: UIViewController {
       
         loginService.performForgetPassword(email) {
             self.presentFromSTB(stbName: "Login", vcID: "Login")
-        } failure: { errorString in
-            self.presentAlert(message: errorString.description)
+        } failure: { error in
+            self.presentAlert(message: error)
         }
     }
 }

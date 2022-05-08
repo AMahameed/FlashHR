@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WON-aN-7nm">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,14 +13,14 @@
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="CreateEmployeeVC" customModule="FlashHR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5az-TW-EqI" userLabel="infoView">
-                                <rect key="frame" x="0.0" y="240" width="375" height="477"/>
+                                <rect key="frame" x="0.0" y="304" width="428" height="672"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NX0-hb-PRu">
-                                        <rect key="frame" x="8" y="40" width="359" height="387"/>
+                                        <rect key="frame" x="8" y="40" width="412" height="582"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
@@ -33,18 +33,18 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ErA-db-EbH">
-                                <rect key="frame" x="112.5" y="68.5" width="150" height="147.5"/>
+                                <rect key="frame" x="129" y="112.66666666666667" width="170" height="167.33333333333331"/>
                                 <color key="tintColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="Mbn-x5-V6l"/>
-                                    <constraint firstAttribute="width" constant="150" id="fGb-WB-9l8"/>
+                                    <constraint firstAttribute="height" constant="170" id="Mbn-x5-V6l"/>
+                                    <constraint firstAttribute="width" constant="170" id="fGb-WB-9l8"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fs2-hf-hxy">
-                                <rect key="frame" x="112.5" y="67" width="150" height="150"/>
+                                <rect key="frame" x="129" y="111" width="170" height="170"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="GIn-Mg-R2I"/>
-                                    <constraint firstAttribute="height" constant="150" id="VKv-1S-HGc"/>
+                                    <constraint firstAttribute="width" constant="170" id="GIn-Mg-R2I"/>
+                                    <constraint firstAttribute="height" constant="170" id="VKv-1S-HGc"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
@@ -52,14 +52,25 @@
                                     <action selector="chooseImage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dpL-iG-NRk"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Edit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tU-0Z-LwI">
+                                <rect key="frame" x="169.66666666666666" y="262" width="88.333333333333343" height="17"/>
+                                <color key="backgroundColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.84907907729999998" green="0.94099998470000001" blue="0.97299999000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ErA-db-EbH" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="14F-kF-Olw"/>
                             <constraint firstItem="5az-TW-EqI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="1MW-E9-ogp"/>
+                            <constraint firstItem="5az-TW-EqI" firstAttribute="top" secondItem="7tU-0Z-LwI" secondAttribute="bottom" constant="25" id="3g8-VJ-pUF"/>
                             <constraint firstItem="fs2-hf-hxy" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="23" id="4mL-PR-3vk"/>
+                            <constraint firstItem="7tU-0Z-LwI" firstAttribute="top" secondItem="ErA-db-EbH" secondAttribute="top" constant="151" id="4ok-3q-2dq"/>
+                            <constraint firstItem="7tU-0Z-LwI" firstAttribute="leading" secondItem="ErA-db-EbH" secondAttribute="leading" constant="40.670000000000002" id="Cun-gJ-ysY"/>
                             <constraint firstAttribute="bottom" secondItem="5az-TW-EqI" secondAttribute="bottom" constant="-50" id="L8s-VR-6Db"/>
+                            <constraint firstItem="ErA-db-EbH" firstAttribute="trailing" secondItem="7tU-0Z-LwI" secondAttribute="trailing" constant="41" id="ORw-aC-kBC"/>
                             <constraint firstItem="5az-TW-EqI" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="RVG-8u-f4v"/>
                             <constraint firstItem="5az-TW-EqI" firstAttribute="top" secondItem="ErA-db-EbH" secondAttribute="bottom" constant="23" id="UgC-8e-xjx"/>
                             <constraint firstItem="fs2-hf-hxy" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="WDC-4X-4Mf"/>
@@ -83,6 +94,7 @@
                     <connections>
                         <outlet property="imageView" destination="ErA-db-EbH" id="cGT-hM-PwJ"/>
                         <outlet property="saveButton" destination="acM-Nb-juK" id="SvE-ub-yhX"/>
+                        <outlet property="tabToEdit" destination="7tU-0Z-LwI" id="W0N-4R-nu5"/>
                         <outlet property="tableView" destination="NX0-hb-PRu" id="SvN-aT-yKF"/>
                         <outlet property="viewBackground" destination="5az-TW-EqI" id="Xh7-sf-7OF"/>
                     </connections>
@@ -97,7 +109,7 @@
                 <navigationController storyboardIdentifier="CreateEmployee" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WON-aN-7nm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XmB-Xx-NfJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
