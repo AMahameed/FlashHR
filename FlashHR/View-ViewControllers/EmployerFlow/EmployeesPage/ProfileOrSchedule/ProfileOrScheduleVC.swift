@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ProfileOrScheduleVC: UIViewController {
+class ProfileOrScheduleVC: UIViewController, UINavigationControllerDelegate {
     
     @IBOutlet weak var scheduleButton: UIButton!
     @IBOutlet weak var profileButton: UIButton!
@@ -33,6 +33,4 @@ class ProfileOrScheduleVC: UIViewController {
     @IBAction func profileButtonPressed(_ sender: UIButton) {
         presentFromSTB(stbName: Constants.Segues.SelectedEmpProfile, vcID: Constants.Segues.SelectedEmpProfile)
     }
-    
-    
 }

@@ -198,6 +198,7 @@ extension WorkDetailsVC: UITableViewDelegate, UITableViewDataSource, GoogleMapsC
         
         if !DaysSchedulesVC.dayIDHolder.canUpdate{
             cell.textField.isUserInteractionEnabled = false
+            cell.textField.placeholder = "N/A"
             googleMapsCell.locationButton.isUserInteractionEnabled = false
         }
         
@@ -214,12 +215,16 @@ extension WorkDetailsVC: UITableViewDelegate, UITableViewDataSource, GoogleMapsC
             cell.textField.inputView = self.workingHoursPickerView
         case 4:
             cell.textField.isUserInteractionEnabled = false
+            cell.textField.placeholder = "N/A"
         case 5:
             cell.textField.isUserInteractionEnabled = false
+            cell.textField.placeholder = "N/A"
         case 6:
             cell.textField.isUserInteractionEnabled = false
+            cell.textField.placeholder = "N/A"
         case 7:
             cell.textField.isUserInteractionEnabled = false
+            cell.textField.placeholder = "N/A"
         case 8:
             googleMapsCell.delegate = self
             return googleMapsCell

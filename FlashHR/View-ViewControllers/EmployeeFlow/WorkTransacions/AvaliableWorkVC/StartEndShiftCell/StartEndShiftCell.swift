@@ -55,6 +55,7 @@ class StartEndShiftCell: UITableViewCell {
             }else{
                 self.endShiftButton.isHidden = true
                 self.startShift.isHidden = false
+                self.startShift.isEnabled = true
             }
         }
     }

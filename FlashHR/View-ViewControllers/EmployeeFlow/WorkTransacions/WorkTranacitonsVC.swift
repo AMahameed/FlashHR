@@ -31,8 +31,7 @@ class WorkTranacitonsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        manager.requestAlwaysAuthorization()
+        
         manager.requestWhenInUseAuthorization()
 
         guard CLLocationManager.locationServicesEnabled() else {
@@ -53,7 +52,6 @@ class WorkTranacitonsVC: UIViewController {
     private func loadAllWorkTransactions(){
         
         if let empID = UserDataService.shared.userID{
-            print(empID)
             
             fireBaseService.getEmpDocID(empID: empID) { [weak self] empDocID in
                 self?.db.collection("employee").document(empDocID).collection("workTransactions").addSnapshotListener { docSnapShot, _ in
