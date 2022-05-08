@@ -71,6 +71,8 @@
 		73E4D70A281336A40067B407 /* ProfileOrSchedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73E4D709281336A40067B407 /* ProfileOrSchedule.storyboard */; };
 		73E4D70C281336AF0067B407 /* ProfileOrScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E4D70B281336AF0067B407 /* ProfileOrScheduleVC.swift */; };
 		73E61AC0281EF4E900E2BBE0 /* Maps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73E61ABF281EF4E900E2BBE0 /* Maps.storyboard */; };
+		73F73721282703460098E70D /* EndShiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F7371F282703460098E70D /* EndShiftCell.swift */; };
+		73F73722282703460098E70D /* EndShiftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73F73720282703460098E70D /* EndShiftCell.xib */; };
 		73FBD99A27CD73A90061B864 /* ResetPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBD99927CD73A90061B864 /* ResetPassViewController.swift */; };
 		ABC2E132C1AF08CDB9826C25 /* Pods_FlashHR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C276AF36410A344916FB7C1 /* Pods_FlashHR.framework */; };
 /* End PBXBuildFile section */
@@ -144,6 +146,8 @@
 		73E4D709281336A40067B407 /* ProfileOrSchedule.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileOrSchedule.storyboard; sourceTree = "<group>"; };
 		73E4D70B281336AF0067B407 /* ProfileOrScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOrScheduleVC.swift; sourceTree = "<group>"; };
 		73E61ABF281EF4E900E2BBE0 /* Maps.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Maps.storyboard; sourceTree = "<group>"; };
+		73F7371F282703460098E70D /* EndShiftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndShiftCell.swift; sourceTree = "<group>"; };
+		73F73720282703460098E70D /* EndShiftCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EndShiftCell.xib; sourceTree = "<group>"; };
 		73FBD99927CD73A90061B864 /* ResetPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassViewController.swift; sourceTree = "<group>"; };
 		BD537B4C9017A29F0631B0E3 /* Pods-FlashHR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashHR.debug.xcconfig"; path = "Target Support Files/Pods-FlashHR/Pods-FlashHR.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +180,7 @@
 			children = (
 				7304B8A0282347B800EE416B /* WorkRecordVC.swift */,
 				7304B89E282347AC00EE416B /* WorkRecord.storyboard */,
+				73F7371E282703270098E70D /* EndShiftCell */,
 			);
 			path = WorkRecordVC;
 			sourceTree = "<group>";
@@ -523,6 +528,15 @@
 			path = ProfileOrSchedule;
 			sourceTree = "<group>";
 		};
+		73F7371E282703270098E70D /* EndShiftCell */ = {
+			isa = PBXGroup;
+			children = (
+				73F7371F282703460098E70D /* EndShiftCell.swift */,
+				73F73720282703460098E70D /* EndShiftCell.xib */,
+			);
+			path = EndShiftCell;
+			sourceTree = "<group>";
+		};
 		A4BD030DFA22BE0A3DC63323 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -626,6 +640,7 @@
 				73556EEA27E7A38C0051A2E5 /* infoCell.xib in Resources */,
 				73067AB027DBF28600FC7A7F /* MessageCell.xib in Resources */,
 				7369FC8F27F3CDEA00E0A312 /* CreateEmployee.storyboard in Resources */,
+				73F73722282703460098E70D /* EndShiftCell.xib in Resources */,
 				7304B89D2823479F00EE416B /* AvaliableWork.storyboard in Resources */,
 				7368026A281D50A90039C251 /* WorkDetailsCell.xib in Resources */,
 				73A735A027CF5F1F00FA9253 /* ResetPassword.storyboard in Resources */,
@@ -736,6 +751,7 @@
 				7394F03327CCBC9E001C58C9 /* Constants.swift in Sources */,
 				7338C11328183C2C0065CA3F /* FireBaseService.swift in Sources */,
 				73B246C6282150F50077B9AD /* EmpCommmunicationVC.swift in Sources */,
+				73F73721282703460098E70D /* EndShiftCell.swift in Sources */,
 				7374A2C327D124EE00493821 /* UserModel.swift in Sources */,
 				7374A2C627D1283C00493821 /* SplashViewController.swift in Sources */,
 			);

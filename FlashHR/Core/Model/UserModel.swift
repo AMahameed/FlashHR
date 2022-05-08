@@ -42,7 +42,11 @@ struct WorkTansactions {
     var lat: Double = 0.0
     var isRequestedLeave: Bool = false
     var isWorked: Bool = false
+    var isWorkedTotally: Bool = false
     var leaveHours: Float = 0.0
+    var actualStart: String = ""
+    var actualEnd: String = ""
+    var actualWorkingHours: String = ""
 }
 
 struct TransactionsHolder {
@@ -55,7 +59,11 @@ struct TransactionsHolder {
     var lat: Double = 0.0
     var isRequestedLeave: Bool = false
     var isWorked: Bool = false
+    var isWorkedTotally: Bool = false
     var leaveHours: Float = 0.0
+    var actualStart: String = ""
+    var actualEnd: String = ""
+    var actualWorkingHours: String = ""
 }
 
 struct Message {

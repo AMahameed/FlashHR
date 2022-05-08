@@ -55,7 +55,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Back" id="GJY-Kd-hUC">
                             <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="backPressed:" destination="aaJ-gv-zAB" id="4E6-yr-zfp"/>
+                                <action selector="backPressed:" destination="aaJ-gv-zAB" id="IoI-1H-UXE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

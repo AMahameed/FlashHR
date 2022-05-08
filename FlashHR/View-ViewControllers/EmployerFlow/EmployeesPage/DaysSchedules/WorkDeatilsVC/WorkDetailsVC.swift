@@ -23,7 +23,7 @@ class WorkDetailsVC: UIViewController{
     private let db = Firestore.firestore()
     private let fireBaseService = FireBaseService()
     
-    private var titles = [ "Project Name", "Contact Number", "Start Time", "Working Hours","Did he/she work?"]
+    private var titles = [ "Project Name", "Contact Number", "Assigned Start Time", "Assigned Working Hours","Did he/she work?","Actual Start Shift at", "Actual End Shift at", "Actual Working Hours" ]
     var wtDocIDHOlder: String = "no data"
 
     override func viewDidLoad() {
@@ -92,9 +92,12 @@ class WorkDetailsVC: UIViewController{
                            let workingHours = doc["workingHours"] as? Int,
                            let long = doc["long"] as? Double,
                            let lat = doc["lat"] as? Double,
-                           let isWorked = doc["isWorked"] as? Bool{
+                           let isWorkedTotally = doc["isWorkedTotally"] as? Bool,
+                           let actualStart = doc["actualStart"] as? String,
+                           let actualEnd = doc["actualEnd"] as? String,
+                           let actualWorkingHours = doc["actualWorkingHours"] as? String{
                             
-                            let thisDayWorkTransactions = TransactionsHolder( projectName: projectName, contactNo: contactNo, startTime: startTime, dayStr: dayStr,workingHours: workingHours, long: long, lat: lat, isWorked: isWorked)
+                            let thisDayWorkTransactions = TransactionsHolder( projectName: projectName, contactNo: contactNo, startTime: startTime, dayStr: dayStr,workingHours: workingHours, long: long, lat: lat, isWorkedTotally: isWorkedTotally, actualStart: actualStart, actualEnd: actualEnd, actualWorkingHours: actualWorkingHours)
                             
                             success(thisDayWorkTransactions)
                         }
@@ -130,7 +133,11 @@ class WorkDetailsVC: UIViewController{
                 "long": self.workTransactions.long,
                 "lat": self.workTransactions.lat,
                 "isRequestedLeave": self.workTransactions.isRequestedLeave,
-                "isWorked": self.workTransactions.isWorked])
+                "isWorked": self.workTransactions.isWorked,
+                "isWorkedTotally": self.workTransactions.isWorkedTotally,
+                "actualStart": self.workTransactions.actualStart,
+                "actualEnd": self.workTransactions.actualEnd,
+                "actualWorkingHours": self.workTransactions.actualWorkingHours ])
             
             self.dismiss(animated: true)
             
@@ -175,8 +182,13 @@ extension WorkDetailsVC: UITableViewDelegate, UITableViewDataSource, GoogleMapsC
             case 3:
                 cell.textField.placeholder = String(transHolder.workingHours)
             case 4:
-                cell.textField.placeholder = String(transHolder.isWorked)
-                cell.textField.isUserInteractionEnabled = false
+                cell.textField.placeholder = String(transHolder.isWorkedTotally)
+            case 5:
+                cell.textField.placeholder = transHolder.actualStart
+            case 6:
+                cell.textField.placeholder = transHolder.actualEnd
+            case 7:
+                cell.textField.placeholder = transHolder.actualWorkingHours
             default:
                 break
             }
@@ -189,17 +201,26 @@ extension WorkDetailsVC: UITableViewDelegate, UITableViewDataSource, GoogleMapsC
             googleMapsCell.locationButton.isUserInteractionEnabled = false
         }
         
-        if indexPath.row <= 4{
+        if indexPath.row <= 7{
             cell.titleLabel.text = titles[indexPath.row]
             cell.textField.delegate = self
-            cell.textField.tag = indexPath.row}
+            cell.textField.tag = indexPath.row
+        }
         
         switch indexPath.row {
         case 2:
             cell.textField.inputView = self.startTimePickerView
         case 3:
             cell.textField.inputView = self.workingHoursPickerView
+        case 4:
+            cell.textField.isUserInteractionEnabled = false
         case 5:
+            cell.textField.isUserInteractionEnabled = false
+        case 6:
+            cell.textField.isUserInteractionEnabled = false
+        case 7:
+            cell.textField.isUserInteractionEnabled = false
+        case 8:
             googleMapsCell.delegate = self
             return googleMapsCell
         default:

@@ -12,7 +12,7 @@ class AvaliableWorkVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var welcomeLabel: UILabel!
-    private var titles = [ "Project Name", "Contact Number", "Start Time", "Working Hours"]    
+    private var titles = [ "Project Name", "Contact Number", "Assigned Start Time", "Working Hours"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +25,8 @@ class AvaliableWorkVC: UIViewController {
         
         backgroundView.layer.cornerRadius = backgroundView.frame.size.height / 11
         welcomeLabel.text = "Hey, here is your Work Details."
+        
     }
-    
     @IBAction func backPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
     }
@@ -35,6 +35,18 @@ class AvaliableWorkVC: UIViewController {
 //MARK: - TableView Delegate and Data Source
 
 extension AvaliableWorkVC: UITableViewDataSource, UITableViewDelegate, StartEndShiftCellDelegate{
+    
+    func proceedEndingSHift(_ complition: @escaping (Bool) -> ()) {
+        let alert = UIAlertController(title: "Warning", message: "Beware, When you choose to End Shift it means that your actual working hours are counted from the moment you pressed Start Shift till the moment you Press End Shift only.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in
+            complition(false)
+        }))
+        alert.addAction(UIAlertAction(title: "Proceed", style: .default, handler: { _ in
+            complition(true)
+        }))
+        present(alert,animated: true)
+    }
+    
     func failOrSuccess(tag: Int8) {
         switch tag {
         case 1:
@@ -47,6 +59,12 @@ extension AvaliableWorkVC: UITableViewDataSource, UITableViewDelegate, StartEndS
             presentAlert(title: "Well Done", message: "You've Ended your Shift Successfully.")
         case 5:
             presentAlert(message: "You can't End Shift, While being out of work site Location", preferredStyle: .alert)
+        case 7:
+            presentAlert(message: "Error in retrieving your Data!", preferredStyle: .alert)
+        case 8:
+            presentAlert(message:"Error in retrieving your Work Transactions!", preferredStyle: .alert)
+        case 9:
+            presentAlert(message: "coudn't retrieve if the selected day is Worked!", preferredStyle: .alert)
         default:
             break
         }
@@ -83,7 +101,6 @@ extension AvaliableWorkVC: UITableViewDataSource, UITableViewDelegate, StartEndS
                 default:
                     break
                 }
-                return cell
             }
         }
         
@@ -96,7 +113,7 @@ extension AvaliableWorkVC: UITableViewDataSource, UITableViewDelegate, StartEndS
         default:
             break
         }
-        return UITableViewCell()
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

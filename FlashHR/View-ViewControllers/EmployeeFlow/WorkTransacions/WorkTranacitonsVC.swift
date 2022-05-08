@@ -32,7 +32,6 @@ class WorkTranacitonsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         manager.requestAlwaysAuthorization()
         manager.requestWhenInUseAuthorization()
         
@@ -50,6 +49,7 @@ class WorkTranacitonsVC: UIViewController {
         tableView.register(UINib(nibName: Constants.NibNames.messgaeCell, bundle: nil) , forCellReuseIdentifier: Constants.Identifiers.messgaeCellIdentifier)
         tableView.reloadData()
         loadAllWorkTransactions()
+        
     }
     
     private func loadAllWorkTransactions(){ //success: @escaping ([WorkTansactions])->Void ){
@@ -72,9 +72,12 @@ class WorkTranacitonsVC: UIViewController {
                                let workingHours = doc["workingHours"] as? Int,
                                let long = doc["long"] as? Double,
                                let lat = doc["lat"] as? Double,
-                               let isWorked = doc["isWorked"] as? Bool{
+                               let isWorkedTotally = doc["isWorkedTotally"] as? Bool,
+                               let actualStart = doc["actualStart"] as? String,
+                               let actualEnd = doc["actualEnd"] as? String,
+                               let actualWorkingHours = doc["actualWorkingHours"] as? String{
                                 
-                                let thisDayWorkTransactions = WorkTansactions( projectName: projectName, contactNo: contactNo, startTime: startTime, dayStr: dayStr,workingHours: workingHours, long: long, lat: lat, isWorked: isWorked)
+                                let thisDayWorkTransactions = WorkTansactions( projectName: projectName, contactNo: contactNo, startTime: startTime, dayStr: dayStr,workingHours: workingHours, long: long, lat: lat, isWorkedTotally: isWorkedTotally, actualStart: actualStart, actualEnd: actualEnd, actualWorkingHours: actualWorkingHours)
                                 
                                 self?.workTransactions.append(thisDayWorkTransactions)
                                 
@@ -224,9 +227,18 @@ extension WorkTranacitonsVC: UITableViewDataSource, UITableViewDelegate{
                 
             }
         }else{
+            activityIndicator()
+            indicator.startAnimating()
             // sending oldWt obj to the WorkRecord VC
             WorkTranacitonsVC.oldWTItem = oldWT[indexPath.row]
-            presentFromSTB(stbName: "WorkRecord", vcID: "WorkRecord")
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 8){
+            
+                self.viewDemo.isHidden = true
+                self.indicator.stopAnimating()
+                self.indicator.hidesWhenStopped = true
+                self.presentFromSTB(stbName: "WorkRecord", vcID: "WorkRecord")
+            }
         }
     }
 }
@@ -247,8 +259,4 @@ extension WorkTranacitonsVC: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error.localizedDescription)
     }
-}
-
-struct EmpDocsHolder {
-    var dayStr: String = ""
 }
