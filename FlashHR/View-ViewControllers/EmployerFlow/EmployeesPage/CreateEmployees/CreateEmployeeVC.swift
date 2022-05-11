@@ -17,9 +17,7 @@ class CreateEmployeeVC: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     var createEmployee = Employee()
     let db = Firestore.firestore()
-    var genderPickerView = UIPickerView()
     var fields = ["User Name", "Password", "Email", "Title", "Mobile Number", "Gender"]
-    var genderTypes = ["Male","Female"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,22 +25,19 @@ class CreateEmployeeVC: UIViewController {
         presentAlert(title: "Warning", message: "Dear User, when creating a new Employee, make sure that all information Provided is correct. Since it is not Editable", preferredStyle: .alert)
         tableView.delegate = self
         tableView.dataSource = self
-        
-        genderPickerView.delegate = self
-        genderPickerView.dataSource = self
-        genderPickerView.tag = 1
-        
-        tableView.register(UINib(nibName: Constants.NibNames.workDetailsCell, bundle: nil) , forCellReuseIdentifier: Constants.Identifiers.workDetailsCellIdentifier)
+
+        tableView.register(UINib(nibName: Constants.NibNames.workDetailsCell, bundle: nil), forCellReuseIdentifier: Constants.Identifiers.workDetailsCellIdentifier)
         
         tabToEdit.layer.cornerRadius = 7
         tabToEdit.layer.masksToBounds = true
         imageView.layer.cornerRadius = imageView.frame.size.height / 5
         viewBackground.layer.cornerRadius = viewBackground.frame.size.height / 11
     }
+    
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         
         guard !(createEmployee.email.isEmpty), !(createEmployee.password.isEmpty),
-        !(createEmployee.userName.isEmpty), !(createEmployee.title.isEmpty), !(createEmployee.mobile.isEmpty), !(createEmployee.gender.isEmpty) else{
+              !(createEmployee.userName.isEmpty), !(createEmployee.title.isEmpty), !(createEmployee.mobile.isEmpty), !(createEmployee.gender.isEmpty) else{
             presentAlert(message: "Please fill all required fields"); return}
         
         guard !(createEmployee.empImageData.isEmpty) else {
@@ -50,7 +45,7 @@ class CreateEmployeeVC: UIViewController {
         }
         
         loginService.performSignUp(createEmployee) { _ in
-        //To send entred values to the firebase
+        //To send entred values to firebase
             
             self.db.collection("employee").addDocument(data: [
                 "empID" : self.createEmployee.empID,
@@ -62,15 +57,15 @@ class CreateEmployeeVC: UIViewController {
                 "mobile" : self.createEmployee.mobile,
                 "gender" : self.createEmployee.gender,
                 "isDeleted" : self.createEmployee.isDeleted])
-            
             self.dismiss(animated: true)
+            
         } failure: { error in
             self.presentAlertInMainThread(message: error)
         }
     }
     
     @IBAction func chooseImage(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Beware", message: "Only images with (.png extension with 1 mB size) are allowed", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Beware", message: "Only images with (.png extension with 1 MB size) are allowed", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: { _ in
             let vc = UIImagePickerController()
             vc.sourceType = .photoLibrary
@@ -85,32 +80,48 @@ class CreateEmployeeVC: UIViewController {
     @IBAction func backPressed(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true)
     }
+    
+    private func getInfoBy(_ index: Int) -> String?{
+        switch index{
+        case 0:
+            return createEmployee.userName
+        case 1:
+            return createEmployee.password
+        case 2:
+            return createEmployee.email
+        case 3:
+            return createEmployee.title
+        case 4:
+            return createEmployee.mobile
+        case 5:
+            return createEmployee.gender
+        default:
+            return ""
+        }
+    }
 }
 
 //MARK: - TabelView
 
 extension CreateEmployeeVC: UITableViewDelegate,UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return fields.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Identifiers.workDetailsCellIdentifier, for: indexPath) as? WorkDetailsCell else {return UITableViewCell()}
         
-        cell.titleLabel.text = fields[indexPath.row]
         cell.textField.tag = indexPath.row
         cell.textField.delegate = self
         
-        switch indexPath.row {
-        case 1:
-            cell.textField.isSecureTextEntry = true
-        case 4:
-            cell.textField.keyboardType = .numberPad
-        case 5:
-            cell.textField.inputView = genderPickerView
-        default:
-            break
+        if indexPath.row == 5 {
+            cell.populateCreateEmpCell(with: fields[indexPath.row], info: getInfoBy(indexPath.row), index: indexPath.row) { [weak self] gender in
+                guard let self = self else {return}
+                self.createEmployee.gender = gender
+            }
+        }else{
+            cell.populateCreateEmpCell(with: fields[indexPath.row], info: getInfoBy(indexPath.row), index: indexPath.row)
         }
         return cell
     }
@@ -129,7 +140,7 @@ extension CreateEmployeeVC: UIImagePickerControllerDelegate, UINavigationControl
         
         guard let image = info[.editedImage] as? UIImage else{ return}
  
-        guard let imageData = image.pngData(), imageData.count >= 103000 else{
+        guard let imageData = image.pngData(), imageData.count <= 999999 else{
             presentAlert(message: "Image size is more than 1 MB.")
             return }
         
@@ -161,7 +172,7 @@ extension CreateEmployeeVC: UITextFieldDelegate {
         case 4:
             createEmployee.mobile = textField.text ?? ""
         case 5:
-            textField.text = createEmployee.gender
+            createEmployee.gender = textField.text ?? ""
         default:
             return
         }
@@ -170,44 +181,5 @@ extension CreateEmployeeVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true;
-    }
-}
-
-//MARK: - PickerView
-
-extension CreateEmployeeVC: UIPickerViewDelegate, UIPickerViewDataSource{
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        switch pickerView.tag {
-        case 1:
-            return genderTypes.count
-        default:
-            return 1
-        }
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
-        switch pickerView.tag {
-        case 1:
-            return genderTypes[row]
-        default:
-            return "Data Not Found"
-        }
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        switch pickerView.tag {
-        case 1:
-            createEmployee.gender = genderTypes[row]
-//            tableView.reloadRows(at: [IndexPath.init(row: 6, section: 0)], with: .automatic)
-        default:
-            return
-        }
     }
 }

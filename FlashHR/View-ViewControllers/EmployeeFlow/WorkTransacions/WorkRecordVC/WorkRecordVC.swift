@@ -14,6 +14,7 @@ class WorkRecordVC: UIViewController{
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var welcomeLabel: UILabel!
     private let fireBaseService = FireBaseService()
+    private let helperService = HelperServices()
     private let db = Firestore.firestore()
     private var titles = [ "Project Name", "Contact Number", "Assigned Start Time", "Assigned Working Hours","Did he/she work?","Actual Start Shift at", "Actual End Shift at", "Actual Working Hours" ]
     
@@ -27,10 +28,19 @@ class WorkRecordVC: UIViewController{
         tableView.register(UINib(nibName: "EndShiftCell", bundle: nil), forCellReuseIdentifier: "endShiftCell")
         
         backgroundView.layer.cornerRadius = backgroundView.frame.size.height / 11
-        welcomeLabel.text = "Hey, here is your Work Details."
+        welcomeLabel.attributedText = helperService.partialBoldString(WorkTranacitonsVC.oldWTItem!.dayStr, "Hey, here's your Work Details on ")
     }
     @IBAction func backPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
+    }
+    func partialBoldString(_ att: String) -> NSMutableAttributedString {
+        let boldText = att
+        let attrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 25)]
+        let attributedString = NSMutableAttributedString(string:boldText, attributes:attrs)
+        let normalText = "Hey, here's your Work Details on "
+        let normalString = NSMutableAttributedString(string:normalText)
+        normalString.append(attributedString)
+        return normalString
     }
     
     

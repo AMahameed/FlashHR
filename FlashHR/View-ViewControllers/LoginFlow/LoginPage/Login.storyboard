@@ -103,6 +103,7 @@
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Abdallah27!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ab4-7e-QhT">
                                                 <rect key="frame" x="51" y="138" width="312" height="25"/>
+                                                <color key="tintColor" red="0.003000000026" green="0.5" blue="0.84799999000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="TbG-o0-J5o"/>
                                                 </constraints>
@@ -120,6 +121,7 @@
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="a.mahameed2000@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cs3-2i-XRQ">
                                                 <rect key="frame" x="51" y="54" width="312" height="25"/>
+                                                <color key="tintColor" red="0.003000000026" green="0.5" blue="0.9527512655" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="KTP-te-i97"/>
                                                 </constraints>

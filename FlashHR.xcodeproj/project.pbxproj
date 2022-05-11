@@ -35,6 +35,7 @@
 		7374A2D127D1321E00493821 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7374A2D027D1321E00493821 /* Login.storyboard */; };
 		7381E2C027DB751F00134937 /* RequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7381E2BE27DB751F00134937 /* RequestCell.swift */; };
 		7381E2C127DB751F00134937 /* RequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7381E2BF27DB751F00134937 /* RequestCell.xib */; };
+		7383C15D28297D86006429C5 /* Helper Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383C15C28297D86006429C5 /* Helper Services.swift */; };
 		738B902728240492009243D2 /* WorkLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738B902528240492009243D2 /* WorkLocationCell.swift */; };
 		738B902828240492009243D2 /* WorkLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 738B902628240492009243D2 /* WorkLocationCell.xib */; };
 		738B902C28241973009243D2 /* StartEndShiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738B902A28241973009243D2 /* StartEndShiftCell.swift */; };
@@ -108,6 +109,7 @@
 		7374A2D027D1321E00493821 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		7381E2BE27DB751F00134937 /* RequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCell.swift; sourceTree = "<group>"; };
 		7381E2BF27DB751F00134937 /* RequestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestCell.xib; sourceTree = "<group>"; };
+		7383C15C28297D86006429C5 /* Helper Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper Services.swift"; sourceTree = "<group>"; };
 		738B902528240492009243D2 /* WorkLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkLocationCell.swift; sourceTree = "<group>"; };
 		738B902628240492009243D2 /* WorkLocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkLocationCell.xib; sourceTree = "<group>"; };
 		738B902A28241973009243D2 /* StartEndShiftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartEndShiftCell.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 				7374A2C927D12C6000493821 /* UserDataService.swift */,
 				7374A2CC27D12C7E00493821 /* LoginService.swift */,
 				7338C11228183C2C0065CA3F /* FireBaseService.swift */,
+				7383C15C28297D86006429C5 /* Helper Services.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -739,6 +742,7 @@
 				7304B89B2823479400EE416B /* AvaliableWorkVC.swift in Sources */,
 				73680268281D508A0039C251 /* WorkDetailsCell.swift in Sources */,
 				73067AAF27DBF28600FC7A7F /* MessageCell.swift in Sources */,
+				7383C15D28297D86006429C5 /* Helper Services.swift in Sources */,
 				7381E2C027DB751F00134937 /* RequestCell.swift in Sources */,
 				73C8942F27D140F200BA3A6A /* Extensions.swift in Sources */,
 				73B246C0282150940077B9AD /* WorkTranacitonsVC.swift in Sources */,
@@ -896,6 +900,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LBM5YFV4LP;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlashHR/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location is required to determine the current location of the user.";
@@ -913,6 +918,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Mahameed.FlashHR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -930,6 +936,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LBM5YFV4LP;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlashHR/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location is required to determine the current location of the user.";
@@ -947,6 +954,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Mahameed.FlashHR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

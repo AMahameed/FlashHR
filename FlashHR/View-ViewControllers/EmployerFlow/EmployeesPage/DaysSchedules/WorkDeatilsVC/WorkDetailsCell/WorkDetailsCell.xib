@@ -28,6 +28,7 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0nO-AT-iMo">
                                 <rect key="frame" x="10" y="36.5" width="277" height="26"/>
+                                <color key="tintColor" red="0.003000000026" green="0.5" blue="0.84799999000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -66,7 +67,7 @@
                 <outlet property="textField" destination="0nO-AT-iMo" id="GPL-V4-R2E"/>
                 <outlet property="titleLabel" destination="mUb-yD-Teb" id="KbQ-xr-GZl"/>
             </connections>
-            <point key="canvasLocation" x="49" y="6"/>
+            <point key="canvasLocation" x="48.550724637681164" y="5.6919642857142856"/>
         </tableViewCell>
     </objects>
     <resources>

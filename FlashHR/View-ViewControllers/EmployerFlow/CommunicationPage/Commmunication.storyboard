@@ -29,6 +29,7 @@
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fpO-fk-4ua">
                                                         <rect key="frame" x="16" y="8" width="366" height="92"/>
                                                         <color key="backgroundColor" red="0.84907907729999998" green="0.94099998470000001" blue="0.97299999000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" red="0.003000000026" green="0.5" blue="0.84799999000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="textColor" systemColor="labelColor"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

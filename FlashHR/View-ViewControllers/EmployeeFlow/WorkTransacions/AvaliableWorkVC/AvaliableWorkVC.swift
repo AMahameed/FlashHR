@@ -12,6 +12,7 @@ class AvaliableWorkVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var welcomeLabel: UILabel!
+    private let helperService = HelperServices()
     private var titles = [ "Project Name", "Contact Number", "Assigned Start Time", "Working Hours"]
     
     override func viewDidLoad() {
@@ -24,7 +25,7 @@ class AvaliableWorkVC: UIViewController {
         tableView.register(UINib(nibName: "StartEndShiftCell", bundle: nil), forCellReuseIdentifier: "startEndShiftCell")
         
         backgroundView.layer.cornerRadius = backgroundView.frame.size.height / 11
-        welcomeLabel.text = "Hey, here is your Work Details."
+        welcomeLabel.attributedText = helperService.partialBoldString(WorkTranacitonsVC.newWTItem!.dayStr, "Hey, here's your Work Details on ")
         
     }
     @IBAction func backPressed(_ sender: UIBarButtonItem) {

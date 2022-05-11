@@ -30,17 +30,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61p-kr-yN3" userLabel="labelView">
                                 <rect key="frame" x="104.5" y="15" width="215.5" height="93"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abdallah Mahameed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="0ed-fK-IG4">
-                                        <rect key="frame" x="13" y="13" width="177.5" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elon Dusk" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="0ed-fK-IG4">
+                                        <rect key="frame" x="13" y="13" width="177.5" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="hMI-do-KXP">
-                                        <rect key="frame" x="13" y="47" width="177.5" height="32.5"/>
+                                        <rect key="frame" x="13" y="51" width="177.5" height="28.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8M-HU-0d0">
-                                                <rect key="frame" x="0.0" y="0.0" width="83" height="32.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="83" height="28.5"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Accept">
@@ -52,7 +52,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLT-H3-Eaa">
-                                                <rect key="frame" x="95" y="0.0" width="82.5" height="32.5"/>
+                                                <rect key="frame" x="95" y="0.0" width="82.5" height="28.5"/>
                                                 <color key="backgroundColor" red="1" green="0.23137254900000001" blue="0.045590736290000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Reject">
@@ -107,7 +107,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="userPhoto" width="1008" height="1344"/>
+        <image name="userPhoto" width="225" height="225"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

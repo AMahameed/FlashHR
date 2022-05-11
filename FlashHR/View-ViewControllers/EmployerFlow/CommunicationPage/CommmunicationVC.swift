@@ -54,8 +54,6 @@ class CommmunicationVC: UIViewController {
                                 
                                 DispatchQueue.main.async {
                                     self?.tableView.reloadData()
-                                    let indexPath = IndexPath(row: 0, section: 0)
-                                    self?.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
                                 }
                             }
                         }
@@ -111,6 +109,7 @@ class CommmunicationVC: UIViewController {
                 self.getMessageID(indexPathForRowAT: indexPath) { [weak self] messageID in
                     self?.db.collection("employee").document(self!.docID).collection("messages").document(messageID).delete()
                 }
+                if self.messages.count == 1 {self.messages.removeAll(); self.tableView.reloadData()}
             }))
             self.present(alert,animated: true)
         }

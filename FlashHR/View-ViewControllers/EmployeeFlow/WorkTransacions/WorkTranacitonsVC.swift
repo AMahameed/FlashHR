@@ -47,12 +47,12 @@ class WorkTranacitonsVC: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: Constants.NibNames.messgaeCell, bundle: nil) , forCellReuseIdentifier: Constants.Identifiers.messgaeCellIdentifier)
         loadAllWorkTransactions()
+            
     }
     
     private func loadAllWorkTransactions(){
         
         if let empID = UserDataService.shared.userID{
-            
             fireBaseService.getEmpDocID(empID: empID) { [weak self] empDocID in
                 self?.db.collection("employee").document(empDocID).collection("workTransactions").addSnapshotListener { docSnapShot, _ in
                     
@@ -80,8 +80,6 @@ class WorkTranacitonsVC: UIViewController {
                                 
                                 DispatchQueue.main.async {
                                     self?.tableView.reloadData()
-                                    let indexPath = IndexPath(row: 0, section: 0)
-                                    self?.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
                                 }
                             }
                         }
@@ -107,8 +105,8 @@ class WorkTranacitonsVC: UIViewController {
             wkNumber += 1
         }
         // sorting
-        newWT = newWT.sorted(by: { $0.dayStr > $1.dayStr }).reversed()
-        oldWT = oldWT.sorted(by: { $0.dayStr > $1.dayStr }).reversed()
+        newWT = newWT.sorted(by: { $0.dayStr > $1.dayStr })
+        oldWT = oldWT.sorted(by: { $0.dayStr > $1.dayStr })
         
         if segment.selectedSegmentIndex == 0 {
             segmentNoHolder = 0
@@ -166,7 +164,6 @@ class WorkTranacitonsVC: UIViewController {
         indicator.style = .large
         indicator.center = viewDemo.center
         self.view.addSubview(indicator)
-        
     }
     
 }
@@ -189,7 +186,7 @@ extension WorkTranacitonsVC: UITableViewDataSource, UITableViewDelegate{
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Identifiers.messgaeCellIdentifier, for: indexPath) as? MessageCell else {return UITableViewCell()}
         
-        guard !workTransactions.isEmpty, !newWT.isEmpty, !oldWT.isEmpty else{return UITableViewCell()}
+        guard !workTransactions.isEmpty else{return UITableViewCell()}
         
         
         if segmentNoHolder == 0{

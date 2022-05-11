@@ -7,17 +7,16 @@
 
 import UIKit
 import Firebase
-import CoreLocation 
+import CoreLocation
 
 class WorkDetailsVC: UIViewController{
-
     
     @IBOutlet weak var viewBackground: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var saveButton: UIBarButtonItem!
-    private  var workTransactions = WorkTansactions()
+    private var workTransactions = WorkTansactions()
     private var workingHoursPickerView = UIPickerView()
     private var startTimePickerView = UIPickerView()
     private let db = Firestore.firestore()
@@ -145,7 +144,6 @@ class WorkDetailsVC: UIViewController{
             self.presentAlertInMainThread(message: error)
         }
     }
-    
 }
 
 //MARK: - TableView
@@ -198,7 +196,6 @@ extension WorkDetailsVC: UITableViewDelegate, UITableViewDataSource, GoogleMapsC
         
         if !DaysSchedulesVC.dayIDHolder.canUpdate{
             cell.textField.isUserInteractionEnabled = false
-            cell.textField.placeholder = "N/A"
             googleMapsCell.locationButton.isUserInteractionEnabled = false
         }
         
@@ -248,16 +245,12 @@ extension WorkDetailsVC: UITextFieldDelegate {
         
         switch textField.tag {
         case 0:
-            //projectName
             workTransactions.projectName = textField.text ?? ""
         case 1:
-            //contactNo
             workTransactions.contactNo = textField.text ?? ""
         case 2:
-            //startTime
             textField.text = workTransactions.startTime
         case 3:
-            //workingHours
             textField.text = String(workTransactions.workingHours)
         default:
             return
@@ -323,6 +316,6 @@ extension WorkDetailsVC: MapsViewCDelegate{
     }
     
     func selectLocationCancelled() {
-        print("error 111")
+        presentAlert(message: "No location was selected")
     }
 }

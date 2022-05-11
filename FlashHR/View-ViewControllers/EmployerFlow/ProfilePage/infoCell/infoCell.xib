@@ -28,6 +28,7 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KrX-rM-GVa">
                                 <rect key="frame" x="10" y="36.5" width="277" height="26"/>
+                                <color key="tintColor" red="0.003000000026" green="0.5" blue="0.84799999000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>

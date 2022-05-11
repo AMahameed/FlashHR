@@ -20,7 +20,7 @@ class Employee {
     var isEmployer: Bool = false
     var workTransactions: [WorkTansactions] = []
     
-    init(empID: String = "", empImageData: Data = Data(), email: String = "", password: String = "", userName: String = "", title: String = "", mobile: String = "", gender: String = "") {
+    init(empID: String = "", empImageData: Data = Data(), email: String = "", password: String = "", userName: String = "", title: String = "", mobile: String = "", gender: String = "", isDeleted: Bool = false) {
         self.empID = empID
         self.empImageData = empImageData
         self.userName = userName
@@ -29,6 +29,7 @@ class Employee {
         self.title = title
         self.password = password
         self.email = email
+        self.isDeleted = isDeleted
     }
 }
 

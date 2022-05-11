@@ -67,8 +67,6 @@ class StartEndShiftCell: UITableViewCell {
         if sender.tag == 1 { // start shift was pressed
             if convertDateFormat(inputDate: dayStr)  {
                 if givenlat == currentlat && givenlong == currentlong {
-                        sender.isHidden = true
-                        endShiftButton.isHidden = false
                         
                    updateActualStart(convertTimeToString())
                     updateIfDayWasWorked(true)

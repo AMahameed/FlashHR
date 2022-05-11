@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>This allows the determining your current location to Start and End Shifts proprly.</string>
+	<string>This allows the app determining your current location to Start and End Shifts properly.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
