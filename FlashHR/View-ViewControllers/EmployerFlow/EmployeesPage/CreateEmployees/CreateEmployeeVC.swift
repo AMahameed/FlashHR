@@ -5,7 +5,7 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseFirestore
 
 class CreateEmployeeVC: UIViewController {
     
