@@ -45,7 +45,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Available Work " id="UIi-wq-mt5"/>
                     <connections>
-                        <outlet property="mainView" destination="5EZ-qb-Rvc" id="Z99-3D-zEl"/>
                         <outlet property="segment" destination="n2m-vu-zIR" id="7Ae-g3-yac"/>
                         <outlet property="tableView" destination="PzO-GY-xkd" id="QAk-KA-C65"/>
                     </connections>

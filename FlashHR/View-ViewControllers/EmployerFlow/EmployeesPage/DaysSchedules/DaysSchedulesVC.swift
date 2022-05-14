@@ -7,7 +7,6 @@
 
 import UIKit
 import FSCalendar
-import CoreLocation
 
 class DaysSchedulesVC: UIViewController {
     

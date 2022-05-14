@@ -6,14 +6,13 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseFirestore
 import CoreLocation
 
 class WorkTranacitonsVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segment: UISegmentedControl!
-    @IBOutlet var mainView: UIView!
     var viewDemo = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
     var indicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
     private var workTransactions: [WorkTansactions] = []

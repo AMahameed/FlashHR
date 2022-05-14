@@ -1,27 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="10C-H6-qRL">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Reports-->
+        <!--Monthly Report-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="Reports" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ReportsVC" customModule="FlashHR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pZe-Za-J1d" customClass="ChartProgressBar" customModule="ChartProgressBar">
+                                <rect key="frame" x="0.0" y="147" width="375" height="222"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="222" id="ork-uu-vO5"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Working Hours during 2022" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFJ-QB-n2R">
+                                <rect key="frame" x="27" y="77" width="321" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMv-Wg-42Q" customClass="ChartProgressBar" customModule="ChartProgressBar">
+                                <rect key="frame" x="0.0" y="414" width="375" height="222"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="222" id="eng-nI-ici"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" red="0.84907907729999998" green="0.94099998470000001" blue="0.97299999000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pZe-Za-J1d" firstAttribute="top" secondItem="RFJ-QB-n2R" secondAttribute="bottom" constant="40" id="1Pa-Xc-for"/>
+                            <constraint firstItem="bMv-Wg-42Q" firstAttribute="top" secondItem="pZe-Za-J1d" secondAttribute="bottom" constant="45" id="4XJ-ic-iaD"/>
+                            <constraint firstItem="RFJ-QB-n2R" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="27" id="Gix-1M-1r3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="RFJ-QB-n2R" secondAttribute="trailing" constant="27" id="IBv-f2-Vjq"/>
+                            <constraint firstItem="pZe-Za-J1d" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="P6L-YL-Wnl"/>
+                            <constraint firstItem="bMv-Wg-42Q" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="TGk-mB-h9k"/>
+                            <constraint firstItem="pZe-Za-J1d" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="j5u-Ym-DuC"/>
+                            <constraint firstItem="RFJ-QB-n2R" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="33" id="qpv-al-euq"/>
+                            <constraint firstItem="bMv-Wg-42Q" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="uVG-fK-iju"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Reports" id="L9f-Au-9Xw"/>
+                    <navigationItem key="navigationItem" title="Monthly Report" id="L9f-Au-9Xw"/>
+                    <connections>
+                        <outlet property="chart1" destination="pZe-Za-J1d" id="S0f-I1-HPi"/>
+                        <outlet property="chart2" destination="bMv-Wg-42Q" id="6t9-p9-7fG"/>
+                        <outlet property="mainView" destination="5EZ-qb-Rvc" id="uq9-mk-Wsk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1855.072463768116" y="64.955357142857139"/>
+            <point key="canvasLocation" x="1853.5999999999999" y="64.31784107946028"/>
         </scene>
         <!--Reports-->
         <scene sceneID="ZmQ-ce-k0x">
@@ -30,7 +68,7 @@
                     <tabBarItem key="tabBarItem" title="Reports" image="list.bullet.rectangle" catalog="system" selectedImage="list.bullet.rectangle.fill" id="iNb-Fa-ice"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="txA-n8-lM5">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>

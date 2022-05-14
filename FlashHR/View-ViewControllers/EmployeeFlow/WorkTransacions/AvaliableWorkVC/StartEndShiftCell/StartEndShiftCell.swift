@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseFirestore
 
 protocol StartEndShiftCellDelegate {
     func failOrSuccess(tag: Int8)

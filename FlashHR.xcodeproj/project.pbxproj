@@ -211,9 +211,9 @@
 				73ABEE4A27D65FB9001F4A2F /* TabBar.storyboard */,
 				73DDCA7F27D6548F0025BC14 /* EmployeesPage */,
 				73DDCA7E27D654790025BC14 /* CommunicationPage */,
-				73DDCA8027D654A30025BC14 /* RequestsPasge */,
-				7333064D27D257230019ECF0 /* ProfilePage */,
 				73DDCA7D27D6545D0025BC14 /* ReportsPage */,
+				7333064D27D257230019ECF0 /* ProfilePage */,
+				73DDCA8027D654A30025BC14 /* RequestsPasge */,
 			);
 			path = EmployerFlow;
 			sourceTree = "<group>";

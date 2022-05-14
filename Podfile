@@ -10,5 +10,6 @@ pod 'Firebase/Firestore'
 pod 'IQKeyboardManagerSwift'
 pod 'FSCalendar'
 pod 'GoogleMaps'
+pod "ChartProgressBar"
 
 end

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseFirestore
 import CoreLocation
 
 class WorkDetailsVC: UIViewController{

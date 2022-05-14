@@ -7,7 +7,7 @@
 
 
 import UIKit
-import Firebase
+import FirebaseFirestore
 
 class SelectedEmpProfileVC: UIViewController{
     
@@ -28,6 +28,7 @@ class SelectedEmpProfileVC: UIViewController{
         tableView.register(UINib(nibName: Constants.NibNames.infoCell, bundle: nil) , forCellReuseIdentifier: Constants.Identifiers.infoCellIdentifier)
         
         empNameTextField.text = EmployeesVC.empIDHolder.employeeName
+        
         tabToEdit.layer.cornerRadius = 8
         tabToEdit.layer.masksToBounds = true
         imageView.layer.cornerRadius = imageView.frame.size.height / 5

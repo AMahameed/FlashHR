@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseFirestore
 
 class EmployeesVC: UIViewController {
     
@@ -55,7 +55,7 @@ class EmployeesVC: UIViewController {
     }
     
     func loadEmployees(){
-        
+         
         db.collection("employee").addSnapshotListener{ [weak self] querySnapshot, e in
     
             guard let self = self else {return}

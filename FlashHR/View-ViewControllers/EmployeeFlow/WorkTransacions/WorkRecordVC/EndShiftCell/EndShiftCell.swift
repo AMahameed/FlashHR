@@ -4,13 +4,15 @@
 //
 //  Created by Abdallah Mahameed on 5/7/22.
 //
+
+
+import UIKit
+import FirebaseFirestore
+
 protocol EndShiftCellDelegate {
     func failOrSuccess(tag: Int8)
     func proceedEndingSHift(_ complition: @escaping (Bool)->())
 }
-
-import UIKit
-import Firebase
 
 class EndShiftCell: UITableViewCell {
 
