@@ -28,24 +28,28 @@ class DaysSchedulesVC: UIViewController {
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true)
     }
-}
+} 
 //MARK: - Calendar Delegate
 
 extension DaysSchedulesVC: FSCalendarDelegate{
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         
-        if Date() > date {
-            DaysSchedulesVC.dayIDHolder.canUpdate = false
-        }else{
-            DaysSchedulesVC.dayIDHolder.canUpdate = true
-        }
-        
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-MM-YYYY"
         
         let dayStr = formatter.string(from: date)
         DaysSchedulesVC.dayIDHolder.dayStr = dayStr
+        let todaysDate = formatter.string(from: Date())
+        
+        
+        if Date() < date || todaysDate == dayStr {
+            DaysSchedulesVC.dayIDHolder.canUpdate = true
+        }else{
+            DaysSchedulesVC.dayIDHolder.canUpdate = false
+        }
+        
+        
         
         presentFromSTB(stbName: Constants.Segues.workDetailsSegue, vcID: Constants.Segues.workDetailsSegue)
     }

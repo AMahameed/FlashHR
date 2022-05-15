@@ -103,7 +103,6 @@ class WorkDetailsVC: UIViewController{
                     }
                 }
             }
-            
         } failure: { error in
             self.presentAlertInMainThread(message: error)
         }
@@ -228,7 +227,6 @@ extension WorkDetailsVC: UITableViewDelegate, UITableViewDataSource, GoogleMapsC
         default:
             break
         }
-    
         return cell
     }
     

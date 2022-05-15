@@ -19,7 +19,6 @@ class SelectedEmpProfileVC: UIViewController{
     private let db = Firestore.firestore()
     let fireBaseService = FireBaseService()
     var titles = ["Title","Email","Mobile No.","Gender"]
-    var flag: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()

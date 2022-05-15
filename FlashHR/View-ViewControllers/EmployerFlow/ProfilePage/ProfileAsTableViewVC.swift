@@ -130,7 +130,7 @@ extension ProfileAsTableViewVC: UIImagePickerControllerDelegate, UINavigationCon
         }
         imageView.image = image
         
-        guard let imageData = image.pngData() else{
+        guard let imageData = image.pngData(), imageData.count <= 999999 else{
             return
         }
         

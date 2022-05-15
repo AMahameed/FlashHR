@@ -15,7 +15,7 @@ class CreateEmployeeVC: UIViewController {
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var tabToEdit: UILabel!
     @IBOutlet weak var imageView: UIImageView!
-    var createEmployee = Employee()
+    private var createEmployee = Employee()
     let db = Firestore.firestore()
     var fields = ["User Name", "Password", "Email", "Title", "Mobile Number", "Gender"]
     

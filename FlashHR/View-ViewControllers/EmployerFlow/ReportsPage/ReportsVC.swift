@@ -40,7 +40,7 @@ class ReportsVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25){
             self.progressBar()}
     }
     
@@ -76,9 +76,6 @@ class ReportsVC: UIViewController {
                             }
                         }
                     }
-//                    self.viewDemo.isHidden = true
-//                    self.indicator.stopAnimating()
-//                    self.indicator.hidesWhenStopped = true
                 }
             }
         }
@@ -99,7 +96,6 @@ class ReportsVC: UIViewController {
             Apr += floatHour
         case "05":
             May += floatHour
-            print(May)
         case "06":
             Jun += floatHour
         case "07":
