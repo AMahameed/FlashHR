@@ -35,8 +35,12 @@ class WorkDetailsCell: UITableViewCell {
         textField.text = info ?? ""
         self.genderTypeHandler = genderHandler
         switch index {
+        case 0:
+            textField.placeholder = "Type here (Not Editable)"
         case 1:
             textField.isSecureTextEntry = true
+        case 2:
+            textField.placeholder = "Type here (Not Editable)"
         case 4:
             textField.keyboardType = .numberPad
         case 5:

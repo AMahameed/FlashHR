@@ -92,7 +92,6 @@ class WorkTranacitonsVC: UIViewController {
     }
     
     private func sortWT() {
-
         // after calling the func convertDateFormat it appends it in the old or the new depending on the date.
         while wkNumber < workTransactions.count {
             
@@ -103,9 +102,9 @@ class WorkTranacitonsVC: UIViewController {
             }
             wkNumber += 1
         }
-        // sorting
-        newWT = newWT.sorted(by: { $0.dayStr > $1.dayStr })
-        oldWT = oldWT.sorted(by: { $0.dayStr > $1.dayStr })
+        // sorting $0.dayStr[3 ..< 6]
+        newWT = newWT.sorted(by: { $0.dayStr > $1.dayStr}).reversed()
+        oldWT = oldWT.sorted(by: { $0.dayStr > $1.dayStr})
         
         if segment.selectedSegmentIndex == 0 {
             segmentNoHolder = 0

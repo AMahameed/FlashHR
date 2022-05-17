@@ -167,8 +167,14 @@ extension WorkDetailsVC: UITableViewDelegate, UITableViewDataSource, GoogleMapsC
         
         guard let googleMapsCell = tableView.dequeueReusableCell(withIdentifier: Constants.Identifiers.GoogleMapsCellIdentifier, for: indexPath) as? GoogleMapsCell else {return UITableViewCell()}
         
+        if indexPath.row <= 7{
+            cell.titleLabel.text = titles[indexPath.row]
+            cell.textField.delegate = self
+            cell.textField.tag = indexPath.row
+        }
+        
         isDayFilled { transHolder in
-
+            
             switch indexPath.row {
             case 0:
                 cell.textField.placeholder = transHolder.projectName
@@ -192,18 +198,7 @@ extension WorkDetailsVC: UITableViewDelegate, UITableViewDataSource, GoogleMapsC
         } failure: { error in
             self.presentAlertInMainThread(message: error)
         }
-        
-        if !DaysSchedulesVC.dayIDHolder.canUpdate{
-            cell.textField.isUserInteractionEnabled = false
-            googleMapsCell.locationButton.isUserInteractionEnabled = false
-        }
-        
-        if indexPath.row <= 7{
-            cell.titleLabel.text = titles[indexPath.row]
-            cell.textField.delegate = self
-            cell.textField.tag = indexPath.row
-        }
-        
+
         switch indexPath.row {
         case 2:
             cell.textField.inputView = self.startTimePickerView
@@ -229,7 +224,7 @@ extension WorkDetailsVC: UITableViewDelegate, UITableViewDataSource, GoogleMapsC
         }
         return cell
     }
-    
+        
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
@@ -239,6 +234,12 @@ extension WorkDetailsVC: UITableViewDelegate, UITableViewDataSource, GoogleMapsC
 
 extension WorkDetailsVC: UITextFieldDelegate {
     
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if !DaysSchedulesVC.dayIDHolder.canUpdate{
+            return false
+        }
+        return true
+    }
     func textFieldDidEndEditing(_ textField: UITextField) {
         
         switch textField.tag {

@@ -52,7 +52,7 @@
                                     <action selector="chooseImage:" destination="mLL-fA-ReI" eventType="touchUpInside" id="sde-Dx-yb7"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G6S-ts-hvV">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G6S-ts-hvV">
                                 <rect key="frame" x="84.5" y="278" width="245" height="25.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="245" id="8PW-KZ-QuV"/>
@@ -94,8 +94,15 @@
                                 <action selector="backButtonPressed:" destination="mLL-fA-ReI" id="wdZ-Rw-KUu"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="Pnq-Eb-9h0">
+                            <color key="tintColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="editOrDonePressed:" destination="mLL-fA-ReI" id="wC9-yz-3Fn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="barButton" destination="Pnq-Eb-9h0" id="qwm-yC-2LA"/>
                         <outlet property="empNameTextField" destination="G6S-ts-hvV" id="byR-Cd-uDz"/>
                         <outlet property="imageView" destination="Xvh-5f-QVh" id="S8i-MU-j9u"/>
                         <outlet property="infoView" destination="EOJ-0I-a1s" id="x9q-FQ-PME"/>

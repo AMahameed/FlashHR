@@ -22,7 +22,7 @@ class CreateEmployeeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presentAlert(title: "Warning", message: "Dear User, when creating a new Employee, make sure that all information Provided is correct. Since it is not Editable", preferredStyle: .alert)
+        presentAlert(title: "Warning", message: "Dear User, when creating a new Employee, make sure that 'Email, Username' Provided is correct. Since they're not Editable", preferredStyle: .alert)
         tableView.delegate = self
         tableView.dataSource = self
 
@@ -100,7 +100,6 @@ class CreateEmployeeVC: UIViewController {
         }
     }
 }
-
 //MARK: - TabelView
 
 extension CreateEmployeeVC: UITableViewDelegate,UITableViewDataSource{
@@ -130,7 +129,6 @@ extension CreateEmployeeVC: UITableViewDelegate,UITableViewDataSource{
         UITableView.automaticDimension
     }
 }
-
 //MARK: - Image Picker
 
 extension CreateEmployeeVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate{

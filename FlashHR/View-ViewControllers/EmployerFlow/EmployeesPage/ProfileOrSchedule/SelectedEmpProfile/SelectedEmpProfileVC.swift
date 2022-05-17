@@ -14,11 +14,16 @@ class SelectedEmpProfileVC: UIViewController{
     @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var barButton: UIBarButtonItem!
     @IBOutlet weak var empNameTextField: UITextField!
     @IBOutlet weak var tabToEdit: UILabel!
+    private var genderPickerView = UIPickerView()
+    private var editEmployee = Employee()
     private let db = Firestore.firestore()
     let fireBaseService = FireBaseService()
     var titles = ["Title","Email","Mobile No.","Gender"]
+    private var genderTypes = ["Male","Female"]
+    var flag = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +31,12 @@ class SelectedEmpProfileVC: UIViewController{
         tableView.dataSource = self
         tableView.register(UINib(nibName: Constants.NibNames.infoCell, bundle: nil) , forCellReuseIdentifier: Constants.Identifiers.infoCellIdentifier)
         
+        genderPickerView.delegate = self
+        genderPickerView.dataSource = self
+        
         empNameTextField.text = EmployeesVC.empIDHolder.employeeName
         
-        tabToEdit.layer.cornerRadius = 8
+        tabToEdit.layer.cornerRadius = 7
         tabToEdit.layer.masksToBounds = true
         imageView.layer.cornerRadius = imageView.frame.size.height / 5
         infoView.layer.cornerRadius = infoView.frame.size.height / 11
@@ -50,6 +58,33 @@ class SelectedEmpProfileVC: UIViewController{
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
     }
+    
+    @IBAction func editOrDonePressed(_ sender: Any) {
+        if !flag {
+            barButton.title = "Done"
+            flag = true
+        }else{
+            barButton.title = "Edit"
+            uploadEditedEmployeeInfo()
+            flag = false
+        }
+    }
+    
+    private func uploadEditedEmployeeInfo() {
+        guard !(editEmployee.title.isEmpty), !(editEmployee.mobile.isEmpty), !(editEmployee.gender.isEmpty) else{
+            presentAlert(message: "Please fill all required fields"); return}
+        
+        fireBaseService.getEmpDocID(empID: EmployeesVC.empIDHolder.employeeID) { empDocID in
+            self.db.collection("employee").document(empDocID).updateData(
+                   ["title" : self.editEmployee.title,
+                    "mobile" : self.editEmployee.mobile,
+                    "gender" : self.editEmployee.gender])
+                self.dismiss(animated: true)
+            
+        } failure: { error in
+            self.presentAlertInMainThread(message: error)
+        }
+    }
 }
 
 
@@ -67,6 +102,7 @@ extension SelectedEmpProfileVC: UITableViewDataSource,UITableViewDelegate{
         
         cell.titleLabel.text = titles[indexPath.row]
         cell.textField.delegate = self
+        cell.textField.tag = indexPath.row
         
         fireBaseService.getEmpData(empID: EmployeesVC.empIDHolder.employeeID) { [weak self] empData in
             
@@ -84,6 +120,21 @@ extension SelectedEmpProfileVC: UITableViewDataSource,UITableViewDelegate{
                 break
             }
         }
+        
+        if flag {
+            switch indexPath.row {
+            case 0:
+                cell.textField.text = editEmployee.title
+            case 2:
+                cell.textField.text = editEmployee.mobile
+            case 3:
+                cell.textField.inputView = genderPickerView
+                cell.textField.text = editEmployee.gender
+            default:
+                break
+            }
+        }
+        
         return cell
     }
     
@@ -97,7 +148,43 @@ extension SelectedEmpProfileVC: UITableViewDataSource,UITableViewDelegate{
 extension SelectedEmpProfileVC: UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        return false
+        if flag{
+            return true
+        }else{
+            return false
+        }
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        switch textField.tag {
+        case 1:
+            textField.isUserInteractionEnabled = false
+        case 2:
+            textField.keyboardType = .numberPad
+        case 3:
+            textField.inputView = genderPickerView
+        default:
+            return
+        }
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        switch textField.tag {
+        case 0:
+            editEmployee.title = textField.text ?? ""
+        case 1:
+            editEmployee.email = textField.text ?? ""
+        case 2:
+            editEmployee.mobile = textField.text ?? ""
+        case 3:
+            textField.text = editEmployee.gender
+        default:
+            return
+        }
+        
+        textField.borderStyle = .none
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -138,4 +225,23 @@ extension SelectedEmpProfileVC: UIImagePickerControllerDelegate, UINavigationCon
         picker.dismiss(animated: true)
     }
     
+}
+
+extension SelectedEmpProfileVC: UIPickerViewDelegate, UIPickerViewDataSource{
+
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+            return genderTypes.count
+    }
+
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return genderTypes[row]
+    }
+
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        editEmployee.gender = genderTypes[row]
+    }
 }
