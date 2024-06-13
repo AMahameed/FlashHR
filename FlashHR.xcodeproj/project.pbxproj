@@ -16,6 +16,13 @@
 		730FA0BD27D0BF3E00EB0C39 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 730FA0BC27D0BF3E00EB0C39 /* GoogleService-Info.plist */; };
 		73354A09281EECB000239127 /* MapsViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73354A08281EECB000239127 /* MapsViewC.swift */; };
 		7338C11328183C2C0065CA3F /* FireBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338C11228183C2C0065CA3F /* FireBaseService.swift */; };
+		734AF4202C1B76F400A1BF6D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 734AF41F2C1B76F400A1BF6D /* FirebaseAnalytics */; };
+		734AF4222C1B76F400A1BF6D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 734AF4212C1B76F400A1BF6D /* FirebaseAuth */; };
+		734AF4242C1B76F400A1BF6D /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 734AF4232C1B76F400A1BF6D /* FirebaseCrashlytics */; };
+		734AF4262C1B76F400A1BF6D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 734AF4252C1B76F400A1BF6D /* FirebaseFirestore */; };
+		734AF4292C1B779800A1BF6D /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 734AF4282C1B779800A1BF6D /* FSCalendar */; };
+		734AF42C2C1B77CA00A1BF6D /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 734AF42B2C1B77CA00A1BF6D /* IQKeyboardManagerSwift */; };
+		734AF42F2C1B782D00A1BF6D /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 734AF42E2C1B782D00A1BF6D /* GoogleMaps */; };
 		73556EE327E79EB70051A2E5 /* ProfileAsTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73556EE227E79EB70051A2E5 /* ProfileAsTableView.storyboard */; };
 		73556EE527E79FC70051A2E5 /* ProfileAsTableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73556EE427E79FC70051A2E5 /* ProfileAsTableViewVC.swift */; };
 		73556EE927E7A38C0051A2E5 /* infoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73556EE727E7A38C0051A2E5 /* infoCell.swift */; };
@@ -75,12 +82,9 @@
 		73F73721282703460098E70D /* EndShiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F7371F282703460098E70D /* EndShiftCell.swift */; };
 		73F73722282703460098E70D /* EndShiftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73F73720282703460098E70D /* EndShiftCell.xib */; };
 		73FBD99A27CD73A90061B864 /* ResetPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBD99927CD73A90061B864 /* ResetPassViewController.swift */; };
-		ABC2E132C1AF08CDB9826C25 /* Pods_FlashHR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C276AF36410A344916FB7C1 /* Pods_FlashHR.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C276AF36410A344916FB7C1 /* Pods_FlashHR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlashHR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		34D270E593635B02F0649083 /* Pods-FlashHR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashHR.release.xcconfig"; path = "Target Support Files/Pods-FlashHR/Pods-FlashHR.release.xcconfig"; sourceTree = "<group>"; };
 		7304B89A2823479400EE416B /* AvaliableWorkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvaliableWorkVC.swift; sourceTree = "<group>"; };
 		7304B89C2823479F00EE416B /* AvaliableWork.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AvaliableWork.storyboard; sourceTree = "<group>"; };
 		7304B89E282347AC00EE416B /* WorkRecord.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkRecord.storyboard; sourceTree = "<group>"; };
@@ -151,7 +155,6 @@
 		73F7371F282703460098E70D /* EndShiftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndShiftCell.swift; sourceTree = "<group>"; };
 		73F73720282703460098E70D /* EndShiftCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EndShiftCell.xib; sourceTree = "<group>"; };
 		73FBD99927CD73A90061B864 /* ResetPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassViewController.swift; sourceTree = "<group>"; };
-		BD537B4C9017A29F0631B0E3 /* Pods-FlashHR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashHR.debug.xcconfig"; path = "Target Support Files/Pods-FlashHR/Pods-FlashHR.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +162,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABC2E132C1AF08CDB9826C25 /* Pods_FlashHR.framework in Frameworks */,
+				734AF4242C1B76F400A1BF6D /* FirebaseCrashlytics in Frameworks */,
+				734AF4262C1B76F400A1BF6D /* FirebaseFirestore in Frameworks */,
+				734AF4202C1B76F400A1BF6D /* FirebaseAnalytics in Frameworks */,
+				734AF4292C1B779800A1BF6D /* FSCalendar in Frameworks */,
+				734AF4222C1B76F400A1BF6D /* FirebaseAuth in Frameworks */,
+				734AF42F2C1B782D00A1BF6D /* GoogleMaps in Frameworks */,
+				734AF42C2C1B77CA00A1BF6D /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,8 +394,6 @@
 			children = (
 				7394F01A27CCBA7B001C58C9 /* FlashHR */,
 				7394F01927CCBA7B001C58C9 /* Products */,
-				A4BD030DFA22BE0A3DC63323 /* Pods */,
-				EAD06FF461377279B6F77236 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -540,23 +547,6 @@
 			path = EndShiftCell;
 			sourceTree = "<group>";
 		};
-		A4BD030DFA22BE0A3DC63323 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				BD537B4C9017A29F0631B0E3 /* Pods-FlashHR.debug.xcconfig */,
-				34D270E593635B02F0649083 /* Pods-FlashHR.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		EAD06FF461377279B6F77236 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0C276AF36410A344916FB7C1 /* Pods_FlashHR.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -564,18 +554,24 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7394F02C27CCBA7B001C58C9 /* Build configuration list for PBXNativeTarget "FlashHR" */;
 			buildPhases = (
-				D0CB881892F229D015ADD189 /* [CP] Check Pods Manifest.lock */,
 				7394F01427CCBA7B001C58C9 /* Sources */,
 				7394F01527CCBA7B001C58C9 /* Frameworks */,
 				7394F01627CCBA7B001C58C9 /* Resources */,
-				533641A8F5DBC0D93BC6E66B /* [CP] Embed Pods Frameworks */,
-				50A9B0DC8E4ECA51971BD119 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = FlashHR;
+			packageProductDependencies = (
+				734AF41F2C1B76F400A1BF6D /* FirebaseAnalytics */,
+				734AF4212C1B76F400A1BF6D /* FirebaseAuth */,
+				734AF4232C1B76F400A1BF6D /* FirebaseCrashlytics */,
+				734AF4252C1B76F400A1BF6D /* FirebaseFirestore */,
+				734AF4282C1B779800A1BF6D /* FSCalendar */,
+				734AF42B2C1B77CA00A1BF6D /* IQKeyboardManagerSwift */,
+				734AF42E2C1B782D00A1BF6D /* GoogleMaps */,
+			);
 			productName = FlashHR;
 			productReference = 7394F01827CCBA7B001C58C9 /* FlashHR.app */;
 			productType = "com.apple.product-type.application";
@@ -607,6 +603,12 @@
 				Base,
 			);
 			mainGroup = 7394F00F27CCBA7B001C58C9;
+			packageReferences = (
+				734AF41E2C1B76F400A1BF6D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				734AF4272C1B779800A1BF6D /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				734AF42A2C1B77CA00A1BF6D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				734AF42D2C1B782D00A1BF6D /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
+			);
 			productRefGroup = 7394F01927CCBA7B001C58C9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -657,65 +659,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		50A9B0DC8E4ECA51971BD119 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FlashHR/Pods-FlashHR-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FlashHR/Pods-FlashHR-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlashHR/Pods-FlashHR-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		533641A8F5DBC0D93BC6E66B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FlashHR/Pods-FlashHR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FlashHR/Pods-FlashHR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlashHR/Pods-FlashHR-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D0CB881892F229D015ADD189 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FlashHR-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7394F01427CCBA7B001C58C9 /* Sources */ = {
@@ -893,7 +836,6 @@
 		};
 		7394F02D27CCBA7B001C58C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD537B4C9017A29F0631B0E3 /* Pods-FlashHR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -903,14 +845,14 @@
 				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlashHR/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This allows the app determining your current location to Start and End Shifts properly.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location is required to determine the current location of the user.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to choose a photo for your profile.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -929,7 +871,6 @@
 		};
 		7394F02E27CCBA7B001C58C9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34D270E593635B02F0649083 /* Pods-FlashHR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -939,14 +880,14 @@
 				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlashHR/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This allows the app determining your current location to Start and End Shifts properly.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location is required to determine the current location of the user.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to choose a photo for your profile.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -985,6 +926,79 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		734AF41E2C1B76F400A1BF6D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.27.0;
+			};
+		};
+		734AF4272C1B779800A1BF6D /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+		734AF42A2C1B77CA00A1BF6D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.3;
+			};
+		};
+		734AF42D2C1B782D00A1BF6D /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		734AF41F2C1B76F400A1BF6D /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 734AF41E2C1B76F400A1BF6D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		734AF4212C1B76F400A1BF6D /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 734AF41E2C1B76F400A1BF6D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		734AF4232C1B76F400A1BF6D /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 734AF41E2C1B76F400A1BF6D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		734AF4252C1B76F400A1BF6D /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 734AF41E2C1B76F400A1BF6D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		734AF4282C1B779800A1BF6D /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 734AF4272C1B779800A1BF6D /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+		734AF42B2C1B77CA00A1BF6D /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 734AF42A2C1B77CA00A1BF6D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		734AF42E2C1B782D00A1BF6D /* GoogleMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 734AF42D2C1B782D00A1BF6D /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMaps;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7394F01027CCBA7B001C58C9 /* Project object */;
 }

@@ -24,8 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = true
-        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
-        IQKeyboardManager.shared.toolbarTintColor = .black
+        IQKeyboardManager.shared.resignOnTouchOutside = true
+        IQKeyboardManager.shared.toolbarConfiguration.tintColor = .black
         
         return true
     }
